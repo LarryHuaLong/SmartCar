@@ -1,0 +1,9 @@
+
+system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4.cache
+system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4.hw
+system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4.runs
+system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4.sim
+system_ability_2018/MIPSfpga_axi4_ddr/.Xil
+*.log
+*.jou
+*.zip
