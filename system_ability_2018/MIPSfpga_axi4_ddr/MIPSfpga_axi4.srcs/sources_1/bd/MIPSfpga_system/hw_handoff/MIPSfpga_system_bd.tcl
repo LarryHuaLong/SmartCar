@@ -30,7 +30,6 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # If you do not already have a project created,
 # you can create a project using the following command:
 #    create_project project_1 myproj -part xc7a100tcsg324-1
-#    set_property BOARD_PART digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
 
 # CHECKING IF PROJECT EXISTS
 if { [get_projects -quiet] eq "" } {

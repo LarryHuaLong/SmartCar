@@ -367,7 +367,7 @@ begin
         reset_hready        <= ahb_hburst_single  or 
                                ahb_hburst_incr    or
                                axi_wr_channel_busy   ;
-        set_hready          <= axi_wr_channel_ready and (not ahb_hburst_single);
+        set_hready          <= axi_wr_channel_ready;
         if (axi_wdata_done = '1') then
           ctl_sm_ns <= CTL_BRESP;
         end if;  

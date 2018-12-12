@@ -15,16 +15,16 @@ preplace port JB8 -pg 1 -y 120 -defaultsOSRD
 preplace portBus LED -pg 1 -y 200 -defaultsOSRD
 preplace portBus PWMs -pg 1 -y 630 -defaultsOSRD
 preplace inst PWM_w_Int_0 -pg 1 -lvl 6 -y 620 -defaultsOSRD
-preplace inst axi_intc_0 -pg 1 -lvl 6 -y 770 -defaultsOSRD
 preplace inst mig_7series_0 -pg 1 -lvl 6 -y 370 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 6 -y 770 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 3 -y 50 -defaultsOSRD
 preplace inst xlconstant_1 -pg 1 -lvl 1 -y 660 -defaultsOSRD
 preplace inst MIPS_MicroAptiv_UP_0 -pg 1 -lvl 3 -y 210 -defaultsOSRD
 preplace inst xlconstant_2 -pg 1 -lvl 2 -y 320 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 6 -y 190 -defaultsOSRD
 preplace inst xlconcat_0 -pg 1 -lvl 2 -y 740 -defaultsOSRD
 preplace inst xlconstant_3 -pg 1 -lvl 5 -y 970 -defaultsOSRD
 preplace inst util_vector_logic_0 -pg 1 -lvl 2 -y 40 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 6 -y 190 -defaultsOSRD
 preplace inst xlconstant_4 -pg 1 -lvl 4 -y 660 -defaultsOSRD
 preplace inst xlconcat_1 -pg 1 -lvl 5 -y 730 -defaultsOSRD
 preplace inst util_vector_logic_1 -pg 1 -lvl 2 -y 120 -defaultsOSRD
@@ -32,8 +32,8 @@ preplace inst blk_mem_gen_0 -pg 1 -lvl 7 -y 60 -defaultsOSRD
 preplace inst ahblite_axi_bridge_0 -pg 1 -lvl 4 -y 170 -defaultsOSRD
 preplace inst util_vector_logic_2 -pg 1 -lvl 4 -y 420 -defaultsOSRD
 preplace inst axi_interconnect_0 -pg 1 -lvl 5 -y 330 -defaultsOSRD
-preplace inst axi_uart16550_0 -pg 1 -lvl 6 -y 940 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 580 -defaultsOSRD
+preplace inst axi_uart16550_0 -pg 1 -lvl 6 -y 940 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 6 -y 60 -defaultsOSRD
 preplace inst util_ds_buf_0 -pg 1 -lvl 2 -y 200 -defaultsOSRD
 preplace netloc xlconstant_1_dout 1 1 1 280

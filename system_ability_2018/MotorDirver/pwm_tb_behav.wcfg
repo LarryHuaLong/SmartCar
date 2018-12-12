@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="wheel_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="wheel_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="5" />
+   <wvobject db_ref_id="1" fp_name="/wheel_tb/wheel1/pwm1/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/wheel_tb/wheel1/pwm1/DutyCycle" type="array">
+      <obj_property name="ElementShortName">DutyCycle[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DutyCycle[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/wheel_tb/wheel1/pwm1/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/wheel_tb/wheel1/pwm1/PWM_out" type="logic">
+      <obj_property name="ElementShortName">PWM_out</obj_property>
+      <obj_property name="ObjectShortName">PWM_out</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/wheel_tb/wheel1/pwm1/count" type="array">
+      <obj_property name="ElementShortName">count[19:0]</obj_property>
+      <obj_property name="ObjectShortName">count[19:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -203,8 +203,8 @@ use ahblite_axi_bridge_v3_0.ahblite_axi_bridge_pkg.all;
 
 entity ahb_if is
   generic (
-    C_S_AHB_ADDR_WIDTH           : integer range 32 to 64  := 32;
-    C_M_AXI_ADDR_WIDTH           : integer range 32 to 64  := 32;
+    C_S_AHB_ADDR_WIDTH           : integer range 32 to 32  := 32;
+    C_M_AXI_ADDR_WIDTH           : integer range 32 to 32  := 32;
     C_S_AHB_DATA_WIDTH           : integer range 32 to 64  := 32;
     C_M_AXI_DATA_WIDTH           : integer range 32 to 64  := 32;
     C_M_AXI_THREAD_ID_WIDTH      : integer                 := 4;  
@@ -516,8 +516,7 @@ ongoing_burst  <= '1' when
         ahb_hburst_incr_i   <= '0';
         ahb_hburst_wrap4_i  <= '0';
       else
-        --if (S_AHB_HTRANS    = NONSEQ) then
-        if (S_AHB_HTRANS    = NONSEQ and S_AHB_HREADY_OUT_i = '1') then
+        if (S_AHB_HTRANS    = NONSEQ) then
           S_AHB_HBURST_i <= S_AHB_HBURST;
           S_AHB_HSIZE_i  <= S_AHB_HSIZE;
           if(S_AHB_HBURST = SINGLE) then
