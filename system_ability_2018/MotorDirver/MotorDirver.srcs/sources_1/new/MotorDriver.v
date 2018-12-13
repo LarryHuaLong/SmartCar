@@ -23,6 +23,7 @@
 module MotorDriver(
     input pwm_clk,
     input clk_1kHz,
+    input reset,
     input [31:0] speed_lf,
     input [31:0] speed_rf,
     input [31:0] speed_lb,
@@ -53,28 +54,28 @@ module MotorDriver(
     PWM#(.period(period)) 
         wheel_lf (.Clk(pwm_clk),
                   .DutyCycle(speed_lf),
-                  .Reset(1),
+                  .Reset(1'b1),
                   .PWM_out(pwm_lf),
                   .count()
                   );
     PWM#(.period(period)) 
         wheel_rf (.Clk(pwm_clk),
                   .DutyCycle(speed_rf),
-                  .Reset(1),
+                  .Reset(1'b1),
                   .PWM_out(pwm_rf),
                   .count()
                   );
     PWM#(.period(period)) 
         wheel_lb (.Clk(pwm_clk),
                   .DutyCycle(speed_lb),
-                  .Reset(1),
+                  .Reset(1'b1),
                   .PWM_out(pwm_lb),
                   .count()
                   );
     PWM#(.period(period)) 
         wheel_rb (.Clk(pwm_clk),
                   .DutyCycle(speed_rb),
-                  .Reset(1),
+                  .Reset(1'b1),
                   .PWM_out(pwm_rb),
                   .count()
                   );

@@ -23,41 +23,43 @@
 module dirController(
     input clk_1kHz,
     input [7:0] dir,
-    input reset,
+    output dir_clk,
+    output dir_enable,
     output dir_serial,
     output dir_latch
     );
-    reg [2:0] counter;
-    reg serial;
+    reg [3:0] counter;
+    reg OE_,SDI,SCK,LCK;
     reg [7:0]dir_buf;
     
-    assign dir_serial = serial;
-    assign dir_latch = !counter;
+    assign dir_clk = LCK;
+    assign dir_enable = OE;
+    assign dir_serial = SDI;
+    assign dir_latch = SCK;
     
-    initial counter = 0;
+    initial counter = 0;   
+    always @(posedge clk_1kHz)  
+            counter = counter + 1;
+            
     always @(posedge clk_1kHz)
-        case(counter)
-            0: serial <= dir_buf[7];
-            1: serial <= dir_buf[6];
-            2: serial <= dir_buf[5];
-            3: serial <= dir_buf[4];
-            4: serial <= dir_buf[3];
-            5: serial <= dir_buf[2];
-            6: serial <= dir_buf[1];
-            7: serial <= dir_buf[0];
-            default: serial <= 0;
+        case(counter)   
+            0: begin OE <=0; SDI <= dir_buf[7]; end
+            1: SDI <= dir_buf[6];
+            2: SDI <= dir_buf[5];
+            3: SDI <= dir_buf[4];
+            4: SDI <= dir_buf[3];
+            5: SDI <= dir_buf[2];
+            6: SDI <= dir_buf[1];
+            7: SDI <= dir_buf[0]; 
+            8: latch <= 1;
+            default: begin
+                    SDI <= 0;
+                    SCK <= 0;
+                    OE <= 1;
+                    dir_buf <= dir;
+                    end
         endcase
         
-    always @ (posedge clk_1kHz)
-        begin
-            if (!reset)
-                begin
-                    counter <= 0;
-                end       
-            if(counter == 0) dir_buf = dir;     
-            counter = counter + 1;
-        end
-    
 endmodule
 
 module divider(clk,
@@ -67,18 +69,18 @@ module divider(clk,
 	
     reg [31:0] count;
     
-    parameter n = 100000;
+    parameter n = 50000;
 	
     initial count = 32'd0;
 	initial clkout = 0;
-    always@(clk)
+    always@(posedge clk)
     begin
         if(count == n)
 			begin
-				clkout = ~clkout;
-				count = 0;
+				clkout <= ~clkout;
+				count <= 0;
 			end
         else
-            count = count + 32'd1;
+            count <= count + 32'd1;
     end
 endmodule

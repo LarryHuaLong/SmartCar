@@ -3,89 +3,41 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="motordirver_tb_behav.wdb" id="1">
+      <db_ref path="dirctrl_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="dirctrl_tb" />
             <top_module name="glbl" />
-            <top_module name="motordirver_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="18" />
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/pwm_clk" type="logic">
-      <obj_property name="ElementShortName">pwm_clk</obj_property>
-      <obj_property name="ObjectShortName">pwm_clk</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/clk_1kHz" type="logic">
+   <WVObjectSize size="7" />
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/clk_1kHz" type="logic">
       <obj_property name="ElementShortName">clk_1kHz</obj_property>
       <obj_property name="ObjectShortName">clk_1kHz</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/speed_lf" type="array">
-      <obj_property name="ElementShortName">speed_lf[31:0]</obj_property>
-      <obj_property name="ObjectShortName">speed_lf[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/speed_rf" type="array">
-      <obj_property name="ElementShortName">speed_rf[31:0]</obj_property>
-      <obj_property name="ObjectShortName">speed_rf[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/speed_lb" type="array">
-      <obj_property name="ElementShortName">speed_lb[31:0]</obj_property>
-      <obj_property name="ObjectShortName">speed_lb[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/speed_rb" type="array">
-      <obj_property name="ElementShortName">speed_rb[31:0]</obj_property>
-      <obj_property name="ObjectShortName">speed_rb[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/dir" type="array">
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/dir" type="array">
       <obj_property name="ElementShortName">dir[7:0]</obj_property>
       <obj_property name="ObjectShortName">dir[7:0]</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/pwm_lf" type="logic">
-      <obj_property name="ElementShortName">pwm_lf</obj_property>
-      <obj_property name="ObjectShortName">pwm_lf</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/pwm_rf" type="logic">
-      <obj_property name="ElementShortName">pwm_rf</obj_property>
-      <obj_property name="ObjectShortName">pwm_rf</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/pwm_lb" type="logic">
-      <obj_property name="ElementShortName">pwm_lb</obj_property>
-      <obj_property name="ObjectShortName">pwm_lb</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/pwm_rb" type="logic">
-      <obj_property name="ElementShortName">pwm_rb</obj_property>
-      <obj_property name="ObjectShortName">pwm_rb</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/dir_clk" type="logic">
-      <obj_property name="ElementShortName">dir_clk</obj_property>
-      <obj_property name="ObjectShortName">dir_clk</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/dir_enable" type="logic">
-      <obj_property name="ElementShortName">dir_enable</obj_property>
-      <obj_property name="ObjectShortName">dir_enable</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/dir_serial" type="logic">
-      <obj_property name="ElementShortName">dir_serial</obj_property>
-      <obj_property name="ObjectShortName">dir_serial</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/dir_latch" type="logic">
-      <obj_property name="ElementShortName">dir_latch</obj_property>
-      <obj_property name="ObjectShortName">dir_latch</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/motor/dirctrl/dir" type="array">
-      <obj_property name="ElementShortName">dir[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dir[7:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/motor/dirctrl/dir_buf" type="array">
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/dir_buf" type="array">
       <obj_property name="ElementShortName">dir_buf[7:0]</obj_property>
       <obj_property name="ObjectShortName">dir_buf[7:0]</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/motordirver_tb/motor/dirctrl/counter" type="array">
-      <obj_property name="ElementShortName">counter[2:0]</obj_property>
-      <obj_property name="ObjectShortName">counter[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/counter" type="array">
+      <obj_property name="ElementShortName">counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dir_enable" type="logic">
+      <obj_property name="ElementShortName">dir_enable</obj_property>
+      <obj_property name="ObjectShortName">dir_enable</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/dir_serial" type="logic">
+      <obj_property name="ElementShortName">dir_serial</obj_property>
+      <obj_property name="ObjectShortName">dir_serial</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/dir_latch" type="logic">
+      <obj_property name="ElementShortName">dir_latch</obj_property>
+      <obj_property name="ObjectShortName">dir_latch</obj_property>
    </wvobject>
 </wave_config>
