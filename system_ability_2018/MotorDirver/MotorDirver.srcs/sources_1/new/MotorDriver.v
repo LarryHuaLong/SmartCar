@@ -21,7 +21,8 @@
 
 
 module MotorDriver(
-    input clk,
+    input pwm_clk,
+    input clk_1kHz,
     input [31:0] speed_lf,
     input [31:0] speed_rf,
     input [31:0] speed_lb,
@@ -37,30 +38,41 @@ module MotorDriver(
     output dir_latch
     );
     parameter period = 20;
-
+    
+    assign dir_clk = clk_1kHz;
+    assign dir_enable = 0;
+    
+    dirController dirctrl(
+        .clk_1kHz(clk_1kHz),
+        .dir(dir),
+        .reset(reset),
+        .dir_serial(dir_serial),
+        .dir_latch(dir_latch)
+        );
+    
     PWM#(.period(period)) 
-        wheel_lf (.Clk(clk),
+        wheel_lf (.Clk(pwm_clk),
                   .DutyCycle(speed_lf),
                   .Reset(1),
                   .PWM_out(pwm_lf),
                   .count()
                   );
     PWM#(.period(period)) 
-        wheel_lf (.Clk(clk),
+        wheel_rf (.Clk(pwm_clk),
                   .DutyCycle(speed_rf),
                   .Reset(1),
                   .PWM_out(pwm_rf),
                   .count()
                   );
     PWM#(.period(period)) 
-        wheel_lf (.Clk(clk),
+        wheel_lb (.Clk(pwm_clk),
                   .DutyCycle(speed_lb),
                   .Reset(1),
                   .PWM_out(pwm_lb),
                   .count()
                   );
     PWM#(.period(period)) 
-        wheel_lf (.Clk(clk),
+        wheel_rb (.Clk(pwm_clk),
                   .DutyCycle(speed_rb),
                   .Reset(1),
                   .PWM_out(pwm_rb),
