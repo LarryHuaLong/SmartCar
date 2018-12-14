@@ -32,10 +32,10 @@ module top(
     output pwm_rf,
     output pwm_lb,
     output pwm_rb,
-    output dir_clk,
-    output dir_enable,
-    output dir_serial,
-    output dir_latch
+    output SCK,
+    output SDI,
+    output LCK,
+    output OE_
     );
  
     
@@ -52,6 +52,12 @@ module top(
     assign speed_rf = 1<<19;
     assign speed_lb = 1<<19;
     assign speed_rb = 1<<19;
+    
+    assign pwm_lf = 1;
+    assign pwm_lb = 1;
+    assign pwm_rf = 1;
+    assign pwm_rb = 1;
+        
     MotorDriver motor(
         .pwm_clk(CLK100MHZ),
         .clk_1kHz(clk_1kHz),
@@ -61,14 +67,14 @@ module top(
         .speed_lb(speed_lb),
         .speed_rb(speed_rb),
         .dir(dir),
-        .pwm_lf(pwm_lf),
-        .pwm_rf(pwm_rf),
-        .pwm_lb(pwm_lb),
-        .pwm_rb(pwm_rb),
-        .dir_clk(dir_clk),
-        .dir_enable(dir_enable),
-        .dir_serial(dir_serial),
-        .dir_latch(dir_latch)
+//        .pwm_lf(pwm_lf),
+//        .pwm_rf(pwm_rf),
+//        .pwm_lb(pwm_lb),
+//        .pwm_rb(pwm_rb),
+        .SCK(SCK),
+        .SDI(SDI),
+        .LCK(LCK),
+        .OE_(OE_)
         );
 //        assign speed_lf[31:24] = {SW[15],SW[15],SW[15],SW[15]};
 //        assign speed_lf[23:16] = {SW[14],SW[14],SW[14],SW[14]};
@@ -87,20 +93,14 @@ module top(
 //        assign speed_rb[15:8] = {SW[1],SW[1],SW[1],SW[1]};
 //        assign speed_rb[7:0] = {SW[0],SW[0],SW[0],SW[0]};
        
-      
-       initial dir_buf = 0;
-       
-       assign dir[7:0] = {dir_buf[5],dir_buf[3],dir_buf[1],dir_buf[0],dir_buf[2],dir_buf[7],dir_buf[4],dir_buf[6]};
-       
-       always @(posedge CLK100MHZ)
-       begin
-       dir_buf = SW[7:0];
+
+       assign dir = SW[7:0];
 //           if(BTNC)dir_buf = 8'b00000000;
 //           if(BTNU)dir_buf = 8'b10101010;
 //           if(BTND)dir_buf = 8'b01010101;
 //           if(BTNL)dir_buf = 8'b01100110;
 //           if(BTNR)dir_buf = 8'b10011001;
-       end
+
             
         
         

@@ -33,22 +33,26 @@ module MotorDriver(
     output pwm_rf,
     output pwm_lb,
     output pwm_rb,
-    output dir_clk,
-    output dir_enable,
-    output dir_serial,
-    output dir_latch
+    output SCK,
+    output SDI,
+    output LCK,
+    output OE_
     );
     parameter period = 20;
     
     assign dir_clk = clk_1kHz;
     assign dir_enable = 0;
-    
+        
+    wire [7:0]dir_buf;         
+    assign dir_buf = {dir[3],dir[6],dir[5],dir[4],dir[1],dir[0],dir[2],dir[7]};
+
     dirController dirctrl(
         .clk_1kHz(clk_1kHz),
-        .dir(dir),
-        .reset(reset),
-        .dir_serial(dir_serial),
-        .dir_latch(dir_latch)
+        .dir(dir_buf),
+        .SCK(SCK),
+        .SDI(SDI),
+        .LCK(LCK),
+        .OE_(OE_)
         );
     
     PWM#(.period(period)) 

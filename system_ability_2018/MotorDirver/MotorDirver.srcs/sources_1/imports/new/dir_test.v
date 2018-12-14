@@ -11,10 +11,10 @@ module dir_test(
     output pwm_rf,
     output pwm_lb,
     output pwm_rb,
-    output dir_clk,
-    output dir_enable,
-    output dir_serial,
-    output dir_latch
+    output SCK,
+    output SDI,
+    output LCK,
+    output OE_
     );
     
     wire clk_1kHz;
@@ -27,16 +27,16 @@ module dir_test(
     wire [7:0]dir;
     reg [7:0]dir_buf;
     
-    assign dir[7:0] = dir_buf[7:0];//{dir_buf[5],dir_buf[3],dir_buf[1],dir_buf[0],dir_buf[2],dir_buf[7],dir_buf[4],dir_buf[6]};
+    assign dir[7:0] = {dir_buf[6],dir_buf[4],dir_buf[5],dir_buf[3],dir_buf[1],dir_buf[0],dir_buf[2],dir_buf[7]};
     
     divider#(50000) div(CLK100MHZ,clk_1kHz);
     dirController dirctrl(
             .clk_1kHz(clk_1kHz),
             .dir(dir),
-            .dir_clk(dir_clk),
-            .dir_enable(dir_enable),
-            .dir_serial(dir_serial),
-            .dir_latch(dir_latch)
+            .SCK(SCK),
+            .SDI(SDI),
+            .LCK(LCK),
+            .OE_(OE_)
             );
             
        initial dir_buf = 0;      
