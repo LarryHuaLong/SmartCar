@@ -159,7 +159,7 @@
           <spirit:configurableElementValue spirit:referenceId="Use_Byte_Write_Enable">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Register_PortA_Output_of_Memory_Primitives">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Load_Init_File">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Coe_File">../../../../new/ram_init.coe</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coe_File">..\..\..\..\..\..\..\ram_init_os.coe</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Use_RSTA_Pin">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="use_bram_block">Stand_Alone</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -322,7 +322,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="mig_7series" spirit:vendor="xilinx.com" spirit:version="2.3"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPSfpga_system_mig_7series_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="XML_INPUT_FILE">mig_a.prj</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="XML_INPUT_FILE">mig_b.prj</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="RESET_BOARD_INTERFACE">Custom</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="MIG_DONT_TOUCH_PARAM">Custom</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="BOARD_MIG_PARAM">Custom</spirit:configurableElementValue>
@@ -351,6 +351,11 @@
         <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_bram_ctrl_0"/>
       </spirit:interconnection>
       <spirit:interconnection>
+        <spirit:name>axi_bram_ctrl_0_BRAM_PORTA</spirit:name>
+        <spirit:activeInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="axi_bram_ctrl_0"/>
+        <spirit:activeInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="blk_mem_gen_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
         <spirit:name>axi_interconnect_0_M02_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M02_AXI" spirit:componentRef="axi_interconnect_0"/>
         <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_uart16550_0"/>
@@ -369,11 +374,6 @@
         <spirit:name>axi_interconnect_0_M05_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M05_AXI" spirit:componentRef="axi_interconnect_0"/>
         <spirit:activeInterface spirit:busRef="s_axi" spirit:componentRef="axi_intc_0"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>axi_bram_ctrl_0_BRAM_PORTA</spirit:name>
-        <spirit:activeInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="axi_bram_ctrl_0"/>
-        <spirit:activeInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="blk_mem_gen_0"/>
       </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
@@ -395,8 +395,6 @@
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="PWM_w_Int_0" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_intc_0" spirit:portRef="s_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ACLK"/>
@@ -404,6 +402,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M02_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M05_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>MIPS_MicroAptiv_UP_0_HRESETn</spirit:name>
@@ -412,9 +412,6 @@
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="PWM_w_Int_0" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_intc_0" spirit:portRef="s_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ARESETN"/>
@@ -422,6 +419,9 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M02_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M04_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M05_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>EJ_TDI_1</spirit:name>

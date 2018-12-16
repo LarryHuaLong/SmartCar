@@ -28,35 +28,54 @@ module dirController(
     output LCK,
     output OE_
     ); 
-     
-    assign SCK = clk_1kHz;
-    assign LCK = ~SCK & load;
-    assign OE_ = 0;
-    
     reg [2:0] counter; 
-    initial counter = 0;   
-    always @(posedge SCK) 
-        counter <= counter + 1;
-        
-    reg [7:0] dir_buf;        
-    always @(posedge SCK) 
-        dir_buf <= dir; 
-        
-    reg load,serial;          
+    reg [7:0]dir_last; 
+    reg changed,load,serial,latch; 
+      
+    assign SCK = clk_1kHz;
+    assign LCK = ~SCK & latch;
+    assign OE_ = 0;
     assign SDI = serial;
-    always @(negedge SCK)
-        case(counter)   
-            0: begin serial <= dir_buf[7]; load <= 1; end
-            1: begin serial <= dir_buf[6]; load <= 0; end
-            2: serial <= dir_buf[5];
-            3: serial <= dir_buf[4];
-            4: serial <= dir_buf[3];
-            5: serial <= dir_buf[2];
-            6: serial <= dir_buf[1];
-            7: serial <= dir_buf[0]; 
-            default: begin
-                   
-                    end
-        endcase
+    
+    initial 
+        begin 
+            changed = 0;
+            load = 0;
+            counter = 0;
+            dir_last = 0;
+        end   
         
+    always @(posedge SCK) 
+        begin
+            if(dir_last^dir) 
+                begin 
+                     changed <= 1; 
+                     dir_last <= dir;                                              
+                     counter <= 0;
+                end
+            else 
+                counter <= counter + 1;
+            if(load) changed <= 0;
+        end
+     
+    always @(negedge SCK)
+        begin
+            case(counter)   
+                0: begin    
+                        serial <= dir_last[7]; 
+                        if(load) begin latch <= 1; load <= 0;end      
+                   end
+                1: begin serial <= dir[6]; latch <= 0;end
+                2: serial <= dir_last[5];
+                3: serial <= dir_last[4];
+                4: serial <= dir_last[3];
+                5: serial <= dir_last[2];
+                6: serial <= dir_last[1];
+                7: begin 
+                        serial <= dir_last[0];
+                        if(changed) load <= 1;
+                    end
+                default: ;
+            endcase  
+        end    
 endmodule

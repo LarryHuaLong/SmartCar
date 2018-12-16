@@ -332,7 +332,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.2 blk_mem_gen_0 ]
-  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Coe_File {../../../../new/ram_init.coe} CONFIG.Enable_32bit_Address {false} CONFIG.Load_Init_File {true} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
+  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Coe_File {..\..\..\..\..\..\..\ram_init_os.coe} CONFIG.Enable_32bit_Address {false} CONFIG.Load_Init_File {true} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.1 clk_wiz_0 ]
@@ -355,12 +355,12 @@ CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} \
 
   # Generate the PRJ File for MIG
   set str_mig_folder [get_property IP_DIR [ get_ips [ get_property CONFIG.Component_Name $mig_7series_0 ] ] ]
-  set str_mig_file_name mig_a.prj
+  set str_mig_file_name mig_b.prj
   set str_mig_file_path ${str_mig_folder}/${str_mig_file_name}
 
   write_mig_file_MIPSfpga_system_mig_7series_0_0 $str_mig_file_path
 
-  set_property -dict [ list CONFIG.BOARD_MIG_PARAM {Custom} CONFIG.MIG_DONT_TOUCH_PARAM {Custom} CONFIG.RESET_BOARD_INTERFACE {Custom} CONFIG.XML_INPUT_FILE {mig_a.prj}  ] $mig_7series_0
+  set_property -dict [ list CONFIG.BOARD_MIG_PARAM {Custom} CONFIG.MIG_DONT_TOUCH_PARAM {Custom} CONFIG.RESET_BOARD_INTERFACE {Custom} CONFIG.XML_INPUT_FILE {mig_b.prj}  ] $mig_7series_0
 
   # Create instance: util_ds_buf_0, and set properties
   set util_ds_buf_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_0 ]

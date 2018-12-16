@@ -3,14 +3,14 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="dirctrl_tb_behav.wdb" id="1">
+      <db_ref path="dirctrl_tb_behav1.wdb" id="1">
          <top_modules>
             <top_module name="dirctrl_tb" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="10" />
    <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/clk_1kHz" type="logic">
       <obj_property name="ElementShortName">clk_1kHz</obj_property>
       <obj_property name="ObjectShortName">clk_1kHz</obj_property>
@@ -18,10 +18,6 @@
    <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/dir" type="array">
       <obj_property name="ElementShortName">dir[7:0]</obj_property>
       <obj_property name="ObjectShortName">dir[7:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/dir_buf" type="array">
-      <obj_property name="ElementShortName">dir_buf[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dir_buf[7:0]</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/counter" type="array">
       <obj_property name="ElementShortName">counter[2:0]</obj_property>
@@ -43,5 +39,17 @@
    <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/OE_" type="logic">
       <obj_property name="ElementShortName">OE_</obj_property>
       <obj_property name="ObjectShortName">OE_</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/dir_last" type="array">
+      <obj_property name="ElementShortName">dir_last[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dir_last[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/changed" type="logic">
+      <obj_property name="ElementShortName">changed</obj_property>
+      <obj_property name="ObjectShortName">changed</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/dirctrl_tb/dirctrl/load" type="logic">
+      <obj_property name="ElementShortName">load</obj_property>
+      <obj_property name="ObjectShortName">load</obj_property>
    </wvobject>
 </wave_config>

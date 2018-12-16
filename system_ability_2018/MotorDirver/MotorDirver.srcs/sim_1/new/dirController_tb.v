@@ -16,9 +16,10 @@ module dirctrl_tb;
         );
      initial begin
         clk_1kHz = 0;
-        dir = 8'b11110000;
-        #30 dir = 8'b10000001;
-        #30 dir = 8'b10001010;
+        dir = 8'b10000000;
+        #60 dir = 8'b10001010;
+        #170 dir = 8'b10001000;
+        #180 dir = 8'b10000001;
         #1000 $finish; 
      end
      always #1 clk_1kHz = ~clk_1kHz;

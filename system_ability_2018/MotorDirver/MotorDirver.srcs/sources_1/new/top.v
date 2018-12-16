@@ -23,58 +23,48 @@ module top(
     input CLK100MHZ,
     input [7:0] SW,
     input CPU_RESETN,
-    input  BTNU,
-    input  BTNC,
-    input  BTND,
-    input  BTNL,
-    input  BTNR,
-    output pwm_lf,
-    output pwm_rf,
-    output pwm_lb,
-    output pwm_rb,
-    output SCK,
-    output SDI,
-    output LCK,
-    output OE_
+//    input  BTNU,
+//    input  BTNC,
+//    input  BTND,
+//    input  BTNL,
+//    input  BTNR,
+    output pwm1,
+    output pwm2,
+    output pwm3,
+    output pwm4,
+    output dir_clk,
+    output dir_serial,
+    output dir_latch,
+    output dir_enable
     );
  
-    
     wire clk_1kHz;
     wire [7:0] dir;
-    wire [31:0] speed_lf;
-    wire [31:0] speed_rf;
-    wire [31:0] speed_lb;
-    wire [31:0] speed_rb;
-     reg [7:0]dir_buf;
-        
-    divider#(100000) div(CLK100MHZ,clk_1kHz);
-    assign speed_lf = 1<<19;
-    assign speed_rf = 1<<19;
-    assign speed_lb = 1<<19;
-    assign speed_rb = 1<<19;
+ 
+    assign pwm1 = 1;
+    assign pwm2 = 1;
+    assign pwm3 = 1;
+    assign pwm4 = 1;
+    assign dir = {24'b0,SW};
     
-    assign pwm_lf = 1;
-    assign pwm_lb = 1;
-    assign pwm_rf = 1;
-    assign pwm_rb = 1;
-        
+    divider#(50000) div(CLK100MHZ,clk_1kHz);    
     MotorDriver motor(
         .pwm_clk(CLK100MHZ),
         .clk_1kHz(clk_1kHz),
         .reset(CPU_RESETN),
-        .speed_lf(speed_lf),
-        .speed_rf(speed_rf),
-        .speed_lb(speed_lb),
-        .speed_rb(speed_rb),
-        .dir(dir),
-//        .pwm_lf(pwm_lf),
-//        .pwm_rf(pwm_rf),
-//        .pwm_lb(pwm_lb),
-//        .pwm_rb(pwm_rb),
-        .SCK(SCK),
-        .SDI(SDI),
-        .LCK(LCK),
-        .OE_(OE_)
+//        .speed1(speed1),
+//        .speed2(speed2),
+//        .speed3(speed3),
+//        .speed4(speed4),
+        .data(dir),
+//        .pwm1(pwm1),
+//        .pwm2(pwm2),
+//        .pwm3(pwm3),
+//        .pwm4(pwm4),
+        .dir_clk(dir_clk),
+        .dir_serial(dir_serial),
+        .dir_latch(dir_latch),
+        .dir_enable(dir_enable)
         );
 //        assign speed_lf[31:24] = {SW[15],SW[15],SW[15],SW[15]};
 //        assign speed_lf[23:16] = {SW[14],SW[14],SW[14],SW[14]};
@@ -94,7 +84,7 @@ module top(
 //        assign speed_rb[7:0] = {SW[0],SW[0],SW[0],SW[0]};
        
 
-       assign dir = SW[7:0];
+
 //           if(BTNC)dir_buf = 8'b00000000;
 //           if(BTNU)dir_buf = 8'b10101010;
 //           if(BTND)dir_buf = 8'b01010101;

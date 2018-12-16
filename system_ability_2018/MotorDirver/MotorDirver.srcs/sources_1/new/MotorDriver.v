@@ -24,63 +24,61 @@ module MotorDriver(
     input pwm_clk,
     input clk_1kHz,
     input reset,
-    input [31:0] speed_lf,
-    input [31:0] speed_rf,
-    input [31:0] speed_lb,
-    input [31:0] speed_rb,
-    input [7:0] dir,
-    output pwm_lf,
-    output pwm_rf,
-    output pwm_lb,
-    output pwm_rb,
-    output SCK,
-    output SDI,
-    output LCK,
-    output OE_
+    input [31:0] speed1,
+    input [31:0] speed2,
+    input [31:0] speed3,
+    input [31:0] speed4,
+    input [31:0] data,
+    output pwm1,
+    output pwm2,
+    output pwm3,
+    output pwm4,
+    output dir_clk,
+    output dir_serial,
+    output dir_latch,
+    output dir_enable
     );
     parameter period = 20;
     
     assign dir_clk = clk_1kHz;
-    assign dir_enable = 0;
         
-    wire [7:0]dir_buf;         
-    assign dir_buf = {dir[3],dir[6],dir[5],dir[4],dir[1],dir[0],dir[2],dir[7]};
-
+    wire [7:0]dir;         
+    assign dir = {data[5],data[6],data[4],data[2],data[0],data[1],data[3],data[7]};
     dirController dirctrl(
         .clk_1kHz(clk_1kHz),
-        .dir(dir_buf),
-        .SCK(SCK),
-        .SDI(SDI),
-        .LCK(LCK),
-        .OE_(OE_)
+        .dir(dir),
+        .SCK(dir_clk),
+        .SDI(dir_serial),
+        .LCK(dir_latch),
+        .OE_(dir_enable)
         );
     
     PWM#(.period(period)) 
-        wheel_lf (.Clk(pwm_clk),
-                  .DutyCycle(speed_lf),
-                  .Reset(1'b1),
-                  .PWM_out(pwm_lf),
+        wheel1 (.Clk(pwm_clk),
+                  .DutyCycle(speed1),
+                  .Reset(reset),
+                  .PWM_out(pwm1),
                   .count()
                   );
     PWM#(.period(period)) 
-        wheel_rf (.Clk(pwm_clk),
-                  .DutyCycle(speed_rf),
-                  .Reset(1'b1),
-                  .PWM_out(pwm_rf),
+        wheel2 (.Clk(pwm_clk),
+                  .DutyCycle(speed2),
+                  .Reset(reset),
+                  .PWM_out(pwm2),
                   .count()
                   );
     PWM#(.period(period)) 
-        wheel_lb (.Clk(pwm_clk),
-                  .DutyCycle(speed_lb),
-                  .Reset(1'b1),
-                  .PWM_out(pwm_lb),
+        wheel3 (.Clk(pwm_clk),
+                  .DutyCycle(speed3),
+                  .Reset(reset),
+                  .PWM_out(pwm3),
                   .count()
                   );
     PWM#(.period(period)) 
-        wheel_rb (.Clk(pwm_clk),
-                  .DutyCycle(speed_rb),
-                  .Reset(1'b1),
-                  .PWM_out(pwm_rb),
+        wheel4 (.Clk(pwm_clk),
+                  .DutyCycle(speed4),
+                  .Reset(reset),
+                  .PWM_out(pwm4),
                   .count()
                   );
    
