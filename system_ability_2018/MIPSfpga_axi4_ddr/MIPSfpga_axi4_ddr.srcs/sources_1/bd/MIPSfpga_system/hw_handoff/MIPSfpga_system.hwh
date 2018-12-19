@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 19 16:29:24 2018" VIVADOVERSION="2015.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 19 22:17:53 2018" VIVADOVERSION="2015.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="MIPSfpga_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -197,6 +197,11 @@
     <PORT DIR="I" LEFT="0" NAME="JC10" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_JC10">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="LED" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1275,6 +1280,7 @@
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED"/>
             <CONNECTION INSTANCE="MotorDriver_0" PORT="speed_dir"/>
           </CONNECTIONS>
         </PORT>

@@ -356,6 +356,16 @@
             </spirit:vector>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>LED</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>15</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -817,11 +827,6 @@
         <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In7"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>axi_gpio_0_gpio2_io_o</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio2_io_o"/>
-        <spirit:internalPortReference spirit:componentRef="MotorDriver_0" spirit:portRef="speed_dir"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>MIPS_MicroAptiv_UP_0_HCLK</spirit:name>
         <spirit:internalPortReference spirit:componentRef="MIPS_MicroAptiv_UP_0" spirit:portRef="HCLK"/>
         <spirit:internalPortReference spirit:componentRef="ahblite_axi_bridge_0" spirit:portRef="s_ahb_hclk"/>
@@ -978,6 +983,12 @@
         <spirit:name>In15_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="JC10"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="In15"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_gpio_0_gpio2_io_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio2_io_o"/>
+        <spirit:externalPortReference spirit:portRef="LED"/>
+        <spirit:internalPortReference spirit:componentRef="MotorDriver_0" spirit:portRef="speed_dir"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

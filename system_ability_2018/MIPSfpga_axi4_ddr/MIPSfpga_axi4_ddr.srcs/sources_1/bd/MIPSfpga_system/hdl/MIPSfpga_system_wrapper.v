@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Wed Dec 19 16:27:42 2018
+//Date        : Wed Dec 19 22:14:50 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system_wrapper.bd
 //Design      : MIPSfpga_system_wrapper
@@ -50,6 +50,7 @@ module MIPSfpga_system_wrapper
     JD7,
     JD8,
     JD9,
+    LED,
     UART_RXD_OUT,
     UART_TXD_IN,
     dir_clk,
@@ -100,6 +101,7 @@ module MIPSfpga_system_wrapper
   input [0:0]JD7;
   input [0:0]JD8;
   input [0:0]JD9;
+  output [15:0]LED;
   output UART_RXD_OUT;
   input UART_TXD_IN;
   output dir_clk;
@@ -151,6 +153,7 @@ module MIPSfpga_system_wrapper
   wire [0:0]JD7;
   wire [0:0]JD8;
   wire [0:0]JD9;
+  wire [15:0]LED;
   wire UART_RXD_OUT;
   wire UART_TXD_IN;
   wire dir_clk;
@@ -203,6 +206,7 @@ module MIPSfpga_system_wrapper
         .JD7(JD7),
         .JD8(JD8),
         .JD9(JD9),
+        .LED(LED),
         .UART_RXD_OUT(UART_RXD_OUT),
         .UART_TXD_IN(UART_TXD_IN),
         .dir_clk(dir_clk),

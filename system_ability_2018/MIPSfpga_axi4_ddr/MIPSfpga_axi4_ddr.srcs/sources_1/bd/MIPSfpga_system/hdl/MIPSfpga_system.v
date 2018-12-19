@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Wed Dec 19 16:27:41 2018
+//Date        : Wed Dec 19 22:14:49 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system.bd
 //Design      : MIPSfpga_system
@@ -51,6 +51,7 @@ module MIPSfpga_system
     JD7,
     JD8,
     JD9,
+    LED,
     UART_RXD_OUT,
     UART_TXD_IN,
     dir_clk,
@@ -101,6 +102,7 @@ module MIPSfpga_system
   input [0:0]JD7;
   input [0:0]JD8;
   input [0:0]JD9;
+  output [15:0]LED;
   output UART_RXD_OUT;
   input UART_TXD_IN;
   output dir_clk;
@@ -404,6 +406,7 @@ module MIPSfpga_system
   assign In8_1 = JC1[0];
   assign In9_1 = JC2[0];
   assign JB3 = MIPS_MicroAptiv_UP_0_EJ_TDO;
+  assign LED[15:0] = axi_gpio_0_gpio2_io_o;
   assign SI_ColdReset_1 = JB8;
   assign SI_Reset_1 = CPU_RESETN;
   assign UART_RXD_OUT = axi_uart16550_0_sout;
