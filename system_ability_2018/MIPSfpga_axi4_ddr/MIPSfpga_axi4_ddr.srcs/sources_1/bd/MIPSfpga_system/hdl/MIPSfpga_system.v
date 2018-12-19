@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Tue Dec 18 21:48:36 2018
+//Date        : Wed Dec 19 10:40:51 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system.bd
 //Design      : MIPSfpga_system
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "MIPSfpga_system,IP_Integrator,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=MIPSfpga_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=43,numReposBlks=35,numNonXlnxBlks=1,numHierBlks=8,maxHierDepth=0,da_board_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "MIPSfpga_system.hwdef" *) 
+(* CORE_GENERATION_INFO = "MIPSfpga_system,IP_Integrator,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=MIPSfpga_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=43,numReposBlks=35,numNonXlnxBlks=1,numHierBlks=8,maxHierDepth=0,da_board_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "MIPSfpga_system.hwdef" *) 
 module MIPSfpga_system
    (BT_RXD_OUT,
     BT_TXD_IN,
