@@ -1,0 +1,76 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 12632
+
+Current time: 	12/19/18 10:33:58 AM CST
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1600x900
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=SimSun,name=ËÎÌו,style=plain,size=12
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	D:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	larry
+User directory: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+Vivado preferences path: C:/Users/HUALONG/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/HUALONG/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	137 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 367 MB
+
+*/
+
+// TclEventType: START_GUI
+// HColorUtils.generateUniqueColorPalette (num colors: 55) elapsed time: 1.7s
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\HUALONG\Desktop\SmartCar\system_ability_2018\MIPSfpga_axi4_ddr\MIPSfpga_axi4_ddr.xpr. Version: Vivado v2015.2 
+// [GUI Memory]: 42 MB (+41509kb) [00:00:12]
+// [Engine Memory]: 355 MB (+220834kb) [00:00:12]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 390 MB. GUI used memory: 30 MB. Current time: 12/19/18 10:34:00 AM CST
+// [Engine Memory]: 390 MB (+18177kb) [00:00:16]
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 447 MB (+39155kb) [00:00:27]
+// HMemoryUtils.trashcanNow. Engine heap size: 486 MB. GUI used memory: 26 MB. Current time: 12/19/18 10:34:15 AM CST
+// [Engine Memory]: 486 MB (+17036kb) [00:00:32]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 510 MB (+77kb) [00:00:39]
+// [GUI Memory]: 45 MB (+1415kb) [00:00:40]
+// [Engine Memory]: 543 MB (+7683kb) [00:00:40]
+// [GUI Memory]: 49 MB (+1184kb) [00:00:40]
+// [GUI Memory]: 53 MB (+1858kb) [00:00:41]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/ip_repo'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MotorDirver'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: MIPSfpga_axi4_ddr; location: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 760.762 ; gain = 190.242 
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 58 MB (+2415kb) [00:00:58]
