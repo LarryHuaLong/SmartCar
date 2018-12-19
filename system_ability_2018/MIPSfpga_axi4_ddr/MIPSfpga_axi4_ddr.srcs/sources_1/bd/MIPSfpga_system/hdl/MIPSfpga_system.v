@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Wed Dec 19 10:40:51 2018
+//Date        : Wed Dec 19 16:27:41 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system.bd
 //Design      : MIPSfpga_system
@@ -299,10 +299,10 @@ module MIPSfpga_system
   wire axi_interconnect_0_M03_AXI_WREADY;
   wire [7:0]axi_interconnect_0_M03_AXI_WSTRB;
   wire axi_interconnect_0_M03_AXI_WVALID;
-  wire [12:0]axi_interconnect_0_M04_AXI_ARADDR;
+  wire [8:0]axi_interconnect_0_M04_AXI_ARADDR;
   wire axi_interconnect_0_M04_AXI_ARREADY;
   wire axi_interconnect_0_M04_AXI_ARVALID;
-  wire [12:0]axi_interconnect_0_M04_AXI_AWADDR;
+  wire [8:0]axi_interconnect_0_M04_AXI_AWADDR;
   wire axi_interconnect_0_M04_AXI_AWREADY;
   wire axi_interconnect_0_M04_AXI_AWVALID;
   wire axi_interconnect_0_M04_AXI_BREADY;
@@ -316,10 +316,10 @@ module MIPSfpga_system
   wire axi_interconnect_0_M04_AXI_WREADY;
   wire [3:0]axi_interconnect_0_M04_AXI_WSTRB;
   wire axi_interconnect_0_M04_AXI_WVALID;
-  wire [8:0]axi_interconnect_0_M05_AXI_ARADDR;
+  wire [12:0]axi_interconnect_0_M05_AXI_ARADDR;
   wire axi_interconnect_0_M05_AXI_ARREADY;
   wire axi_interconnect_0_M05_AXI_ARVALID;
-  wire [8:0]axi_interconnect_0_M05_AXI_AWADDR;
+  wire [12:0]axi_interconnect_0_M05_AXI_AWADDR;
   wire axi_interconnect_0_M05_AXI_AWREADY;
   wire axi_interconnect_0_M05_AXI_AWVALID;
   wire axi_interconnect_0_M05_AXI_BREADY;
@@ -339,7 +339,6 @@ module MIPSfpga_system
   wire axi_uart16550_1_sout;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
-  wire clk_wiz_0_clk_out3;
   wire [12:0]mig_7series_0_DDR2_ADDR;
   wire [2:0]mig_7series_0_DDR2_BA;
   wire mig_7series_0_DDR2_CAS_N;
@@ -444,7 +443,7 @@ module MIPSfpga_system
         .SI_Int(xlconcat_0_dout),
         .SI_Reset(util_vector_logic_0_Res));
   MIPSfpga_system_MotorDriver_0_0 MotorDriver_0
-       (.CLK100MHZ(clk_wiz_0_clk_out3),
+       (.CLK100MHZ(MIPS_MicroAptiv_UP_0_HCLK),
         .dir_clk(MotorDriver_0_dir_clk),
         .dir_enable(MotorDriver_0_dir_enable),
         .dir_latch(MotorDriver_0_dir_latch),
@@ -453,7 +452,7 @@ module MIPSfpga_system
         .pwm2(MotorDriver_0_pwm2),
         .pwm3(MotorDriver_0_pwm3),
         .pwm4(MotorDriver_0_pwm4),
-        .resetn(SI_Reset_1),
+        .resetn(MIPS_MicroAptiv_UP_0_HRESETn),
         .speed_dir(axi_gpio_0_gpio2_io_o));
   VCC VCC
        (.P(VCC_1));
@@ -573,24 +572,24 @@ module MIPSfpga_system
        (.intr(xlconcat_1_dout),
         .irq(axi_intc_0_irq),
         .s_axi_aclk(MIPS_MicroAptiv_UP_0_HCLK),
-        .s_axi_araddr(axi_interconnect_0_M05_AXI_ARADDR),
+        .s_axi_araddr(axi_interconnect_0_M04_AXI_ARADDR),
         .s_axi_aresetn(MIPS_MicroAptiv_UP_0_HRESETn),
-        .s_axi_arready(axi_interconnect_0_M05_AXI_ARREADY),
-        .s_axi_arvalid(axi_interconnect_0_M05_AXI_ARVALID),
-        .s_axi_awaddr(axi_interconnect_0_M05_AXI_AWADDR),
-        .s_axi_awready(axi_interconnect_0_M05_AXI_AWREADY),
-        .s_axi_awvalid(axi_interconnect_0_M05_AXI_AWVALID),
-        .s_axi_bready(axi_interconnect_0_M05_AXI_BREADY),
-        .s_axi_bresp(axi_interconnect_0_M05_AXI_BRESP),
-        .s_axi_bvalid(axi_interconnect_0_M05_AXI_BVALID),
-        .s_axi_rdata(axi_interconnect_0_M05_AXI_RDATA),
-        .s_axi_rready(axi_interconnect_0_M05_AXI_RREADY),
-        .s_axi_rresp(axi_interconnect_0_M05_AXI_RRESP),
-        .s_axi_rvalid(axi_interconnect_0_M05_AXI_RVALID),
-        .s_axi_wdata(axi_interconnect_0_M05_AXI_WDATA),
-        .s_axi_wready(axi_interconnect_0_M05_AXI_WREADY),
-        .s_axi_wstrb(axi_interconnect_0_M05_AXI_WSTRB),
-        .s_axi_wvalid(axi_interconnect_0_M05_AXI_WVALID));
+        .s_axi_arready(axi_interconnect_0_M04_AXI_ARREADY),
+        .s_axi_arvalid(axi_interconnect_0_M04_AXI_ARVALID),
+        .s_axi_awaddr(axi_interconnect_0_M04_AXI_AWADDR),
+        .s_axi_awready(axi_interconnect_0_M04_AXI_AWREADY),
+        .s_axi_awvalid(axi_interconnect_0_M04_AXI_AWVALID),
+        .s_axi_bready(axi_interconnect_0_M04_AXI_BREADY),
+        .s_axi_bresp(axi_interconnect_0_M04_AXI_BRESP),
+        .s_axi_bvalid(axi_interconnect_0_M04_AXI_BVALID),
+        .s_axi_rdata(axi_interconnect_0_M04_AXI_RDATA),
+        .s_axi_rready(axi_interconnect_0_M04_AXI_RREADY),
+        .s_axi_rresp(axi_interconnect_0_M04_AXI_RRESP),
+        .s_axi_rvalid(axi_interconnect_0_M04_AXI_RVALID),
+        .s_axi_wdata(axi_interconnect_0_M04_AXI_WDATA),
+        .s_axi_wready(axi_interconnect_0_M04_AXI_WREADY),
+        .s_axi_wstrb(axi_interconnect_0_M04_AXI_WSTRB),
+        .s_axi_wvalid(axi_interconnect_0_M04_AXI_WVALID));
   MIPSfpga_system_axi_interconnect_0_0 axi_interconnect_0
        (.ACLK(MIPS_MicroAptiv_UP_0_HCLK),
         .ARESETN(MIPS_MicroAptiv_UP_0_HRESETn),
@@ -803,7 +802,7 @@ module MIPSfpga_system
         .s_axi_wvalid(axi_interconnect_0_M02_AXI_WVALID),
         .sin(sin_1),
         .sout(axi_uart16550_0_sout));
-  MIPSfpga_system_axi_uart16550_0_1 axi_uart16550_1
+  MIPSfpga_system_axi_uart16550_1_0 axi_uart16550_1
        (.ctsn(VCC_1),
         .dcdn(VCC_1),
         .dsrn(VCC_1),
@@ -811,24 +810,24 @@ module MIPSfpga_system
         .ip2intc_irpt(axi_uart16550_1_ip2intc_irpt),
         .rin(VCC_1),
         .s_axi_aclk(MIPS_MicroAptiv_UP_0_HCLK),
-        .s_axi_araddr(axi_interconnect_0_M04_AXI_ARADDR),
+        .s_axi_araddr(axi_interconnect_0_M05_AXI_ARADDR),
         .s_axi_aresetn(MIPS_MicroAptiv_UP_0_HRESETn),
-        .s_axi_arready(axi_interconnect_0_M04_AXI_ARREADY),
-        .s_axi_arvalid(axi_interconnect_0_M04_AXI_ARVALID),
-        .s_axi_awaddr(axi_interconnect_0_M04_AXI_AWADDR),
-        .s_axi_awready(axi_interconnect_0_M04_AXI_AWREADY),
-        .s_axi_awvalid(axi_interconnect_0_M04_AXI_AWVALID),
-        .s_axi_bready(axi_interconnect_0_M04_AXI_BREADY),
-        .s_axi_bresp(axi_interconnect_0_M04_AXI_BRESP),
-        .s_axi_bvalid(axi_interconnect_0_M04_AXI_BVALID),
-        .s_axi_rdata(axi_interconnect_0_M04_AXI_RDATA),
-        .s_axi_rready(axi_interconnect_0_M04_AXI_RREADY),
-        .s_axi_rresp(axi_interconnect_0_M04_AXI_RRESP),
-        .s_axi_rvalid(axi_interconnect_0_M04_AXI_RVALID),
-        .s_axi_wdata(axi_interconnect_0_M04_AXI_WDATA),
-        .s_axi_wready(axi_interconnect_0_M04_AXI_WREADY),
-        .s_axi_wstrb(axi_interconnect_0_M04_AXI_WSTRB),
-        .s_axi_wvalid(axi_interconnect_0_M04_AXI_WVALID),
+        .s_axi_arready(axi_interconnect_0_M05_AXI_ARREADY),
+        .s_axi_arvalid(axi_interconnect_0_M05_AXI_ARVALID),
+        .s_axi_awaddr(axi_interconnect_0_M05_AXI_AWADDR),
+        .s_axi_awready(axi_interconnect_0_M05_AXI_AWREADY),
+        .s_axi_awvalid(axi_interconnect_0_M05_AXI_AWVALID),
+        .s_axi_bready(axi_interconnect_0_M05_AXI_BREADY),
+        .s_axi_bresp(axi_interconnect_0_M05_AXI_BRESP),
+        .s_axi_bvalid(axi_interconnect_0_M05_AXI_BVALID),
+        .s_axi_rdata(axi_interconnect_0_M05_AXI_RDATA),
+        .s_axi_rready(axi_interconnect_0_M05_AXI_RREADY),
+        .s_axi_rresp(axi_interconnect_0_M05_AXI_RRESP),
+        .s_axi_rvalid(axi_interconnect_0_M05_AXI_RVALID),
+        .s_axi_wdata(axi_interconnect_0_M05_AXI_WDATA),
+        .s_axi_wready(axi_interconnect_0_M05_AXI_WREADY),
+        .s_axi_wstrb(axi_interconnect_0_M05_AXI_WSTRB),
+        .s_axi_wvalid(axi_interconnect_0_M05_AXI_WVALID),
         .sin(sin_2),
         .sout(axi_uart16550_1_sout));
   MIPSfpga_system_blk_mem_gen_0_0 blk_mem_gen_0
@@ -841,8 +840,7 @@ module MIPSfpga_system
   MIPSfpga_system_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(CLK100MHZ_1),
         .clk_out1(clk_wiz_0_clk_out1),
-        .clk_out2(clk_wiz_0_clk_out2),
-        .clk_out3(clk_wiz_0_clk_out3));
+        .clk_out2(clk_wiz_0_clk_out2));
   MIPSfpga_system_mig_7series_0_0 mig_7series_0
        (.aresetn(MIPS_MicroAptiv_UP_0_HRESETn),
         .ddr2_addr(mig_7series_0_DDR2_ADDR),
@@ -1254,10 +1252,10 @@ module MIPSfpga_system_axi_interconnect_0_0
   output M03_AXI_wvalid;
   input M04_ACLK;
   input M04_ARESETN;
-  output [12:0]M04_AXI_araddr;
+  output [8:0]M04_AXI_araddr;
   input M04_AXI_arready;
   output M04_AXI_arvalid;
-  output [12:0]M04_AXI_awaddr;
+  output [8:0]M04_AXI_awaddr;
   input M04_AXI_awready;
   output M04_AXI_awvalid;
   output M04_AXI_bready;
@@ -1273,10 +1271,10 @@ module MIPSfpga_system_axi_interconnect_0_0
   output M04_AXI_wvalid;
   input M05_ACLK;
   input M05_ARESETN;
-  output [8:0]M05_AXI_araddr;
+  output [12:0]M05_AXI_araddr;
   input M05_AXI_arready;
   output M05_AXI_arvalid;
-  output [8:0]M05_AXI_awaddr;
+  output [12:0]M05_AXI_awaddr;
   input M05_AXI_awready;
   output M05_AXI_awvalid;
   output M05_AXI_bready;
@@ -1477,10 +1475,10 @@ module MIPSfpga_system_axi_interconnect_0_0
   wire m03_couplers_to_axi_interconnect_0_WREADY;
   wire [7:0]m03_couplers_to_axi_interconnect_0_WSTRB;
   wire m03_couplers_to_axi_interconnect_0_WVALID;
-  wire [12:0]m04_couplers_to_axi_interconnect_0_ARADDR;
+  wire [8:0]m04_couplers_to_axi_interconnect_0_ARADDR;
   wire m04_couplers_to_axi_interconnect_0_ARREADY;
   wire m04_couplers_to_axi_interconnect_0_ARVALID;
-  wire [12:0]m04_couplers_to_axi_interconnect_0_AWADDR;
+  wire [8:0]m04_couplers_to_axi_interconnect_0_AWADDR;
   wire m04_couplers_to_axi_interconnect_0_AWREADY;
   wire m04_couplers_to_axi_interconnect_0_AWVALID;
   wire m04_couplers_to_axi_interconnect_0_BREADY;
@@ -1494,10 +1492,10 @@ module MIPSfpga_system_axi_interconnect_0_0
   wire m04_couplers_to_axi_interconnect_0_WREADY;
   wire [3:0]m04_couplers_to_axi_interconnect_0_WSTRB;
   wire m04_couplers_to_axi_interconnect_0_WVALID;
-  wire [8:0]m05_couplers_to_axi_interconnect_0_ARADDR;
+  wire [12:0]m05_couplers_to_axi_interconnect_0_ARADDR;
   wire m05_couplers_to_axi_interconnect_0_ARREADY;
   wire m05_couplers_to_axi_interconnect_0_ARVALID;
-  wire [8:0]m05_couplers_to_axi_interconnect_0_AWADDR;
+  wire [12:0]m05_couplers_to_axi_interconnect_0_AWADDR;
   wire m05_couplers_to_axi_interconnect_0_AWREADY;
   wire m05_couplers_to_axi_interconnect_0_AWVALID;
   wire m05_couplers_to_axi_interconnect_0_BREADY;
@@ -1829,9 +1827,9 @@ module MIPSfpga_system_axi_interconnect_0_0
   assign M03_AXI_wvalid = m03_couplers_to_axi_interconnect_0_WVALID;
   assign M04_ACLK_1 = M04_ACLK;
   assign M04_ARESETN_1 = M04_ARESETN;
-  assign M04_AXI_araddr[12:0] = m04_couplers_to_axi_interconnect_0_ARADDR;
+  assign M04_AXI_araddr[8:0] = m04_couplers_to_axi_interconnect_0_ARADDR;
   assign M04_AXI_arvalid = m04_couplers_to_axi_interconnect_0_ARVALID;
-  assign M04_AXI_awaddr[12:0] = m04_couplers_to_axi_interconnect_0_AWADDR;
+  assign M04_AXI_awaddr[8:0] = m04_couplers_to_axi_interconnect_0_AWADDR;
   assign M04_AXI_awvalid = m04_couplers_to_axi_interconnect_0_AWVALID;
   assign M04_AXI_bready = m04_couplers_to_axi_interconnect_0_BREADY;
   assign M04_AXI_rready = m04_couplers_to_axi_interconnect_0_RREADY;
@@ -1840,9 +1838,9 @@ module MIPSfpga_system_axi_interconnect_0_0
   assign M04_AXI_wvalid = m04_couplers_to_axi_interconnect_0_WVALID;
   assign M05_ACLK_1 = M05_ACLK;
   assign M05_ARESETN_1 = M05_ARESETN;
-  assign M05_AXI_araddr[8:0] = m05_couplers_to_axi_interconnect_0_ARADDR;
+  assign M05_AXI_araddr[12:0] = m05_couplers_to_axi_interconnect_0_ARADDR;
   assign M05_AXI_arvalid = m05_couplers_to_axi_interconnect_0_ARVALID;
-  assign M05_AXI_awaddr[8:0] = m05_couplers_to_axi_interconnect_0_AWADDR;
+  assign M05_AXI_awaddr[12:0] = m05_couplers_to_axi_interconnect_0_AWADDR;
   assign M05_AXI_awvalid = m05_couplers_to_axi_interconnect_0_AWVALID;
   assign M05_AXI_bready = m05_couplers_to_axi_interconnect_0_BREADY;
   assign M05_AXI_rready = m05_couplers_to_axi_interconnect_0_RREADY;
@@ -2218,7 +2216,7 @@ module MIPSfpga_system_axi_interconnect_0_0
         .M_AXI_wvalid(m04_couplers_to_axi_interconnect_0_WVALID),
         .S_ACLK(axi_interconnect_0_ACLK_net),
         .S_ARESETN(axi_interconnect_0_ARESETN_net),
-        .S_AXI_araddr(xbar_to_m04_couplers_ARADDR[140:128]),
+        .S_AXI_araddr(xbar_to_m04_couplers_ARADDR),
         .S_AXI_arburst(xbar_to_m04_couplers_ARBURST),
         .S_AXI_arcache(xbar_to_m04_couplers_ARCACHE),
         .S_AXI_arlen(xbar_to_m04_couplers_ARLEN),
@@ -2229,7 +2227,7 @@ module MIPSfpga_system_axi_interconnect_0_0
         .S_AXI_arregion(xbar_to_m04_couplers_ARREGION),
         .S_AXI_arsize(xbar_to_m04_couplers_ARSIZE),
         .S_AXI_arvalid(xbar_to_m04_couplers_ARVALID),
-        .S_AXI_awaddr(xbar_to_m04_couplers_AWADDR[140:128]),
+        .S_AXI_awaddr(xbar_to_m04_couplers_AWADDR),
         .S_AXI_awburst(xbar_to_m04_couplers_AWBURST),
         .S_AXI_awcache(xbar_to_m04_couplers_AWCACHE),
         .S_AXI_awlen(xbar_to_m04_couplers_AWLEN),
@@ -2275,7 +2273,7 @@ module MIPSfpga_system_axi_interconnect_0_0
         .M_AXI_wvalid(m05_couplers_to_axi_interconnect_0_WVALID),
         .S_ACLK(axi_interconnect_0_ACLK_net),
         .S_ARESETN(axi_interconnect_0_ARESETN_net),
-        .S_AXI_araddr(xbar_to_m05_couplers_ARADDR),
+        .S_AXI_araddr(xbar_to_m05_couplers_ARADDR[172:160]),
         .S_AXI_arburst(xbar_to_m05_couplers_ARBURST),
         .S_AXI_arcache(xbar_to_m05_couplers_ARCACHE),
         .S_AXI_arlen(xbar_to_m05_couplers_ARLEN),
@@ -2286,7 +2284,7 @@ module MIPSfpga_system_axi_interconnect_0_0
         .S_AXI_arregion(xbar_to_m05_couplers_ARREGION),
         .S_AXI_arsize(xbar_to_m05_couplers_ARSIZE),
         .S_AXI_arvalid(xbar_to_m05_couplers_ARVALID),
-        .S_AXI_awaddr(xbar_to_m05_couplers_AWADDR),
+        .S_AXI_awaddr(xbar_to_m05_couplers_AWADDR[172:160]),
         .S_AXI_awburst(xbar_to_m05_couplers_AWBURST),
         .S_AXI_awcache(xbar_to_m05_couplers_AWCACHE),
         .S_AXI_awlen(xbar_to_m05_couplers_AWLEN),
@@ -4007,10 +4005,10 @@ module m04_couplers_imp_19UQ28A
     S_AXI_wvalid);
   input M_ACLK;
   input M_ARESETN;
-  output [12:0]M_AXI_araddr;
+  output [8:0]M_AXI_araddr;
   input M_AXI_arready;
   output M_AXI_arvalid;
-  output [12:0]M_AXI_awaddr;
+  output [8:0]M_AXI_awaddr;
   input M_AXI_awready;
   output M_AXI_awvalid;
   output M_AXI_bready;
@@ -4026,7 +4024,7 @@ module m04_couplers_imp_19UQ28A
   output M_AXI_wvalid;
   input S_ACLK;
   input S_ARESETN;
-  input [12:0]S_AXI_araddr;
+  input [31:0]S_AXI_araddr;
   input [1:0]S_AXI_arburst;
   input [3:0]S_AXI_arcache;
   input [7:0]S_AXI_arlen;
@@ -4037,7 +4035,7 @@ module m04_couplers_imp_19UQ28A
   input [3:0]S_AXI_arregion;
   input [2:0]S_AXI_arsize;
   input S_AXI_arvalid;
-  input [12:0]S_AXI_awaddr;
+  input [31:0]S_AXI_awaddr;
   input [1:0]S_AXI_awburst;
   input [3:0]S_AXI_awcache;
   input [7:0]S_AXI_awlen;
@@ -4064,7 +4062,7 @@ module m04_couplers_imp_19UQ28A
 
   wire S_ACLK_1;
   wire S_ARESETN_1;
-  wire [12:0]auto_ds_to_auto_pc_ARADDR;
+  wire [31:0]auto_ds_to_auto_pc_ARADDR;
   wire [1:0]auto_ds_to_auto_pc_ARBURST;
   wire [3:0]auto_ds_to_auto_pc_ARCACHE;
   wire [7:0]auto_ds_to_auto_pc_ARLEN;
@@ -4075,7 +4073,7 @@ module m04_couplers_imp_19UQ28A
   wire [3:0]auto_ds_to_auto_pc_ARREGION;
   wire [2:0]auto_ds_to_auto_pc_ARSIZE;
   wire auto_ds_to_auto_pc_ARVALID;
-  wire [12:0]auto_ds_to_auto_pc_AWADDR;
+  wire [31:0]auto_ds_to_auto_pc_AWADDR;
   wire [1:0]auto_ds_to_auto_pc_AWBURST;
   wire [3:0]auto_ds_to_auto_pc_AWCACHE;
   wire [7:0]auto_ds_to_auto_pc_AWLEN;
@@ -4099,10 +4097,10 @@ module m04_couplers_imp_19UQ28A
   wire auto_ds_to_auto_pc_WREADY;
   wire [3:0]auto_ds_to_auto_pc_WSTRB;
   wire auto_ds_to_auto_pc_WVALID;
-  wire [12:0]auto_pc_to_m04_couplers_ARADDR;
+  wire [31:0]auto_pc_to_m04_couplers_ARADDR;
   wire auto_pc_to_m04_couplers_ARREADY;
   wire auto_pc_to_m04_couplers_ARVALID;
-  wire [12:0]auto_pc_to_m04_couplers_AWADDR;
+  wire [31:0]auto_pc_to_m04_couplers_AWADDR;
   wire auto_pc_to_m04_couplers_AWREADY;
   wire auto_pc_to_m04_couplers_AWVALID;
   wire auto_pc_to_m04_couplers_BREADY;
@@ -4116,7 +4114,7 @@ module m04_couplers_imp_19UQ28A
   wire auto_pc_to_m04_couplers_WREADY;
   wire [3:0]auto_pc_to_m04_couplers_WSTRB;
   wire auto_pc_to_m04_couplers_WVALID;
-  wire [12:0]m04_couplers_to_auto_ds_ARADDR;
+  wire [31:0]m04_couplers_to_auto_ds_ARADDR;
   wire [1:0]m04_couplers_to_auto_ds_ARBURST;
   wire [3:0]m04_couplers_to_auto_ds_ARCACHE;
   wire [7:0]m04_couplers_to_auto_ds_ARLEN;
@@ -4127,7 +4125,7 @@ module m04_couplers_imp_19UQ28A
   wire [3:0]m04_couplers_to_auto_ds_ARREGION;
   wire [2:0]m04_couplers_to_auto_ds_ARSIZE;
   wire m04_couplers_to_auto_ds_ARVALID;
-  wire [12:0]m04_couplers_to_auto_ds_AWADDR;
+  wire [31:0]m04_couplers_to_auto_ds_AWADDR;
   wire [1:0]m04_couplers_to_auto_ds_AWBURST;
   wire [3:0]m04_couplers_to_auto_ds_AWCACHE;
   wire [7:0]m04_couplers_to_auto_ds_AWLEN;
@@ -4152,9 +4150,9 @@ module m04_couplers_imp_19UQ28A
   wire [7:0]m04_couplers_to_auto_ds_WSTRB;
   wire m04_couplers_to_auto_ds_WVALID;
 
-  assign M_AXI_araddr[12:0] = auto_pc_to_m04_couplers_ARADDR;
+  assign M_AXI_araddr[8:0] = auto_pc_to_m04_couplers_ARADDR[8:0];
   assign M_AXI_arvalid = auto_pc_to_m04_couplers_ARVALID;
-  assign M_AXI_awaddr[12:0] = auto_pc_to_m04_couplers_AWADDR;
+  assign M_AXI_awaddr[8:0] = auto_pc_to_m04_couplers_AWADDR[8:0];
   assign M_AXI_awvalid = auto_pc_to_m04_couplers_AWVALID;
   assign M_AXI_bready = auto_pc_to_m04_couplers_BREADY;
   assign M_AXI_rready = auto_pc_to_m04_couplers_RREADY;
@@ -4180,7 +4178,7 @@ module m04_couplers_imp_19UQ28A
   assign auto_pc_to_m04_couplers_RRESP = M_AXI_rresp[1:0];
   assign auto_pc_to_m04_couplers_RVALID = M_AXI_rvalid;
   assign auto_pc_to_m04_couplers_WREADY = M_AXI_wready;
-  assign m04_couplers_to_auto_ds_ARADDR = S_AXI_araddr[12:0];
+  assign m04_couplers_to_auto_ds_ARADDR = S_AXI_araddr[31:0];
   assign m04_couplers_to_auto_ds_ARBURST = S_AXI_arburst[1:0];
   assign m04_couplers_to_auto_ds_ARCACHE = S_AXI_arcache[3:0];
   assign m04_couplers_to_auto_ds_ARLEN = S_AXI_arlen[7:0];
@@ -4190,7 +4188,7 @@ module m04_couplers_imp_19UQ28A
   assign m04_couplers_to_auto_ds_ARREGION = S_AXI_arregion[3:0];
   assign m04_couplers_to_auto_ds_ARSIZE = S_AXI_arsize[2:0];
   assign m04_couplers_to_auto_ds_ARVALID = S_AXI_arvalid;
-  assign m04_couplers_to_auto_ds_AWADDR = S_AXI_awaddr[12:0];
+  assign m04_couplers_to_auto_ds_AWADDR = S_AXI_awaddr[31:0];
   assign m04_couplers_to_auto_ds_AWBURST = S_AXI_awburst[1:0];
   assign m04_couplers_to_auto_ds_AWCACHE = S_AXI_awcache[3:0];
   assign m04_couplers_to_auto_ds_AWLEN = S_AXI_awlen[7:0];
@@ -4395,10 +4393,10 @@ module m05_couplers_imp_7VAV8
     S_AXI_wvalid);
   input M_ACLK;
   input M_ARESETN;
-  output [8:0]M_AXI_araddr;
+  output [12:0]M_AXI_araddr;
   input M_AXI_arready;
   output M_AXI_arvalid;
-  output [8:0]M_AXI_awaddr;
+  output [12:0]M_AXI_awaddr;
   input M_AXI_awready;
   output M_AXI_awvalid;
   output M_AXI_bready;
@@ -4414,7 +4412,7 @@ module m05_couplers_imp_7VAV8
   output M_AXI_wvalid;
   input S_ACLK;
   input S_ARESETN;
-  input [31:0]S_AXI_araddr;
+  input [12:0]S_AXI_araddr;
   input [1:0]S_AXI_arburst;
   input [3:0]S_AXI_arcache;
   input [7:0]S_AXI_arlen;
@@ -4425,7 +4423,7 @@ module m05_couplers_imp_7VAV8
   input [3:0]S_AXI_arregion;
   input [2:0]S_AXI_arsize;
   input S_AXI_arvalid;
-  input [31:0]S_AXI_awaddr;
+  input [12:0]S_AXI_awaddr;
   input [1:0]S_AXI_awburst;
   input [3:0]S_AXI_awcache;
   input [7:0]S_AXI_awlen;
@@ -4452,7 +4450,7 @@ module m05_couplers_imp_7VAV8
 
   wire S_ACLK_1;
   wire S_ARESETN_1;
-  wire [31:0]auto_ds_to_auto_pc_ARADDR;
+  wire [12:0]auto_ds_to_auto_pc_ARADDR;
   wire [1:0]auto_ds_to_auto_pc_ARBURST;
   wire [3:0]auto_ds_to_auto_pc_ARCACHE;
   wire [7:0]auto_ds_to_auto_pc_ARLEN;
@@ -4463,7 +4461,7 @@ module m05_couplers_imp_7VAV8
   wire [3:0]auto_ds_to_auto_pc_ARREGION;
   wire [2:0]auto_ds_to_auto_pc_ARSIZE;
   wire auto_ds_to_auto_pc_ARVALID;
-  wire [31:0]auto_ds_to_auto_pc_AWADDR;
+  wire [12:0]auto_ds_to_auto_pc_AWADDR;
   wire [1:0]auto_ds_to_auto_pc_AWBURST;
   wire [3:0]auto_ds_to_auto_pc_AWCACHE;
   wire [7:0]auto_ds_to_auto_pc_AWLEN;
@@ -4487,10 +4485,10 @@ module m05_couplers_imp_7VAV8
   wire auto_ds_to_auto_pc_WREADY;
   wire [3:0]auto_ds_to_auto_pc_WSTRB;
   wire auto_ds_to_auto_pc_WVALID;
-  wire [31:0]auto_pc_to_m05_couplers_ARADDR;
+  wire [12:0]auto_pc_to_m05_couplers_ARADDR;
   wire auto_pc_to_m05_couplers_ARREADY;
   wire auto_pc_to_m05_couplers_ARVALID;
-  wire [31:0]auto_pc_to_m05_couplers_AWADDR;
+  wire [12:0]auto_pc_to_m05_couplers_AWADDR;
   wire auto_pc_to_m05_couplers_AWREADY;
   wire auto_pc_to_m05_couplers_AWVALID;
   wire auto_pc_to_m05_couplers_BREADY;
@@ -4504,7 +4502,7 @@ module m05_couplers_imp_7VAV8
   wire auto_pc_to_m05_couplers_WREADY;
   wire [3:0]auto_pc_to_m05_couplers_WSTRB;
   wire auto_pc_to_m05_couplers_WVALID;
-  wire [31:0]m05_couplers_to_auto_ds_ARADDR;
+  wire [12:0]m05_couplers_to_auto_ds_ARADDR;
   wire [1:0]m05_couplers_to_auto_ds_ARBURST;
   wire [3:0]m05_couplers_to_auto_ds_ARCACHE;
   wire [7:0]m05_couplers_to_auto_ds_ARLEN;
@@ -4515,7 +4513,7 @@ module m05_couplers_imp_7VAV8
   wire [3:0]m05_couplers_to_auto_ds_ARREGION;
   wire [2:0]m05_couplers_to_auto_ds_ARSIZE;
   wire m05_couplers_to_auto_ds_ARVALID;
-  wire [31:0]m05_couplers_to_auto_ds_AWADDR;
+  wire [12:0]m05_couplers_to_auto_ds_AWADDR;
   wire [1:0]m05_couplers_to_auto_ds_AWBURST;
   wire [3:0]m05_couplers_to_auto_ds_AWCACHE;
   wire [7:0]m05_couplers_to_auto_ds_AWLEN;
@@ -4540,9 +4538,9 @@ module m05_couplers_imp_7VAV8
   wire [7:0]m05_couplers_to_auto_ds_WSTRB;
   wire m05_couplers_to_auto_ds_WVALID;
 
-  assign M_AXI_araddr[8:0] = auto_pc_to_m05_couplers_ARADDR[8:0];
+  assign M_AXI_araddr[12:0] = auto_pc_to_m05_couplers_ARADDR;
   assign M_AXI_arvalid = auto_pc_to_m05_couplers_ARVALID;
-  assign M_AXI_awaddr[8:0] = auto_pc_to_m05_couplers_AWADDR[8:0];
+  assign M_AXI_awaddr[12:0] = auto_pc_to_m05_couplers_AWADDR;
   assign M_AXI_awvalid = auto_pc_to_m05_couplers_AWVALID;
   assign M_AXI_bready = auto_pc_to_m05_couplers_BREADY;
   assign M_AXI_rready = auto_pc_to_m05_couplers_RREADY;
@@ -4568,7 +4566,7 @@ module m05_couplers_imp_7VAV8
   assign auto_pc_to_m05_couplers_RRESP = M_AXI_rresp[1:0];
   assign auto_pc_to_m05_couplers_RVALID = M_AXI_rvalid;
   assign auto_pc_to_m05_couplers_WREADY = M_AXI_wready;
-  assign m05_couplers_to_auto_ds_ARADDR = S_AXI_araddr[31:0];
+  assign m05_couplers_to_auto_ds_ARADDR = S_AXI_araddr[12:0];
   assign m05_couplers_to_auto_ds_ARBURST = S_AXI_arburst[1:0];
   assign m05_couplers_to_auto_ds_ARCACHE = S_AXI_arcache[3:0];
   assign m05_couplers_to_auto_ds_ARLEN = S_AXI_arlen[7:0];
@@ -4578,7 +4576,7 @@ module m05_couplers_imp_7VAV8
   assign m05_couplers_to_auto_ds_ARREGION = S_AXI_arregion[3:0];
   assign m05_couplers_to_auto_ds_ARSIZE = S_AXI_arsize[2:0];
   assign m05_couplers_to_auto_ds_ARVALID = S_AXI_arvalid;
-  assign m05_couplers_to_auto_ds_AWADDR = S_AXI_awaddr[31:0];
+  assign m05_couplers_to_auto_ds_AWADDR = S_AXI_awaddr[12:0];
   assign m05_couplers_to_auto_ds_AWBURST = S_AXI_awburst[1:0];
   assign m05_couplers_to_auto_ds_AWCACHE = S_AXI_awcache[3:0];
   assign m05_couplers_to_auto_ds_AWLEN = S_AXI_awlen[7:0];

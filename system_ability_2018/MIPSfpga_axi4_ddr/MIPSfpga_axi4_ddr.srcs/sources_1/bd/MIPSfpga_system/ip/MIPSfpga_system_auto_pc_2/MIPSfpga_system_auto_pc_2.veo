@@ -57,7 +57,7 @@
 MIPSfpga_system_auto_pc_2 your_instance_name (
   .aclk(aclk),                      // input wire aclk
   .aresetn(aresetn),                // input wire aresetn
-  .s_axi_awaddr(s_axi_awaddr),      // input wire [12 : 0] s_axi_awaddr
+  .s_axi_awaddr(s_axi_awaddr),      // input wire [31 : 0] s_axi_awaddr
   .s_axi_awlen(s_axi_awlen),        // input wire [7 : 0] s_axi_awlen
   .s_axi_awsize(s_axi_awsize),      // input wire [2 : 0] s_axi_awsize
   .s_axi_awburst(s_axi_awburst),    // input wire [1 : 0] s_axi_awburst
@@ -76,7 +76,7 @@ MIPSfpga_system_auto_pc_2 your_instance_name (
   .s_axi_bresp(s_axi_bresp),        // output wire [1 : 0] s_axi_bresp
   .s_axi_bvalid(s_axi_bvalid),      // output wire s_axi_bvalid
   .s_axi_bready(s_axi_bready),      // input wire s_axi_bready
-  .s_axi_araddr(s_axi_araddr),      // input wire [12 : 0] s_axi_araddr
+  .s_axi_araddr(s_axi_araddr),      // input wire [31 : 0] s_axi_araddr
   .s_axi_arlen(s_axi_arlen),        // input wire [7 : 0] s_axi_arlen
   .s_axi_arsize(s_axi_arsize),      // input wire [2 : 0] s_axi_arsize
   .s_axi_arburst(s_axi_arburst),    // input wire [1 : 0] s_axi_arburst
@@ -92,7 +92,7 @@ MIPSfpga_system_auto_pc_2 your_instance_name (
   .s_axi_rlast(s_axi_rlast),        // output wire s_axi_rlast
   .s_axi_rvalid(s_axi_rvalid),      // output wire s_axi_rvalid
   .s_axi_rready(s_axi_rready),      // input wire s_axi_rready
-  .m_axi_awaddr(m_axi_awaddr),      // output wire [12 : 0] m_axi_awaddr
+  .m_axi_awaddr(m_axi_awaddr),      // output wire [31 : 0] m_axi_awaddr
   .m_axi_awprot(m_axi_awprot),      // output wire [2 : 0] m_axi_awprot
   .m_axi_awvalid(m_axi_awvalid),    // output wire m_axi_awvalid
   .m_axi_awready(m_axi_awready),    // input wire m_axi_awready
@@ -103,7 +103,7 @@ MIPSfpga_system_auto_pc_2 your_instance_name (
   .m_axi_bresp(m_axi_bresp),        // input wire [1 : 0] m_axi_bresp
   .m_axi_bvalid(m_axi_bvalid),      // input wire m_axi_bvalid
   .m_axi_bready(m_axi_bready),      // output wire m_axi_bready
-  .m_axi_araddr(m_axi_araddr),      // output wire [12 : 0] m_axi_araddr
+  .m_axi_araddr(m_axi_araddr),      // output wire [31 : 0] m_axi_araddr
   .m_axi_arprot(m_axi_arprot),      // output wire [2 : 0] m_axi_arprot
   .m_axi_arvalid(m_axi_arvalid),    // output wire m_axi_arvalid
   .m_axi_arready(m_axi_arready),    // input wire m_axi_arready

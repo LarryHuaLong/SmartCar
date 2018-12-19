@@ -2,15 +2,14 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Dec 19 11:07:31 2018
-# Process ID: 22120
+# Start of session at: Wed Dec 19 16:40:07 2018
+# Process ID: 20340
 # Log file: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/MIPSfpga_system_auto_ds_4_synth_1/MIPSfpga_system_auto_ds_4.vds
 # Journal file: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/MIPSfpga_system_auto_ds_4_synth_1\vivado.jou
 #-----------------------------------------------------------
 source MIPSfpga_system_auto_ds_4.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/ip_repo'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MotorDirver'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2015.2/data/ip'.
 WARNING: [IP_Flow 19-3664] IP 'MIPSfpga_system_auto_ds_4' generated file not found 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_4/MIPSfpga_system_auto_ds_4.dcp'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'MIPSfpga_system_auto_ds_4' generated file not found 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_4/MIPSfpga_system_auto_ds_4_stub.v'. Please regenerate to continue.
@@ -22,7 +21,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 261.059 ; gain = 87.844
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 260.703 ; gain = 88.051
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'MIPSfpga_system_auto_ds_4' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_4/synth/MIPSfpga_system_auto_ds_4.v:57]
 INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_top' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/xilinx.com/axi_dwidth_converter_v2_1/d98fa611/hdl/verilog/axi_dwidth_converter_v2_1_top.v:79]
@@ -30,7 +29,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_top' [c:/User
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_SUPPORTS_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_SUPPORTS_WRITE bound to: 1 - type: integer 
@@ -56,7 +55,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_axi_downsizer
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_SUPPORTS_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_SUPPORTS_WRITE bound to: 1 - type: integer 
@@ -66,7 +65,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_axi_downsizer
 	Parameter C_M_AXI_BYTES_LOG bound to: 2 - type: integer 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_RATIO_LOG bound to: 1 - type: integer 
-	Parameter P_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter P_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
@@ -77,7 +76,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_a_downsizer' 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_SUPPORTS_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_CHANNEL bound to: 0 - type: integer 
@@ -88,7 +87,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_a_downsizer' 
 	Parameter C_RATIO_LOG bound to: 1 - type: integer 
 	Parameter C_S_AXI_NATIVE_SIZE bound to: 3'b011 
 	Parameter C_M_AXI_NATIVE_SIZE bound to: 3'b010 
-	Parameter C_DOUBLE_LEN bound to: 40'b0000000000000000000000000000000011111111 
+	Parameter C_DOUBLE_LEN bound to: 21'b000000000000011111111 
 	Parameter C_FIX_BURST bound to: 2'b00 
 	Parameter C_INCR_BURST bound to: 2'b01 
 	Parameter C_WRAP_BURST bound to: 2'b10 
@@ -1506,7 +1505,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_a_downsizer__
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_SUPPORTS_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_CHANNEL bound to: 1 - type: integer 
@@ -1517,7 +1516,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_a_downsizer__
 	Parameter C_RATIO_LOG bound to: 1 - type: integer 
 	Parameter C_S_AXI_NATIVE_SIZE bound to: 3'b011 
 	Parameter C_M_AXI_NATIVE_SIZE bound to: 3'b010 
-	Parameter C_DOUBLE_LEN bound to: 40'b0000000000000000000000000000000011111111 
+	Parameter C_DOUBLE_LEN bound to: 21'b000000000000011111111 
 	Parameter C_FIX_BURST bound to: 2'b00 
 	Parameter C_INCR_BURST bound to: 2'b01 
 	Parameter C_WRAP_BURST bound to: 2'b10 
@@ -1541,7 +1540,7 @@ INFO: [Synth 8-256] done synthesizing module 'axi_dwidth_converter_v2_1_axi_down
 INFO: [Synth 8-256] done synthesizing module 'axi_dwidth_converter_v2_1_top' (25#1) [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/xilinx.com/axi_dwidth_converter_v2_1/d98fa611/hdl/verilog/axi_dwidth_converter_v2_1_top.v:79]
 INFO: [Synth 8-256] done synthesizing module 'MIPSfpga_system_auto_ds_4' (26#1) [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_4/synth/MIPSfpga_system_auto_ds_4.v:57]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:54 ; elapsed = 00:02:59 . Memory (MB): peak = 379.598 ; gain = 206.383
+Finished RTL Elaboration : Time (s): cpu = 00:03:24 ; elapsed = 00:03:30 . Memory (MB): peak = 379.246 ; gain = 206.594
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1551,7 +1550,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:54 ; elapsed = 00:03:00 . Memory (MB): peak = 379.598 ; gain = 206.383
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:25 ; elapsed = 00:03:30 . Memory (MB): peak = 379.246 ; gain = 206.594
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1570,23 +1569,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 614.871 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 615.066 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:09 ; elapsed = 00:03:16 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Constraint Validation : Time (s): cpu = 00:03:47 ; elapsed = 00:03:55 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:09 ; elapsed = 00:03:16 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:47 ; elapsed = 00:03:55 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:10 ; elapsed = 00:03:16 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:47 ; elapsed = 00:03:55 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cmd_step_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -1600,7 +1599,7 @@ INFO: [Synth 8-5544] ROM "size_mask" won't be mapped to Block RAM because addres
 INFO: [Synth 8-5544] ROM "fix_len" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'first_word_reg' into 'first_mi_word_reg' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/xilinx.com/axi_dwidth_converter_v2_1/d98fa611/hdl/verilog/axi_dwidth_converter_v2_1_r_downsizer.v:308]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:12 ; elapsed = 00:03:18 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:51 ; elapsed = 00:03:59 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1613,7 +1612,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 7     
 	   3 Input      8 Bit       Adders := 2     
 	   2 Input      5 Bit       Adders := 6     
@@ -1621,8 +1620,9 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 60    
 +---Registers : 
-	               32 Bit    Registers := 10    
+	               32 Bit    Registers := 2     
 	               26 Bit    Registers := 2     
+	               13 Bit    Registers := 8     
 	               11 Bit    Registers := 2     
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 13    
@@ -1633,8 +1633,9 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 14    
 	                1 Bit    Registers := 91    
 +---Muxes : 
-	   8 Input     32 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 3     
+	   8 Input     13 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 4     
 	   2 Input     11 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 11    
 	   8 Input      7 Bit        Muxes := 2     
@@ -1706,11 +1707,11 @@ Detailed RTL Component Info :
 Module axi_dwidth_converter_v2_1_a_downsizer 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 2     
 	   3 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 4     
+	               13 Bit    Registers := 4     
 	               11 Bit    Registers := 1     
 	                8 Bit    Registers := 5     
 	                7 Bit    Registers := 1     
@@ -1720,8 +1721,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 16    
 +---Muxes : 
-	   8 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
+	   8 Input     13 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 4     
 	   8 Input      7 Bit        Muxes := 1     
@@ -1759,11 +1760,11 @@ Detailed RTL Component Info :
 Module axi_dwidth_converter_v2_1_a_downsizer__parameterized0 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 2     
 	   3 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 4     
+	               13 Bit    Registers := 4     
 	               11 Bit    Registers := 1     
 	                8 Bit    Registers := 5     
 	                7 Bit    Registers := 1     
@@ -1773,8 +1774,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 15    
 +---Muxes : 
-	   8 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
+	   8 Input     13 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   8 Input      7 Bit        Muxes := 1     
@@ -1814,14 +1815,14 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:03:12 ; elapsed = 00:03:19 . Memory (MB): peak = 614.871 ; gain = 441.656
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:03:51 ; elapsed = 00:03:59 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:03:13 ; elapsed = 00:03:20 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Cross Boundary Optimization : Time (s): cpu = 00:03:52 ; elapsed = 00:04:01 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:03:13 ; elapsed = 00:03:20 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Parallel Reinference  : Time (s): cpu = 00:03:52 ; elapsed = 00:04:01 . Memory (MB): peak = 615.066 ; gain = 442.414
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1849,16 +1850,16 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:03:16 ; elapsed = 00:03:23 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Area Optimization : Time (s): cpu = 00:03:57 ; elapsed = 00:04:06 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:03:16 ; elapsed = 00:03:23 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Parallel Area Optimization  : Time (s): cpu = 00:03:57 ; elapsed = 00:04:06 . Memory (MB): peak = 615.066 ; gain = 442.414
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:03:16 ; elapsed = 00:03:23 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:03:57 ; elapsed = 00:04:06 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1866,10 +1867,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:38 ; elapsed = 00:03:46 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:31 ; elapsed = 00:04:43 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:39 ; elapsed = 00:03:46 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Timing Optimization : Time (s): cpu = 00:04:32 ; elapsed = 00:04:44 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1904,7 +1905,7 @@ INFO: [Synth 8-3332] Sequential element (\gen_downsizer.gen_simple_downsizer.axi
 INFO: [Synth 8-3332] Sequential element (\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/next_mi_addr_reg[1] ) is unused and will be removed from module axi_dwidth_converter_v2_1_top.
 INFO: [Synth 8-3332] Sequential element (\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/next_mi_addr_reg[0] ) is unused and will be removed from module axi_dwidth_converter_v2_1_top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:42 ; elapsed = 00:03:49 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Technology Mapping : Time (s): cpu = 00:04:35 ; elapsed = 00:04:47 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1922,7 +1923,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:42 ; elapsed = 00:03:50 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished IO Insertion : Time (s): cpu = 00:04:36 ; elapsed = 00:04:48 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1935,7 +1936,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:42 ; elapsed = 00:03:50 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:36 ; elapsed = 00:04:48 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1947,13 +1948,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:43 ; elapsed = 00:03:51 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:37 ; elapsed = 00:04:49 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:03:43 ; elapsed = 00:03:51 . Memory (MB): peak = 614.871 ; gain = 441.656
+Start Renaming Generated Ports : Time (s): cpu = 00:04:37 ; elapsed = 00:04:49 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:43 ; elapsed = 00:03:51 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:37 ; elapsed = 00:04:49 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1969,17 +1970,17 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    18|
+|1     |CARRY4 |     6|
 |2     |LUT1   |    14|
-|3     |LUT2   |    85|
-|4     |LUT3   |   137|
-|5     |LUT4   |   147|
-|6     |LUT5   |    92|
-|7     |LUT6   |   358|
+|3     |LUT2   |    88|
+|4     |LUT3   |   143|
+|5     |LUT4   |   146|
+|6     |LUT5   |    87|
+|7     |LUT6   |   257|
 |8     |RAM32M |    12|
 |9     |FDCE   |    66|
 |10    |FDPE   |    45|
-|11    |FDRE   |   679|
+|11    |FDRE   |   527|
 |12    |FDSE   |     3|
 +------+-------+------+
 
@@ -1987,12 +1988,12 @@ Report Instance Areas:
 +------+------------------------------------------------------------+------------------------------------------------------+------+
 |      |Instance                                                    |Module                                                |Cells |
 +------+------------------------------------------------------------+------------------------------------------------------+------+
-|1     |top                                                         |                                                      |  1656|
-|2     |  inst                                                      |axi_dwidth_converter_v2_1_top                         |  1656|
-|3     |    \gen_downsizer.gen_simple_downsizer.axi_downsizer_inst  |axi_dwidth_converter_v2_1_axi_downsizer               |  1656|
-|4     |      \USE_READ.read_addr_inst                              |axi_dwidth_converter_v2_1_a_downsizer__parameterized0 |   639|
-|5     |        cmd_queue                                           |axi_data_fifo_v2_1_axic_fifo_8                        |   226|
-|6     |          inst                                              |axi_data_fifo_v2_1_fifo_gen_9                         |   226|
+|1     |top                                                         |                                                      |  1394|
+|2     |  inst                                                      |axi_dwidth_converter_v2_1_top                         |  1394|
+|3     |    \gen_downsizer.gen_simple_downsizer.axi_downsizer_inst  |axi_dwidth_converter_v2_1_axi_downsizer               |  1394|
+|4     |      \USE_READ.read_addr_inst                              |axi_dwidth_converter_v2_1_a_downsizer__parameterized0 |   508|
+|5     |        cmd_queue                                           |axi_data_fifo_v2_1_axic_fifo_8                        |   217|
+|6     |          inst                                              |axi_data_fifo_v2_1_fifo_gen_9                         |   217|
 |7     |            fifo_gen_inst                                   |fifo_generator_v12_0                                  |   131|
 |8     |              inst_fifo_gen                                 |fifo_generator_v12_0_synth_10                         |   131|
 |9     |                \gconvfifo.rf                               |fifo_generator_top_11                                 |   131|
@@ -2009,9 +2010,9 @@ Report Instance Areas:
 |20    |                    rstblk                                  |reset_blk_ramfifo_16                                  |    18|
 |21    |      \USE_READ.read_data_inst                              |axi_dwidth_converter_v2_1_r_downsizer                 |   174|
 |22    |      \USE_WRITE.USE_SPLIT.write_resp_inst                  |axi_dwidth_converter_v2_1_b_downsizer                 |    36|
-|23    |      \USE_WRITE.write_addr_inst                            |axi_dwidth_converter_v2_1_a_downsizer                 |   734|
-|24    |        \USE_B_CHANNEL.cmd_b_queue                          |axi_data_fifo_v2_1_axic_fifo__parameterized0          |   101|
-|25    |          inst                                              |axi_data_fifo_v2_1_fifo_gen__parameterized0           |   101|
+|23    |      \USE_WRITE.write_addr_inst                            |axi_dwidth_converter_v2_1_a_downsizer                 |   603|
+|24    |        \USE_B_CHANNEL.cmd_b_queue                          |axi_data_fifo_v2_1_axic_fifo__parameterized0          |   100|
+|25    |          inst                                              |axi_data_fifo_v2_1_fifo_gen__parameterized0           |   100|
 |26    |            fifo_gen_inst                                   |fifo_generator_v12_0__parameterized0                  |    94|
 |27    |              inst_fifo_gen                                 |fifo_generator_v12_0_synth__parameterized0            |    94|
 |28    |                \gconvfifo.rf                               |fifo_generator_top__parameterized0                    |    94|
@@ -2026,8 +2027,8 @@ Report Instance Areas:
 |37    |                    \gntv_or_sync_fifo.mem                  |memory__parameterized0                                |    20|
 |38    |                      \gdm.dm                               |dmem__parameterized0                                  |    11|
 |39    |                    rstblk                                  |reset_blk_ramfifo_2                                   |    18|
-|40    |        cmd_queue                                           |axi_data_fifo_v2_1_axic_fifo                          |   219|
-|41    |          inst                                              |axi_data_fifo_v2_1_fifo_gen                           |   219|
+|40    |        cmd_queue                                           |axi_data_fifo_v2_1_axic_fifo                          |   210|
+|41    |          inst                                              |axi_data_fifo_v2_1_fifo_gen                           |   210|
 |42    |            fifo_gen_inst                                   |fifo_generator_v12_0__1                               |   131|
 |43    |              inst_fifo_gen                                 |fifo_generator_v12_0_synth                            |   131|
 |44    |                \gconvfifo.rf                               |fifo_generator_top                                    |   131|
@@ -2045,13 +2046,13 @@ Report Instance Areas:
 |56    |      \USE_WRITE.write_data_inst                            |axi_dwidth_converter_v2_1_w_downsizer                 |    73|
 +------+------------------------------------------------------------+------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:43 ; elapsed = 00:03:51 . Memory (MB): peak = 614.871 ; gain = 441.656
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:37 ; elapsed = 00:04:49 . Memory (MB): peak = 615.066 ; gain = 442.414
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:03:32 . Memory (MB): peak = 614.871 ; gain = 175.523
-Synthesis Optimization Complete : Time (s): cpu = 00:03:43 ; elapsed = 00:03:51 . Memory (MB): peak = 614.871 ; gain = 441.656
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:04:25 . Memory (MB): peak = 615.066 ; gain = 174.879
+Synthesis Optimization Complete : Time (s): cpu = 00:04:37 ; elapsed = 00:04:49 . Memory (MB): peak = 615.066 ; gain = 442.414
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_4/MIPSfpga_system_auto_ds_4_ooc.xdc] for cell 'inst'
@@ -2065,9 +2066,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-128 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+127 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:41 ; elapsed = 00:03:47 . Memory (MB): peak = 614.871 ; gain = 413.645
+synth_design: Time (s): cpu = 00:04:37 ; elapsed = 00:04:48 . Memory (MB): peak = 615.066 ; gain = 414.496
 INFO: [Coretcl 2-1174] Renamed 55 cell refs.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 614.871 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 19 11:11:31 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 615.066 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 19 16:45:07 2018...

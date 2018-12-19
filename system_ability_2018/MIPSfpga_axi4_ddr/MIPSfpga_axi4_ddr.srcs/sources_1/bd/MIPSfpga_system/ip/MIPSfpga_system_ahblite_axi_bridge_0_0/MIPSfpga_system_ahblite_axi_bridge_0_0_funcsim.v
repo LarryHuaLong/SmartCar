@@ -1,7 +1,7 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-// Date        : Wed Dec 19 10:46:22 2018
+// Date        : Wed Dec 19 16:31:19 2018
 // Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_ahblite_axi_bridge_0_0/MIPSfpga_system_ahblite_axi_bridge_0_0_funcsim.v
@@ -285,17 +285,17 @@ endmodule
 (* ORIG_REF_NAME = "ahb_if" *) 
 module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
    (idle_txfer_pending,
+    ahb_hburst_single,
+    SR,
     ahb_penult_beat_reg_0,
     ahb_done_axi_in_progress_reg_0,
     ahb_hburst_incr,
-    SR,
     nonseq_txfer_pending,
     s_ahb_hready_out,
     s_ahb_hresp,
     burst_term_hwrite,
     burst_term_single_incr,
     burst_term,
-    ahb_hburst_single,
     ahb_data_valid,
     S_AHB_HREADY_OUT_i_reg_0,
     Q,
@@ -319,7 +319,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
     seq_detected,
     ahb_burst_done,
     idle_detected_i,
-    p_28_in,
+    p_29_in,
     M_AXI_WSTRB_i,
     dummy_on_axi,
     dummy_on_axi_init,
@@ -384,17 +384,17 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
     s_ahb_haddr,
     D);
   output idle_txfer_pending;
+  output ahb_hburst_single;
+  output [0:0]SR;
   output ahb_penult_beat_reg_0;
   output ahb_done_axi_in_progress_reg_0;
   output ahb_hburst_incr;
-  output [0:0]SR;
   output nonseq_txfer_pending;
   output s_ahb_hready_out;
   output s_ahb_hresp;
   output burst_term_hwrite;
   output burst_term_single_incr;
   output burst_term;
-  output ahb_hburst_single;
   output ahb_data_valid;
   output S_AHB_HREADY_OUT_i_reg_0;
   output [2:0]Q;
@@ -418,7 +418,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
   output seq_detected;
   output ahb_burst_done;
   output idle_detected_i;
-  output p_28_in;
+  output p_29_in;
   output [0:0]M_AXI_WSTRB_i;
   output dummy_on_axi;
   output dummy_on_axi_init;
@@ -557,6 +557,8 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
   wire dummy_on_axi_progress_reg;
   wire dummy_txfer_in_progress_i_1_n_0;
   wire dummy_txfer_in_progress_reg_n_0;
+  wire eqOp;
+  wire eqOp0_in;
   wire idle_detected_i;
   wire idle_txfer_pending;
   wire idle_txfer_pending_reg_0;
@@ -579,7 +581,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
   wire [0:0]out;
   wire p_14_in;
   wire [2:2]p_1_out;
-  wire p_28_in;
+  wire p_29_in;
   wire rd_load_timeout_cntr;
   wire reset_hready0;
   wire reset_hready24_out;
@@ -832,7 +834,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .D(\AXI_ABURST_i[1]_i_1_n_0 ),
         .Q(m_axi_arburst[1]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \AXI_ALEN_i[1]_i_1 
@@ -848,7 +850,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .I3(s_ahb_hsel),
         .I4(s_ahb_htrans[1]),
         .O(AXI_ALEN_i0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \AXI_ALEN_i[3]_i_2 
@@ -942,7 +944,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .D(s_ahb_hprot[3]),
         .Q(m_axi_arcache[1]),
         .S(SR));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \GEN_1_PROT_CACHE_REG_NON_SECURE.AXI_APROT_i[1]_i_1 
@@ -1003,7 +1005,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .I4(M_AXI_WLAST_i_reg_0),
         .I5(m_axi_wready),
         .O(M_AXI_WLAST_i));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'hE)) 
     M_AXI_WVALID_i_i_4
@@ -1016,7 +1018,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
        (.I0(ahb_data_valid),
         .I1(local_en_reg),
         .O(M_AXI_WVALID_i3));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \NARROW_TRANSFER_OFF.M_AXI_WSTRB_i[3]_i_1 
@@ -1226,7 +1228,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .D(m_axi_rdata[9]),
         .Q(s_ahb_hrdata[9]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h0000FFF2)) 
     S_AHB_HREADY_OUT_i_i_11
@@ -1236,7 +1238,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .I3(ahb_hburst_incr),
         .I4(out),
         .O(S_AHB_HREADY_OUT_i_reg_2));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h1F)) 
     S_AHB_HREADY_OUT_i_i_12
@@ -1253,7 +1255,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .I3(nonseq_txfer_pending),
         .I4(timeout_detected),
         .O(S_AHB_HREADY_OUT_i_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'hABFFFFFF)) 
     S_AHB_HREADY_OUT_i_i_22
@@ -1329,7 +1331,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .D(ahb_data_valid_i_reg_0),
         .Q(ahb_data_valid),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     ahb_done_axi_in_progress_i_2
@@ -1345,32 +1347,46 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .D(M_AXI_WLAST_i_reg),
         .Q(ahb_done_axi_in_progress_reg_0),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFF04FF00000400)) 
+  LUT5 #(
+    .INIT(32'hEFFF2000)) 
     ahb_hburst_incr_i_i_1
+       (.I0(eqOp),
+        .I1(s_ahb_htrans[0]),
+        .I2(s_ahb_htrans[1]),
+        .I3(s_ahb_hready_out),
+        .I4(ahb_hburst_incr),
+        .O(ahb_hburst_incr_i_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    ahb_hburst_incr_i_i_2
        (.I0(s_ahb_hburst[2]),
         .I1(s_ahb_hburst[0]),
         .I2(s_ahb_hburst[1]),
-        .I3(s_ahb_htrans[1]),
-        .I4(s_ahb_htrans[0]),
-        .I5(ahb_hburst_incr),
-        .O(ahb_hburst_incr_i_i_1_n_0));
+        .O(eqOp));
   FDRE ahb_hburst_incr_i_reg
        (.C(s_ahb_hclk),
         .CE(1'b1),
         .D(ahb_hburst_incr_i_i_1_n_0),
         .Q(ahb_hburst_incr),
         .R(SR));
-  LUT6 #(
-    .INIT(64'hFFFF01FF00000100)) 
+  LUT5 #(
+    .INIT(32'hEFFF2000)) 
     ahb_hburst_single_i_i_1
+       (.I0(eqOp0_in),
+        .I1(s_ahb_htrans[0]),
+        .I2(s_ahb_htrans[1]),
+        .I3(s_ahb_hready_out),
+        .I4(ahb_hburst_single),
+        .O(ahb_hburst_single_i_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    ahb_hburst_single_i_i_2
        (.I0(s_ahb_hburst[2]),
         .I1(s_ahb_hburst[0]),
         .I2(s_ahb_hburst[1]),
-        .I3(s_ahb_htrans[1]),
-        .I4(s_ahb_htrans[0]),
-        .I5(ahb_hburst_single),
-        .O(ahb_hburst_single_i_i_1_n_0));
+        .O(eqOp0_in));
   FDRE ahb_hburst_single_i_reg
        (.C(s_ahb_hclk),
         .CE(1'b1),
@@ -1383,7 +1399,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
        (.I0(ahb_penult_beat_reg_0),
         .I1(s_ahb_hresetn),
         .I2(\INFERRED_GEN.icount_out_reg[3] ),
-        .I3(p_28_in),
+        .I3(p_29_in),
         .I4(s_ahb_htrans[1]),
         .I5(s_ahb_htrans[0]),
         .O(ahb_penult_beat_i_1_n_0));
@@ -1393,7 +1409,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
     ahb_penult_beat_i_3
        (.I0(s_ahb_hready_in),
         .I1(s_ahb_hsel),
-        .O(p_28_in));
+        .O(p_29_in));
   FDRE ahb_penult_beat_reg
        (.C(s_ahb_hclk),
         .CE(1'b1),
@@ -1505,7 +1521,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .I4(\INFERRED_GEN.icount_out_reg[0] ),
         .I5(burst_term),
         .O(dummy_on_axi_init));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'h90000090)) 
     dummy_on_axi_progress_i_3
@@ -1544,7 +1560,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .I4(Q[1]),
         .I5(\INFERRED_GEN.icount_out_reg[4] [1]),
         .O(dummy_on_axi_progress_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h6)) 
     dummy_on_axi_progress_i_8
@@ -1642,7 +1658,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
         .I2(nonseq_detected),
         .I3(valid_cnt_required[2]),
         .O(\valid_cnt_required_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \valid_cnt_required_i[3]_i_2 
@@ -1777,18 +1793,18 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bridge
   wire AHB_DATA_COUNTER_n_3;
   wire AHB_DATA_COUNTER_n_4;
   wire AHB_DATA_COUNTER_n_5;
-  wire AHB_IF_n_1;
   wire AHB_IF_n_13;
   wire AHB_IF_n_17;
   wire AHB_IF_n_19;
-  wire AHB_IF_n_2;
   wire AHB_IF_n_21;
   wire AHB_IF_n_22;
   wire AHB_IF_n_23;
   wire AHB_IF_n_24;
   wire AHB_IF_n_25;
   wire AHB_IF_n_27;
+  wire AHB_IF_n_3;
   wire AHB_IF_n_33;
+  wire AHB_IF_n_4;
   wire AXI_ALEN_i0;
   wire AXI_RCHANNEL_n_12;
   wire AXI_RCHANNEL_n_2;
@@ -1876,7 +1892,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bridge
   wire nonseq_detected;
   wire nonseq_txfer_pending;
   wire p_14_in;
-  wire p_28_in;
+  wire p_29_in;
   wire rd_load_timeout_cntr;
   wire reset_hready0;
   wire reset_hready24_out;
@@ -1925,15 +1941,16 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bridge
         .O({TIME_OUT_n_3,TIME_OUT_n_4,TIME_OUT_n_5,TIME_OUT_n_6}),
         .Q(AXI_WCHANNEL_n_12),
         .S_AHB_HREADY_OUT_i_reg(AHBLITE_AXI_CONTROL_n_24),
+        .S_AHB_HREADY_OUT_i_reg_0(s_ahb_hready_out),
         .S_AHB_HRESP_i_reg(AHBLITE_AXI_CONTROL_n_19),
         .ahb_burst_done(ahb_burst_done),
         .ahb_data_valid_burst_term_reg(AHBLITE_AXI_CONTROL_n_28),
         .ahb_data_valid_burst_term_reg_0(AXI_WCHANNEL_n_5),
         .ahb_done_axi_in_progress_reg(AHB_IF_n_13),
-        .ahb_done_axi_in_progress_reg_0(AHB_IF_n_2),
+        .ahb_done_axi_in_progress_reg_0(AHB_IF_n_4),
         .ahb_hburst_incr(ahb_hburst_incr),
         .ahb_hburst_single(ahb_hburst_single),
-        .ahb_penult_beat_reg(AHB_IF_n_1),
+        .ahb_penult_beat_reg(AHB_IF_n_3),
         .ahb_rd_txer_pending_reg(AXI_RCHANNEL_n_5),
         .\axi_rresp_avlbl_reg[1] (AXI_RCHANNEL_n_4),
         .\axi_rresp_avlbl_reg[1]_0 (AXI_RCHANNEL_n_2),
@@ -1982,7 +1999,6 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bridge
         .s_ahb_hburst(s_ahb_hburst[2:1]),
         .s_ahb_hclk(s_ahb_hclk),
         .s_ahb_hready_in(s_ahb_hready_in),
-        .s_ahb_hready_out(s_ahb_hready_out),
         .s_ahb_hresetn(s_ahb_hresetn),
         .s_ahb_hsel(s_ahb_hsel),
         .s_ahb_htrans(s_ahb_htrans),
@@ -2039,10 +2055,10 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bridge
         .ahb_burst_done(ahb_burst_done),
         .ahb_data_valid(ahb_data_valid),
         .ahb_data_valid_i_reg_0(AXI_WCHANNEL_n_20),
-        .ahb_done_axi_in_progress_reg_0(AHB_IF_n_2),
+        .ahb_done_axi_in_progress_reg_0(AHB_IF_n_4),
         .ahb_hburst_incr(ahb_hburst_incr),
         .ahb_hburst_single(ahb_hburst_single),
-        .ahb_penult_beat_reg_0(AHB_IF_n_1),
+        .ahb_penult_beat_reg_0(AHB_IF_n_3),
         .ahb_rd_txer_pending_reg(AXI_RCHANNEL_n_8),
         .axi_penult_beat_reg(burst_term_txer_cnt),
         .\axi_rresp_avlbl_reg[1] (AXI_RCHANNEL_n_12),
@@ -2083,7 +2099,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bridge
         .nonseq_txfer_pending_i_reg_0(AHBLITE_AXI_CONTROL_n_29),
         .out(AHBLITE_AXI_CONTROL_n_0),
         .p_14_in(p_14_in),
-        .p_28_in(p_28_in),
+        .p_29_in(p_29_in),
         .rd_load_timeout_cntr(rd_load_timeout_cntr),
         .reset_hready0(reset_hready0),
         .reset_hready24_out(reset_hready24_out),
@@ -2158,7 +2174,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bridge
         .ahb_data_valid_burst_term_reg_0(AXI_WCHANNEL_n_5),
         .ahb_data_valid_i_reg(AXI_WCHANNEL_n_20),
         .ahb_done_axi_in_progress_reg(AXI_WCHANNEL_n_19),
-        .ahb_done_axi_in_progress_reg_0(AHB_IF_n_2),
+        .ahb_done_axi_in_progress_reg_0(AHB_IF_n_4),
         .ahb_hburst_incr(ahb_hburst_incr),
         .ahb_hburst_single(ahb_hburst_single),
         .axi_waddr_done_i(axi_waddr_done_i),
@@ -2183,7 +2199,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bridge
         .m_axi_wvalid(m_axi_wvalid),
         .nonseq_detected(nonseq_detected),
         .nonseq_txfer_pending_i_reg(AHBLITE_AXI_CONTROL_n_28),
-        .p_28_in(p_28_in),
+        .p_29_in(p_29_in),
         .s_ahb_hclk(s_ahb_hclk),
         .s_ahb_hresetn(s_ahb_hresetn),
         .s_ahb_hwdata(s_ahb_hwdata),
@@ -2301,7 +2317,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_control
     reset_hready24_out,
     ahb_data_valid_burst_term_reg_0,
     M_AXI_WVALID_i3,
-    s_ahb_hready_out,
+    S_AHB_HREADY_OUT_i_reg_0,
     m_axi_arready,
     M_AXI_ARVALID_i_reg_0,
     m_axi_awready,
@@ -2392,7 +2408,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_control
   input reset_hready24_out;
   input ahb_data_valid_burst_term_reg_0;
   input M_AXI_WVALID_i3;
-  input s_ahb_hready_out;
+  input S_AHB_HREADY_OUT_i_reg_0;
   input m_axi_arready;
   input M_AXI_ARVALID_i_reg_0;
   input m_axi_awready;
@@ -2445,6 +2461,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_control
   wire S_AHB_HREADY_OUT_i_i_7_n_0;
   wire S_AHB_HREADY_OUT_i_i_8_n_0;
   wire S_AHB_HREADY_OUT_i_reg;
+  wire S_AHB_HREADY_OUT_i_reg_0;
   wire S_AHB_HRESP_i_i_6_n_0;
   wire S_AHB_HRESP_i_reg;
   wire ahb_burst_done;
@@ -2505,7 +2522,6 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_control
   wire [1:0]s_ahb_hburst;
   wire s_ahb_hclk;
   wire s_ahb_hready_in;
-  wire s_ahb_hready_out;
   wire s_ahb_hresetn;
   wire s_ahb_hsel;
   wire [1:0]s_ahb_htrans;
@@ -2798,7 +2814,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_control
         .I2(S_AHB_HREADY_OUT_i_i_4_n_0),
         .I3(s_ahb_hresetn),
         .I4(S_AHB_HREADY_OUT_i_i_5_n_0),
-        .I5(s_ahb_hready_out),
+        .I5(S_AHB_HREADY_OUT_i_reg_0),
         .O(S_AHB_HREADY_OUT_i_reg));
   LUT5 #(
     .INIT(32'hFF08FFFF)) 
@@ -2833,14 +2849,15 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_control
         .I2(ctl_sm_cs[1]),
         .I3(ctl_sm_cs[2]),
         .O(S_AHB_HREADY_OUT_i_i_19_n_0));
-  LUT5 #(
-    .INIT(32'h00FF00B0)) 
+  LUT6 #(
+    .INIT(64'h0000FFFF00000D00)) 
     S_AHB_HREADY_OUT_i_i_20
-       (.I0(m_axi_wready),
-        .I1(M_AXI_WVALID_i_reg_1),
-        .I2(ctl_sm_cs[1]),
-        .I3(ctl_sm_cs[0]),
-        .I4(ctl_sm_cs[2]),
+       (.I0(M_AXI_WVALID_i_reg_1),
+        .I1(m_axi_wready),
+        .I2(ahb_hburst_single),
+        .I3(ctl_sm_cs[1]),
+        .I4(ctl_sm_cs[0]),
+        .I5(ctl_sm_cs[2]),
         .O(S_AHB_HREADY_OUT_i_i_20_n_0));
   LUT4 #(
     .INIT(16'h0020)) 
@@ -3203,7 +3220,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_rchannel
         .D(M_AXI_ARVALID_i_reg_0),
         .Q(m_axi_arvalid),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
     .INIT(16'hBAAA)) 
     M_AXI_RLAST_reg_i_1
@@ -3232,7 +3249,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_rchannel
         .I4(busy_detected),
         .I5(set_hresp_err),
         .O(M_AXI_RREADY_i_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'hFFFF8000)) 
     M_AXI_RREADY_i_i_3
@@ -3242,7 +3259,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_rchannel
         .I3(s_ahb_htrans[0]),
         .I4(ahb_rd_txer_pending),
         .O(M_AXI_RREADY_i0));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'h80)) 
     M_AXI_RREADY_i_i_4
@@ -3302,7 +3319,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_rchannel
         .I4(ahb_rd_txer_pending011_out),
         .I5(axi_rresp_avlbl),
         .O(S_AHB_HREADY_OUT_i_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'hAAAAEAAA)) 
     S_AHB_HREADY_OUT_i_i_25
@@ -3519,7 +3536,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
     m_axi_bvalid,
     m_axi_wready,
     ahb_data_valid,
-    p_28_in,
+    p_29_in,
     burst_term,
     s_ahb_hwdata,
     \burst_term_txer_cnt_i_reg[3] ,
@@ -3568,7 +3585,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
   input m_axi_bvalid;
   input m_axi_wready;
   input ahb_data_valid;
-  input p_28_in;
+  input p_29_in;
   input burst_term;
   input [31:0]s_ahb_hwdata;
   input [2:0]\burst_term_txer_cnt_i_reg[3] ;
@@ -3678,7 +3695,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
   wire m_axi_wvalid;
   wire nonseq_detected;
   wire nonseq_txfer_pending_i_reg;
-  wire p_28_in;
+  wire p_29_in;
   wire s_ahb_hclk;
   wire s_ahb_hresetn;
   wire [31:0]s_ahb_hwdata;
@@ -4299,7 +4316,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
         .I3(ahb_data_valid_i_i_2_n_0),
         .I4(ahb_data_valid),
         .O(ahb_data_valid_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'h000020FF)) 
     ahb_data_valid_i_i_2
@@ -4307,7 +4324,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
         .I1(m_axi_wready),
         .I2(local_en_reg_0),
         .I3(ahb_data_valid),
-        .I4(p_28_in),
+        .I4(p_29_in),
         .O(ahb_data_valid_i_i_2_n_0));
   LUT6 #(
     .INIT(64'hAAAA002AAAAA0000)) 
@@ -4326,7 +4343,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
         .I1(axi_waddr_done_i),
         .I2(axi_cnt_required[1]),
         .O(\axi_cnt_required[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \axi_cnt_required[2]_i_1 
@@ -4334,7 +4351,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
         .I1(axi_waddr_done_i),
         .I2(axi_cnt_required[2]),
         .O(\axi_cnt_required[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \axi_cnt_required[3]_i_1 
@@ -4382,7 +4399,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
         .I4(dummy_on_axi_init),
         .I5(dummy_on_axi_progress_reg_0),
         .O(dummy_on_axi_progress_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     dummy_on_axi_progress_i_9
@@ -4695,7 +4712,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f
         .I1(Q[0]),
         .I2(set_axi_waddr),
         .O(\INFERRED_GEN.icount_out[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT4 #(
     .INIT(16'h006A)) 
     \INFERRED_GEN.icount_out[2]_i_1__0 
@@ -4704,7 +4721,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f
         .I2(Q[0]),
         .I3(set_axi_waddr),
         .O(\INFERRED_GEN.icount_out[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT5 #(
     .INIT(32'h00006CCC)) 
     \INFERRED_GEN.icount_out[3]_i_1__0 
@@ -4770,7 +4787,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f
         .I3(M_AXI_WVALID_i_reg),
         .I4(axi_last_beat_i_2_n_0),
         .O(axi_last_beat_reg));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h15)) 
     axi_last_beat_i_2
@@ -4798,7 +4815,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f
         .I4(\burst_term_txer_cnt_i_reg[3] [1]),
         .I5(Q[4]),
         .O(eqOp1_out));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'h42180000)) 
     axi_last_beat_i_5
@@ -4808,7 +4825,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f
         .I3(Q[2]),
         .I4(Q[1]),
         .O(axi_last_beat_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'h42180000)) 
     axi_last_beat_i_6
@@ -4827,7 +4844,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f
         .I3(M_AXI_WVALID_i_reg),
         .I4(axi_penult_beat_i_2_n_0),
         .O(axi_penult_beat_reg));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h15)) 
     axi_penult_beat_i_2
@@ -4855,7 +4872,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f
         .I4(\burst_term_txer_cnt_i_reg[3] [1]),
         .I5(Q[4]),
         .O(eqOp5_out));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'h01048020)) 
     axi_penult_beat_i_5
@@ -4865,7 +4882,7 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f
         .I3(Q[2]),
         .I4(Q[1]),
         .O(axi_penult_beat_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'h01048020)) 
     axi_penult_beat_i_6
@@ -5336,14 +5353,14 @@ module MIPSfpga_system_ahblite_axi_bridge_0_0_time_out
         .D(timeout_i),
         .Q(timeout_o),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'hE)) 
     S_AHB_HREADY_OUT_i_i_26
        (.I0(timeout_o),
         .I1(idle_txfer_pending),
         .O(S_AHB_HREADY_OUT_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'hE)) 
     S_AHB_HRESP_i_i_10

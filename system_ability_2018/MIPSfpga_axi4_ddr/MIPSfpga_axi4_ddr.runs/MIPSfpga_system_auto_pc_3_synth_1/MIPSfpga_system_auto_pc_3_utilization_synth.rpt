@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Wed Dec 19 10:58:06 2018
+| Date         : Wed Dec 19 16:57:55 2018
 | Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MIPSfpga_system_auto_pc_3_utilization_synth.rpt -pb MIPSfpga_system_auto_pc_3_utilization_synth.pb
 | Design       : MIPSfpga_system_auto_pc_3
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  451 |     0 |     63400 |  0.71 |
-|   LUT as Logic             |  404 |     0 |     63400 |  0.64 |
+| Slice LUTs*                |  431 |     0 |     63400 |  0.68 |
+|   LUT as Logic             |  384 |     0 |     63400 |  0.61 |
 |   LUT as Memory            |   47 |     0 |     19000 |  0.25 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   47 |     0 |           |       |
-| Slice Registers            |  501 |     0 |    126800 |  0.40 |
-|   Register as Flip Flop    |  501 |     0 |    126800 |  0.40 |
+| Slice Registers            |  426 |     0 |    126800 |  0.34 |
+|   Register as Flip Flop    |  426 |     0 |    126800 |  0.34 |
 |   Register as Latch        |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     15850 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 46    |          Yes |         Set |            - |
-| 455   |          Yes |       Reset |            - |
+| 47    |          Yes |         Set |            - |
+| 379   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,12 +149,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  455 |        Flop & Latch |
-| LUT3     |  207 |                 LUT |
-| LUT6     |  132 |                 LUT |
-| LUT5     |   85 |                 LUT |
-| FDSE     |   46 |        Flop & Latch |
-| LUT4     |   44 |                 LUT |
+| FDRE     |  379 |        Flop & Latch |
+| LUT3     |  169 |                 LUT |
+| LUT6     |  131 |                 LUT |
+| LUT5     |   84 |                 LUT |
+| FDSE     |   47 |        Flop & Latch |
+| LUT4     |   42 |                 LUT |
 | SRLC32E  |   36 |  Distributed Memory |
 | LUT1     |   36 |                 LUT |
 | LUT2     |   18 |                 LUT |

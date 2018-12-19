@@ -2,28 +2,27 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Dec 19 10:48:50 2018
-# Process ID: 7832
+# Start of session at: Wed Dec 19 16:37:31 2018
+# Process ID: 13956
 # Log file: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/MIPSfpga_system_mig_7series_0_0_synth_1/MIPSfpga_system_mig_7series_0_0.vds
 # Journal file: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/MIPSfpga_system_mig_7series_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source MIPSfpga_system_mig_7series_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/ip_repo'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MotorDirver'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2015.2/data/ip'.
 WARNING: [IP_Flow 19-3664] IP 'MIPSfpga_system_mig_7series_0_0' generated file not found 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0.dcp'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'MIPSfpga_system_mig_7series_0_0' generated file not found 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0_stub.v'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'MIPSfpga_system_mig_7series_0_0' generated file not found 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0_stub.vhdl'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'MIPSfpga_system_mig_7series_0_0' generated file not found 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0_funcsim.v'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'MIPSfpga_system_mig_7series_0_0' generated file not found 'c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0_funcsim.vhdl'. Please regenerate to continue.
-read_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 268.270 ; gain = 79.313
+read_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 268.152 ; gain = 78.938
 Command: synth_design -top MIPSfpga_system_mig_7series_0_0 -part xc7a100tcsg324-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 300.406 ; gain = 127.953
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 300.008 ; gain = 127.027
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'MIPSfpga_system_mig_7series_0_0' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0/user_design/rtl/MIPSfpga_system_mig_7series_0_0.v:71]
 INFO: [Synth 8-638] synthesizing module 'MIPSfpga_system_mig_7series_0_0_mig' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0/user_design/rtl/MIPSfpga_system_mig_7series_0_0_mig.v:74]
@@ -5921,7 +5920,7 @@ WARNING: [Synth 8-3848] Net device_temp_i in module/entity MIPSfpga_system_mig_7
 INFO: [Synth 8-256] done synthesizing module 'MIPSfpga_system_mig_7series_0_0_mig' (101#1) [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0/user_design/rtl/MIPSfpga_system_mig_7series_0_0_mig.v:74]
 INFO: [Synth 8-256] done synthesizing module 'MIPSfpga_system_mig_7series_0_0' (102#1) [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0/user_design/rtl/MIPSfpga_system_mig_7series_0_0.v:71]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 476.875 ; gain = 304.422
+Finished RTL Elaboration : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 476.465 ; gain = 303.484
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -6032,7 +6031,7 @@ WARNING: [Synth 8-3295] tying undriven pin u_ddr_mc_phy:phy_dout[93] to constant
 WARNING: [Synth 8-3295] tying undriven pin u_ddr_mc_phy:phy_dout[92] to constant 0 [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0/user_design/rtl/phy/mig_7series_v2_3_ddr_mc_phy_wrapper.v:1575]
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 476.875 ; gain = 304.422
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 476.465 ; gain = 303.484
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 200 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -6059,22 +6058,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LUT6_2 => LUT6_2 (LUT6, LUT5): 24 instances
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 51 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.607 . Memory (MB): peak = 789.824 ; gain = 1.836
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.506 . Memory (MB): peak = 789.270 ; gain = 1.922
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:39 ; elapsed = 00:01:45 . Memory (MB): peak = 789.824 ; gain = 617.371
+Finished Constraint Validation : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 789.270 ; gain = 616.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:39 ; elapsed = 00:01:45 . Memory (MB): peak = 789.824 ; gain = 617.371
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 789.270 ; gain = 616.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:01:46 . Memory (MB): peak = 789.824 ; gain = 617.371
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 789.270 ; gain = 616.289
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'xadc_supplied_temperature.xadc_den_reg' into 'xadc_supplied_temperature.sample_timer_clr_reg' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0/user_design/rtl/clocking/mig_7series_v2_3_tempmon.v:286]
 INFO: [Synth 8-5546] ROM "sample_en0" won't be mapped to RAM because it is too sparse
@@ -6398,7 +6397,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'cal1_state_r_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mig_7series_v2_3_axi_mc_r_channel'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 789.824 ; gain = 617.371
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 789.270 ; gain = 616.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7630,7 +7629,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:19 ; elapsed = 00:02:28 . Memory (MB): peak = 789.824 ; gain = 617.371
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:03 ; elapsed = 00:02:08 . Memory (MB): peak = 789.270 ; gain = 616.289
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -7667,9 +7666,9 @@ INFO: [Synth 8-5546] ROM "pi_phaselock_start" won't be mapped to RAM because it 
 INFO: [Synth 8-5546] ROM "pi_phase_locked_err" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:02:37 ; elapsed = 00:02:47 . Memory (MB): peak = 789.824 ; gain = 617.371
+Finished Cross Boundary Optimization : Time (s): cpu = 00:02:19 ; elapsed = 00:02:24 . Memory (MB): peak = 789.270 ; gain = 616.289
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:02:37 ; elapsed = 00:02:47 . Memory (MB): peak = 789.824 ; gain = 617.371
+Finished Parallel Reinference  : Time (s): cpu = 00:02:19 ; elapsed = 00:02:24 . Memory (MB): peak = 789.270 ; gain = 616.289
 
 Report RTL Partitions: 
 +------+----------------------------------------------------+------------+----------+
@@ -7884,9 +7883,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (ddr_phy_t
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_ddr_mc_phy_wrapperi_3/\phy_ctl_wd_i1_reg[26] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_ddr_mc_phy_wrapperi_3/\phy_ctl_wd_i1_reg[26] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:04:35 ; elapsed = 00:04:57 . Memory (MB): peak = 904.727 ; gain = 732.273
+Finished Area Optimization : Time (s): cpu = 00:04:06 ; elapsed = 00:04:17 . Memory (MB): peak = 903.953 ; gain = 730.973
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:04:35 ; elapsed = 00:04:57 . Memory (MB): peak = 904.727 ; gain = 732.273
+Finished Parallel Area Optimization  : Time (s): cpu = 00:04:06 ; elapsed = 00:04:17 . Memory (MB): peak = 903.953 ; gain = 730.973
 
 Report RTL Partitions: 
 +------+----------------------------------------------------+------------+----------+
@@ -7901,7 +7900,7 @@ Report RTL Partitions:
 |7     |mig_7series_v2_3_memc_ui_top_axi__GC0               |           1|      6055|
 |8     |MIPSfpga_system_mig_7series_0_0_mig__GC0            |           1|       281|
 +------+----------------------------------------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:35 ; elapsed = 00:04:57 . Memory (MB): peak = 904.727 ; gain = 732.273
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:06 ; elapsed = 00:04:17 . Memory (MB): peak = 903.953 ; gain = 730.973
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -7909,10 +7908,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:10 ; elapsed = 00:05:33 . Memory (MB): peak = 988.691 ; gain = 816.238
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:37 ; elapsed = 00:04:49 . Memory (MB): peak = 989.309 ; gain = 816.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:13 ; elapsed = 00:05:36 . Memory (MB): peak = 993.684 ; gain = 821.230
+Finished Timing Optimization : Time (s): cpu = 00:04:40 ; elapsed = 00:04:52 . Memory (MB): peak = 994.301 ; gain = 821.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7932,7 +7931,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:53 ; elapsed = 00:06:23 . Memory (MB): peak = 1022.508 ; gain = 850.055
+Finished Technology Mapping : Time (s): cpu = 00:05:15 ; elapsed = 00:05:31 . Memory (MB): peak = 1021.313 ; gain = 848.332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7973,7 +7972,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 50 on net \u_MIPSfpga_sys
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:56 ; elapsed = 00:06:27 . Memory (MB): peak = 1022.508 ; gain = 850.055
+Finished IO Insertion : Time (s): cpu = 00:05:18 ; elapsed = 00:05:34 . Memory (MB): peak = 1021.313 ; gain = 848.332
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -7986,7 +7985,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:57 ; elapsed = 00:06:27 . Memory (MB): peak = 1022.508 ; gain = 850.055
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:18 ; elapsed = 00:05:34 . Memory (MB): peak = 1021.313 ; gain = 848.332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7998,13 +7997,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:02 ; elapsed = 00:06:33 . Memory (MB): peak = 1022.508 ; gain = 850.055
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:24 ; elapsed = 00:05:40 . Memory (MB): peak = 1021.313 ; gain = 848.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:06:02 ; elapsed = 00:06:33 . Memory (MB): peak = 1022.508 ; gain = 850.055
+Start Renaming Generated Ports : Time (s): cpu = 00:05:24 ; elapsed = 00:05:40 . Memory (MB): peak = 1021.313 ; gain = 848.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:03 ; elapsed = 00:06:33 . Memory (MB): peak = 1022.508 ; gain = 850.055
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:25 ; elapsed = 00:05:41 . Memory (MB): peak = 1021.313 ; gain = 848.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8287,11 +8286,11 @@ Report Instance Areas:
 |176   |        ui_wr_data0                                                      |mig_7series_v2_3_ui_wr_data                                |   444|
 +------+-------------------------------------------------------------------------+-----------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:04 ; elapsed = 00:06:34 . Memory (MB): peak = 1022.508 ; gain = 850.055
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:26 ; elapsed = 00:05:42 . Memory (MB): peak = 1021.313 ; gain = 848.332
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 827 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:35 ; elapsed = 00:05:49 . Memory (MB): peak = 1022.508 ; gain = 441.289
-Synthesis Optimization Complete : Time (s): cpu = 00:06:04 ; elapsed = 00:06:35 . Memory (MB): peak = 1022.508 ; gain = 850.055
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:07 ; elapsed = 00:05:03 . Memory (MB): peak = 1021.313 ; gain = 440.355
+Synthesis Optimization Complete : Time (s): cpu = 00:05:27 ; elapsed = 00:05:43 . Memory (MB): peak = 1021.313 ; gain = 848.332
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 430 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
@@ -8312,12 +8311,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC32E => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1178 Infos, 300 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1177 Infos, 300 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:15 ; elapsed = 00:06:43 . Memory (MB): peak = 1022.508 ; gain = 754.238
+synth_design: Time (s): cpu = 00:05:40 ; elapsed = 00:05:55 . Memory (MB): peak = 1021.313 ; gain = 753.160
 INFO: [Coretcl 2-1174] Renamed 175 cell refs.
-write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1022.508 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.712 . Memory (MB): peak = 1022.508 ; gain = 0.000
-write_verilog: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1022.508 ; gain = 0.000
-write_vhdl: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1022.508 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 19 10:56:19 2018...
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1021.313 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.699 . Memory (MB): peak = 1021.313 ; gain = 0.000
+write_verilog: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1021.313 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1021.313 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 19 16:44:11 2018...

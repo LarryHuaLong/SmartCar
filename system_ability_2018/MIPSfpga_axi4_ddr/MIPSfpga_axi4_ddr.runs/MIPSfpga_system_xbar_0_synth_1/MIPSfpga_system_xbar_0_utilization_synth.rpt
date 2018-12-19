@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Wed Dec 19 10:48:43 2018
+| Date         : Wed Dec 19 16:35:01 2018
 | Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MIPSfpga_system_xbar_0_utilization_synth.rpt -pb MIPSfpga_system_xbar_0_utilization_synth.pb
 | Design       : MIPSfpga_system_xbar_0
@@ -151,12 +151,12 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     | 1096 |        Flop & Latch |
 | LUT3     |  455 |                 LUT |
-| LUT6     |  228 |                 LUT |
+| LUT6     |  226 |                 LUT |
 | LUT4     |  101 |                 LUT |
 | MUXF7    |   70 |               MuxFx |
-| LUT5     |   46 |                 LUT |
-| LUT2     |   23 |                 LUT |
-| LUT1     |    5 |                 LUT |
+| LUT5     |   44 |                 LUT |
+| LUT2     |   27 |                 LUT |
+| LUT1     |    6 |                 LUT |
 | SRL16E   |    4 |  Distributed Memory |
 | FDSE     |    3 |        Flop & Latch |
 +----------+------+---------------------+

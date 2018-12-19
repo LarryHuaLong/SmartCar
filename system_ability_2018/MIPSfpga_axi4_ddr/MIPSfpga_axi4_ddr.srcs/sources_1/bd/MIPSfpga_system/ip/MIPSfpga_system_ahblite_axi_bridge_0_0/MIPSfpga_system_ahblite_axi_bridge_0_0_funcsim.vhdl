@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Wed Dec 19 10:46:22 2018
+-- Date        : Wed Dec 19 16:31:19 2018
 -- Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_ahblite_axi_bridge_0_0/MIPSfpga_system_ahblite_axi_bridge_0_0_funcsim.vhdl
@@ -17,17 +17,17 @@ use UNISIM.VCOMPONENTS.ALL;
 entity MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if is
   port (
     idle_txfer_pending : out STD_LOGIC;
+    ahb_hburst_single : out STD_LOGIC;
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     ahb_penult_beat_reg_0 : out STD_LOGIC;
     ahb_done_axi_in_progress_reg_0 : out STD_LOGIC;
     ahb_hburst_incr : out STD_LOGIC;
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     nonseq_txfer_pending : out STD_LOGIC;
     s_ahb_hready_out : out STD_LOGIC;
     s_ahb_hresp : out STD_LOGIC;
     burst_term_hwrite : out STD_LOGIC;
     burst_term_single_incr : out STD_LOGIC;
     burst_term : out STD_LOGIC;
-    ahb_hburst_single : out STD_LOGIC;
     ahb_data_valid : out STD_LOGIC;
     S_AHB_HREADY_OUT_i_reg_0 : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -51,7 +51,7 @@ entity MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if is
     seq_detected : out STD_LOGIC;
     ahb_burst_done : out STD_LOGIC;
     idle_detected_i : out STD_LOGIC;
-    p_28_in : out STD_LOGIC;
+    p_29_in : out STD_LOGIC;
     M_AXI_WSTRB_i : out STD_LOGIC_VECTOR ( 0 to 0 );
     dummy_on_axi : out STD_LOGIC;
     dummy_on_axi_init : out STD_LOGIC;
@@ -157,13 +157,16 @@ architecture STRUCTURE of MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if is
   signal dummy_on_axi_progress_i_8_n_0 : STD_LOGIC;
   signal dummy_txfer_in_progress_i_1_n_0 : STD_LOGIC;
   signal dummy_txfer_in_progress_reg_n_0 : STD_LOGIC;
+  signal eqOp : STD_LOGIC;
+  signal eqOp0_in : STD_LOGIC;
   signal \^idle_txfer_pending\ : STD_LOGIC;
   signal \^m_axi_arburst\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^m_axi_arprot\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^nonseq_detected\ : STD_LOGIC;
   signal \^nonseq_txfer_pending\ : STD_LOGIC;
   signal p_1_out : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal \^p_28_in\ : STD_LOGIC;
+  signal \^p_29_in\ : STD_LOGIC;
+  signal \^s_ahb_hready_out\ : STD_LOGIC;
   signal \^s_ahb_hresp\ : STD_LOGIC;
   signal \^seq_detected\ : STD_LOGIC;
   signal \^valid_cnt_required\ : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -171,26 +174,28 @@ architecture STRUCTURE of MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if is
   signal \valid_cnt_required_i[2]_i_1_n_0\ : STD_LOGIC;
   signal \valid_cnt_required_i[3]_i_1_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \AXI_ALEN_i[1]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \AXI_ALEN_i[3]_i_2\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \AXI_ALEN_i[1]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \AXI_ALEN_i[3]_i_2\ : label is "soft_lutpair17";
   attribute SOFT_HLUTNM of \FSM_sequential_ctl_sm_cs[0]_i_5\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \GEN_1_PROT_CACHE_REG_NON_SECURE.AXI_APROT_i[1]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \GEN_1_PROT_CACHE_REG_NON_SECURE.AXI_APROT_i[1]_i_1\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of M_AXI_ARVALID_i_i_4 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of M_AXI_WVALID_i_i_4 : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \NARROW_TRANSFER_OFF.M_AXI_WSTRB_i[3]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_11 : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_12 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_22 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of ahb_done_axi_in_progress_i_2 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of M_AXI_WVALID_i_i_4 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \NARROW_TRANSFER_OFF.M_AXI_WSTRB_i[3]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_11 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_12 : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_22 : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of ahb_done_axi_in_progress_i_2 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of ahb_hburst_incr_i_i_2 : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of ahb_hburst_single_i_i_2 : label is "soft_lutpair15";
   attribute SOFT_HLUTNM of ahb_penult_beat_i_3 : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of ahb_wnr_i_i_4 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of dummy_on_axi_progress_i_3 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of dummy_on_axi_progress_i_8 : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of dummy_on_axi_progress_i_3 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of dummy_on_axi_progress_i_8 : label is "soft_lutpair11";
   attribute SOFT_HLUTNM of idle_txfer_pending_i_2 : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of seq_detected_d1_i_1 : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \valid_cnt_required_i[1]_i_1\ : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \valid_cnt_required_i[3]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \valid_cnt_required_i[3]_i_2\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \valid_cnt_required_i[3]_i_2\ : label is "soft_lutpair9";
 begin
   AXI_ALEN_i0 <= \^axi_alen_i0\;
   Q(2 downto 0) <= \^q\(2 downto 0);
@@ -212,7 +217,8 @@ begin
   m_axi_arprot(2 downto 0) <= \^m_axi_arprot\(2 downto 0);
   nonseq_detected <= \^nonseq_detected\;
   nonseq_txfer_pending <= \^nonseq_txfer_pending\;
-  p_28_in <= \^p_28_in\;
+  p_29_in <= \^p_29_in\;
+  s_ahb_hready_out <= \^s_ahb_hready_out\;
   s_ahb_hresp <= \^s_ahb_hresp\;
   seq_detected <= \^seq_detected\;
   valid_cnt_required(2 downto 0) <= \^valid_cnt_required\(2 downto 0);
@@ -1100,7 +1106,7 @@ S_AHB_HREADY_OUT_i_reg: unisim.vcomponents.FDRE
       C => s_ahb_hclk,
       CE => '1',
       D => S_AHB_HREADY_OUT_i_reg_3,
-      Q => s_ahb_hready_out,
+      Q => \^s_ahb_hready_out\,
       R => '0'
     );
 S_AHB_HRESP_i_i_1: unisim.vcomponents.LUT6
@@ -1191,18 +1197,27 @@ ahb_done_axi_in_progress_reg: unisim.vcomponents.FDRE
       Q => \^ahb_done_axi_in_progress_reg_0\,
       R => '0'
     );
-ahb_hburst_incr_i_i_1: unisim.vcomponents.LUT6
+ahb_hburst_incr_i_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFF04FF00000400"
+      INIT => X"EFFF2000"
+    )
+        port map (
+      I0 => eqOp,
+      I1 => s_ahb_htrans(0),
+      I2 => s_ahb_htrans(1),
+      I3 => \^s_ahb_hready_out\,
+      I4 => \^ahb_hburst_incr\,
+      O => ahb_hburst_incr_i_i_1_n_0
+    );
+ahb_hburst_incr_i_i_2: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
     )
         port map (
       I0 => s_ahb_hburst(2),
       I1 => s_ahb_hburst(0),
       I2 => s_ahb_hburst(1),
-      I3 => s_ahb_htrans(1),
-      I4 => s_ahb_htrans(0),
-      I5 => \^ahb_hburst_incr\,
-      O => ahb_hburst_incr_i_i_1_n_0
+      O => eqOp
     );
 ahb_hburst_incr_i_reg: unisim.vcomponents.FDRE
      port map (
@@ -1212,18 +1227,27 @@ ahb_hburst_incr_i_reg: unisim.vcomponents.FDRE
       Q => \^ahb_hburst_incr\,
       R => \^sr\(0)
     );
-ahb_hburst_single_i_i_1: unisim.vcomponents.LUT6
+ahb_hburst_single_i_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFF01FF00000100"
+      INIT => X"EFFF2000"
+    )
+        port map (
+      I0 => eqOp0_in,
+      I1 => s_ahb_htrans(0),
+      I2 => s_ahb_htrans(1),
+      I3 => \^s_ahb_hready_out\,
+      I4 => \^ahb_hburst_single\,
+      O => ahb_hburst_single_i_i_1_n_0
+    );
+ahb_hburst_single_i_i_2: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
     )
         port map (
       I0 => s_ahb_hburst(2),
       I1 => s_ahb_hburst(0),
       I2 => s_ahb_hburst(1),
-      I3 => s_ahb_htrans(1),
-      I4 => s_ahb_htrans(0),
-      I5 => \^ahb_hburst_single\,
-      O => ahb_hburst_single_i_i_1_n_0
+      O => eqOp0_in
     );
 ahb_hburst_single_i_reg: unisim.vcomponents.FDRE
      port map (
@@ -1241,7 +1265,7 @@ ahb_penult_beat_i_1: unisim.vcomponents.LUT6
       I0 => \^ahb_penult_beat_reg_0\,
       I1 => s_ahb_hresetn,
       I2 => \INFERRED_GEN.icount_out_reg[3]\,
-      I3 => \^p_28_in\,
+      I3 => \^p_29_in\,
       I4 => s_ahb_htrans(1),
       I5 => s_ahb_htrans(0),
       O => ahb_penult_beat_i_1_n_0
@@ -1253,7 +1277,7 @@ ahb_penult_beat_i_3: unisim.vcomponents.LUT2
         port map (
       I0 => s_ahb_hready_in,
       I1 => s_ahb_hsel,
-      O => \^p_28_in\
+      O => \^p_29_in\
     );
 ahb_penult_beat_reg: unisim.vcomponents.FDRE
      port map (
@@ -1703,7 +1727,7 @@ entity MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_control is
     reset_hready24_out : in STD_LOGIC;
     ahb_data_valid_burst_term_reg_0 : in STD_LOGIC;
     M_AXI_WVALID_i3 : in STD_LOGIC;
-    s_ahb_hready_out : in STD_LOGIC;
+    S_AHB_HREADY_OUT_i_reg_0 : in STD_LOGIC;
     m_axi_arready : in STD_LOGIC;
     M_AXI_ARVALID_i_reg_0 : in STD_LOGIC;
     m_axi_awready : in STD_LOGIC;
@@ -2141,7 +2165,7 @@ S_AHB_HREADY_OUT_i_i_1: unisim.vcomponents.LUT6
       I2 => S_AHB_HREADY_OUT_i_i_4_n_0,
       I3 => s_ahb_hresetn,
       I4 => S_AHB_HREADY_OUT_i_i_5_n_0,
-      I5 => s_ahb_hready_out,
+      I5 => S_AHB_HREADY_OUT_i_reg_0,
       O => S_AHB_HREADY_OUT_i_reg
     );
 S_AHB_HREADY_OUT_i_i_10: unisim.vcomponents.LUT5
@@ -2189,16 +2213,17 @@ S_AHB_HREADY_OUT_i_i_19: unisim.vcomponents.LUT4
       I3 => ctl_sm_cs(2),
       O => S_AHB_HREADY_OUT_i_i_19_n_0
     );
-S_AHB_HREADY_OUT_i_i_20: unisim.vcomponents.LUT5
+S_AHB_HREADY_OUT_i_i_20: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00FF00B0"
+      INIT => X"0000FFFF00000D00"
     )
         port map (
-      I0 => m_axi_wready,
-      I1 => M_AXI_WVALID_i_reg_1,
-      I2 => ctl_sm_cs(1),
-      I3 => ctl_sm_cs(0),
-      I4 => ctl_sm_cs(2),
+      I0 => M_AXI_WVALID_i_reg_1,
+      I1 => m_axi_wready,
+      I2 => ahb_hburst_single,
+      I3 => ctl_sm_cs(1),
+      I4 => ctl_sm_cs(0),
+      I5 => ctl_sm_cs(2),
       O => S_AHB_HREADY_OUT_i_i_20_n_0
     );
 S_AHB_HREADY_OUT_i_i_21: unisim.vcomponents.LUT4
@@ -2578,10 +2603,10 @@ architecture STRUCTURE of MIPSfpga_system_ahblite_axi_bridge_0_0_axi_rchannel is
   signal \^rd_load_timeout_cntr\ : STD_LOGIC;
   signal seq_detected_d1 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of M_AXI_RLAST_reg_i_1 : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of M_AXI_RREADY_i_i_3 : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of M_AXI_RREADY_i_i_4 : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_25 : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of M_AXI_RLAST_reg_i_1 : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of M_AXI_RREADY_i_i_3 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of M_AXI_RREADY_i_i_4 : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_25 : label is "soft_lutpair18";
 begin
   busy_detected <= \^busy_detected\;
   ctl_sm_ns035_out <= \^ctl_sm_ns035_out\;
@@ -3013,14 +3038,14 @@ architecture STRUCTURE of MIPSfpga_system_ahblite_axi_bridge_0_0_counter_f is
   signal eqOp3_out : STD_LOGIC;
   signal eqOp5_out : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \INFERRED_GEN.icount_out[2]_i_1__0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \INFERRED_GEN.icount_out[3]_i_1__0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of axi_last_beat_i_2 : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of axi_last_beat_i_5 : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of axi_last_beat_i_6 : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of axi_penult_beat_i_2 : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of axi_penult_beat_i_5 : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of axi_penult_beat_i_6 : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \INFERRED_GEN.icount_out[2]_i_1__0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \INFERRED_GEN.icount_out[3]_i_1__0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of axi_last_beat_i_2 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of axi_last_beat_i_5 : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of axi_last_beat_i_6 : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of axi_penult_beat_i_2 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of axi_penult_beat_i_5 : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of axi_penult_beat_i_6 : label is "soft_lutpair21";
 begin
   Q(4 downto 0) <= \^q\(4 downto 0);
 \INFERRED_GEN.icount_out[1]_i_1__0\: unisim.vcomponents.LUT3
@@ -3783,7 +3808,7 @@ entity MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel is
     m_axi_bvalid : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC;
     ahb_data_valid : in STD_LOGIC;
-    p_28_in : in STD_LOGIC;
+    p_29_in : in STD_LOGIC;
     burst_term : in STD_LOGIC;
     s_ahb_hwdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \burst_term_txer_cnt_i_reg[3]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -3866,10 +3891,10 @@ architecture STRUCTURE of MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel is
   signal \^m_axi_wvalid\ : STD_LOGIC;
   signal \^timeout_detected\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of ahb_data_valid_i_i_2 : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \axi_cnt_required[2]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \axi_cnt_required[3]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of dummy_on_axi_progress_i_9 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of ahb_data_valid_i_i_2 : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \axi_cnt_required[2]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \axi_cnt_required[3]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of dummy_on_axi_progress_i_9 : label is "soft_lutpair24";
 begin
   axi_wdata_done <= \^axi_wdata_done\;
   dummy_on_axi_progress_reg_0 <= \^dummy_on_axi_progress_reg_0\;
@@ -4699,7 +4724,7 @@ ahb_data_valid_i_i_2: unisim.vcomponents.LUT5
       I1 => m_axi_wready,
       I2 => \^local_en_reg_0\,
       I3 => ahb_data_valid,
-      I4 => p_28_in,
+      I4 => p_29_in,
       O => ahb_data_valid_i_i_2_n_0
     );
 ahb_done_axi_in_progress_i_1: unisim.vcomponents.LUT6
@@ -5148,8 +5173,8 @@ architecture STRUCTURE of MIPSfpga_system_ahblite_axi_bridge_0_0_time_out is
   signal timeout_i : STD_LOGIC;
   signal \^timeout_o\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_26 : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of S_AHB_HRESP_i_i_10 : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of S_AHB_HREADY_OUT_i_i_26 : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of S_AHB_HRESP_i_i_10 : label is "soft_lutpair26";
 begin
   \GEN_WDT.cntr_enable_reg_0\ <= \^gen_wdt.cntr_enable_reg_0\;
   timeout_o <= \^timeout_o\;
@@ -5293,18 +5318,18 @@ architecture STRUCTURE of MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bri
   signal AHB_DATA_COUNTER_n_3 : STD_LOGIC;
   signal AHB_DATA_COUNTER_n_4 : STD_LOGIC;
   signal AHB_DATA_COUNTER_n_5 : STD_LOGIC;
-  signal AHB_IF_n_1 : STD_LOGIC;
   signal AHB_IF_n_13 : STD_LOGIC;
   signal AHB_IF_n_17 : STD_LOGIC;
   signal AHB_IF_n_19 : STD_LOGIC;
-  signal AHB_IF_n_2 : STD_LOGIC;
   signal AHB_IF_n_21 : STD_LOGIC;
   signal AHB_IF_n_22 : STD_LOGIC;
   signal AHB_IF_n_23 : STD_LOGIC;
   signal AHB_IF_n_24 : STD_LOGIC;
   signal AHB_IF_n_25 : STD_LOGIC;
   signal AHB_IF_n_27 : STD_LOGIC;
+  signal AHB_IF_n_3 : STD_LOGIC;
   signal AHB_IF_n_33 : STD_LOGIC;
+  signal AHB_IF_n_4 : STD_LOGIC;
   signal AXI_ALEN_i0 : STD_LOGIC;
   signal AXI_RCHANNEL_n_12 : STD_LOGIC;
   signal AXI_RCHANNEL_n_2 : STD_LOGIC;
@@ -5373,7 +5398,7 @@ architecture STRUCTURE of MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_axi_bri
   signal nonseq_detected : STD_LOGIC;
   signal nonseq_txfer_pending : STD_LOGIC;
   signal p_14_in : STD_LOGIC;
-  signal p_28_in : STD_LOGIC;
+  signal p_29_in : STD_LOGIC;
   signal rd_load_timeout_cntr : STD_LOGIC;
   signal reset_hready0 : STD_LOGIC;
   signal reset_hready24_out : STD_LOGIC;
@@ -5427,15 +5452,16 @@ AHBLITE_AXI_CONTROL: entity work.MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_
       O(0) => TIME_OUT_n_6,
       Q(0) => AXI_WCHANNEL_n_12,
       S_AHB_HREADY_OUT_i_reg => AHBLITE_AXI_CONTROL_n_24,
+      S_AHB_HREADY_OUT_i_reg_0 => \^s_ahb_hready_out\,
       S_AHB_HRESP_i_reg => AHBLITE_AXI_CONTROL_n_19,
       ahb_burst_done => ahb_burst_done,
       ahb_data_valid_burst_term_reg => AHBLITE_AXI_CONTROL_n_28,
       ahb_data_valid_burst_term_reg_0 => AXI_WCHANNEL_n_5,
       ahb_done_axi_in_progress_reg => AHB_IF_n_13,
-      ahb_done_axi_in_progress_reg_0 => AHB_IF_n_2,
+      ahb_done_axi_in_progress_reg_0 => AHB_IF_n_4,
       ahb_hburst_incr => ahb_hburst_incr,
       ahb_hburst_single => ahb_hburst_single,
-      ahb_penult_beat_reg => AHB_IF_n_1,
+      ahb_penult_beat_reg => AHB_IF_n_3,
       ahb_rd_txer_pending_reg => AXI_RCHANNEL_n_5,
       \axi_rresp_avlbl_reg[1]\ => AXI_RCHANNEL_n_4,
       \axi_rresp_avlbl_reg[1]_0\ => AXI_RCHANNEL_n_2,
@@ -5484,7 +5510,6 @@ AHBLITE_AXI_CONTROL: entity work.MIPSfpga_system_ahblite_axi_bridge_0_0_ahblite_
       s_ahb_hburst(1 downto 0) => s_ahb_hburst(2 downto 1),
       s_ahb_hclk => s_ahb_hclk,
       s_ahb_hready_in => s_ahb_hready_in,
-      s_ahb_hready_out => \^s_ahb_hready_out\,
       s_ahb_hresetn => s_ahb_hresetn,
       s_ahb_hsel => s_ahb_hsel,
       s_ahb_htrans(1 downto 0) => s_ahb_htrans(1 downto 0),
@@ -5557,10 +5582,10 @@ AHB_IF: entity work.MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
       ahb_burst_done => ahb_burst_done,
       ahb_data_valid => ahb_data_valid,
       ahb_data_valid_i_reg_0 => AXI_WCHANNEL_n_20,
-      ahb_done_axi_in_progress_reg_0 => AHB_IF_n_2,
+      ahb_done_axi_in_progress_reg_0 => AHB_IF_n_4,
       ahb_hburst_incr => ahb_hburst_incr,
       ahb_hburst_single => ahb_hburst_single,
-      ahb_penult_beat_reg_0 => AHB_IF_n_1,
+      ahb_penult_beat_reg_0 => AHB_IF_n_3,
       ahb_rd_txer_pending_reg => AXI_RCHANNEL_n_8,
       axi_penult_beat_reg(2 downto 0) => burst_term_txer_cnt(3 downto 1),
       \axi_rresp_avlbl_reg[1]\ => AXI_RCHANNEL_n_12,
@@ -5601,7 +5626,7 @@ AHB_IF: entity work.MIPSfpga_system_ahblite_axi_bridge_0_0_ahb_if
       nonseq_txfer_pending_i_reg_0 => AHBLITE_AXI_CONTROL_n_29,
       \out\(0) => AHBLITE_AXI_CONTROL_n_0,
       p_14_in => p_14_in,
-      p_28_in => p_28_in,
+      p_29_in => p_29_in,
       rd_load_timeout_cntr => rd_load_timeout_cntr,
       reset_hready0 => reset_hready0,
       reset_hready24_out => reset_hready24_out,
@@ -5684,7 +5709,7 @@ AXI_WCHANNEL: entity work.MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
       ahb_data_valid_burst_term_reg_0 => AXI_WCHANNEL_n_5,
       ahb_data_valid_i_reg => AXI_WCHANNEL_n_20,
       ahb_done_axi_in_progress_reg => AXI_WCHANNEL_n_19,
-      ahb_done_axi_in_progress_reg_0 => AHB_IF_n_2,
+      ahb_done_axi_in_progress_reg_0 => AHB_IF_n_4,
       ahb_hburst_incr => ahb_hburst_incr,
       ahb_hburst_single => ahb_hburst_single,
       axi_waddr_done_i => axi_waddr_done_i,
@@ -5709,7 +5734,7 @@ AXI_WCHANNEL: entity work.MIPSfpga_system_ahblite_axi_bridge_0_0_axi_wchannel
       m_axi_wvalid => \^m_axi_wvalid\,
       nonseq_detected => nonseq_detected,
       nonseq_txfer_pending_i_reg => AHBLITE_AXI_CONTROL_n_28,
-      p_28_in => p_28_in,
+      p_29_in => p_29_in,
       s_ahb_hclk => s_ahb_hclk,
       s_ahb_hresetn => s_ahb_hresetn,
       s_ahb_hwdata(31 downto 0) => s_ahb_hwdata(31 downto 0),
