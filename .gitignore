@@ -6,10 +6,13 @@ system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/impl_1
 system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.sim
 system_ability_2018/MIPSfpga_axi4_ddr/.Xil
 system_ability_2018/MotorDirver/.Xil
-system_ability_2018/MotorDirver/MotorDirver.cache
-system_ability_2018/MotorDirver/MotorDirver.hw
-system_ability_2018/MotorDirver/MotorDirver.runs
-system_ability_2018/MotorDirver/MotorDirver.sim
+system_ability_2018/ip_repo/MotorDriver/MotorDirver.cache
+system_ability_2018/ip_repo/MotorDirver/MotorDirver.hw
+system_ability_2018/ip_repo/MotorDirver/MotorDirver.runs
+system_ability_2018/ip_repo/MotorDirver/MotorDirver.sim
+
 *.log
+
 *.jou
+
 *.zip
