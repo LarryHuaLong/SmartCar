@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Thu Dec 20 19:21:58 2018
+//Date        : Thu Dec 20 21:07:32 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system_wrapper.bd
 //Design      : MIPSfpga_system_wrapper
@@ -38,8 +38,6 @@ module MIPSfpga_system_wrapper
     JC1,
     JC10,
     JC2,
-    JC3,
-    JC4,
     JC7,
     JC8,
     JC9,
@@ -91,8 +89,6 @@ module MIPSfpga_system_wrapper
   input [0:0]JC1;
   input [0:0]JC10;
   input [0:0]JC2;
-  input [0:0]JC3;
-  input [0:0]JC4;
   input [0:0]JC7;
   input [0:0]JC8;
   input [0:0]JC9;
@@ -145,8 +141,6 @@ module MIPSfpga_system_wrapper
   wire [0:0]JC1;
   wire [0:0]JC10;
   wire [0:0]JC2;
-  wire [0:0]JC3;
-  wire [0:0]JC4;
   wire [0:0]JC7;
   wire [0:0]JC8;
   wire [0:0]JC9;
@@ -200,8 +194,6 @@ module MIPSfpga_system_wrapper
         .JC1(JC1),
         .JC10(JC10),
         .JC2(JC2),
-        .JC3(JC3),
-        .JC4(JC4),
         .JC7(JC7),
         .JC8(JC8),
         .JC9(JC9),

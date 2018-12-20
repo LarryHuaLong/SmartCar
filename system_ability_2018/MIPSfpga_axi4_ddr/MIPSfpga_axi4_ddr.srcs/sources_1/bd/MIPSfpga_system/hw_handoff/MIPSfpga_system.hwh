@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 20 19:25:07 2018" VIVADOVERSION="2015.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 20 21:10:49 2018" VIVADOVERSION="2015.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="MIPSfpga_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -165,16 +165,6 @@
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="0" NAME="JC2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_JC2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="0" NAME="JC3" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_JC3">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="0" NAME="JC4" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_JC4">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
       </CONNECTIONS>
@@ -1268,14 +1258,12 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_JC10 &amp; External_Ports_JC9 &amp; External_Ports_JC8 &amp; External_Ports_JC7 &amp; External_Ports_JC4 &amp; External_Ports_JC3 &amp; External_Ports_JC2 &amp; External_Ports_JC1 &amp; External_Ports_JD10 &amp; External_Ports_JD9 &amp; External_Ports_JD8 &amp; External_Ports_JD7 &amp; External_Ports_JD4 &amp; External_Ports_JD3 &amp; External_Ports_JD2 &amp; External_Ports_JD1">
+        <PORT DIR="I" LEFT="15" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_JC10 &amp; External_Ports_JC9 &amp; External_Ports_JC8 &amp; External_Ports_JC7 &amp; External_Ports_JC2 &amp; External_Ports_JC1 &amp; External_Ports_JD10 &amp; External_Ports_JD9 &amp; External_Ports_JD8 &amp; External_Ports_JD7 &amp; External_Ports_JD4 &amp; External_Ports_JD3 &amp; External_Ports_JD2 &amp; External_Ports_JD1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="JC10"/>
             <CONNECTION INSTANCE="External_Ports" PORT="JC9"/>
             <CONNECTION INSTANCE="External_Ports" PORT="JC8"/>
             <CONNECTION INSTANCE="External_Ports" PORT="JC7"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="JC4"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="JC3"/>
             <CONNECTION INSTANCE="External_Ports" PORT="JC2"/>
             <CONNECTION INSTANCE="External_Ports" PORT="JC1"/>
             <CONNECTION INSTANCE="External_Ports" PORT="JD10"/>

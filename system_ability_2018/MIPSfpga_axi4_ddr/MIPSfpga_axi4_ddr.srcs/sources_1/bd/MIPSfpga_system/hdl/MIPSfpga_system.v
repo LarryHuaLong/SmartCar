@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Thu Dec 20 19:21:57 2018
+//Date        : Thu Dec 20 21:07:32 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system.bd
 //Design      : MIPSfpga_system
@@ -39,8 +39,6 @@ module MIPSfpga_system
     JC1,
     JC10,
     JC2,
-    JC3,
-    JC4,
     JC7,
     JC8,
     JC9,
@@ -92,8 +90,6 @@ module MIPSfpga_system
   input [0:0]JC1;
   input [0:0]JC10;
   input [0:0]JC2;
-  input [0:0]JC3;
-  input [0:0]JC4;
   input [0:0]JC7;
   input [0:0]JC8;
   input [0:0]JC9;
@@ -125,8 +121,6 @@ module MIPSfpga_system
   wire EJ_TRST_N_1;
   wire GND_1;
   wire [0:0]In0_1;
-  wire [0:0]In10_1;
-  wire [0:0]In11_1;
   wire [0:0]In12_1;
   wire [0:0]In13_1;
   wire [0:0]In14_1;
@@ -395,8 +389,6 @@ module MIPSfpga_system
   assign EJ_TRST_N_1 = JB7;
   assign GREEN2 = axi_intc_0_irq;
   assign In0_1 = JD1[0];
-  assign In10_1 = JC3[0];
-  assign In11_1 = JC4[0];
   assign In12_1 = JC7[0];
   assign In13_1 = JC8[0];
   assign In14_1 = JC9[0];
@@ -940,8 +932,8 @@ module MIPSfpga_system
   MIPSfpga_system_xlconcat_2_0 xlconcat_2
        (.In0(In0_1),
         .In1(In1_1),
-        .In10(In10_1),
-        .In11(In11_1),
+        .In10(GND_1),
+        .In11(GND_1),
         .In12(In12_1),
         .In13(In13_1),
         .In14(In14_1),

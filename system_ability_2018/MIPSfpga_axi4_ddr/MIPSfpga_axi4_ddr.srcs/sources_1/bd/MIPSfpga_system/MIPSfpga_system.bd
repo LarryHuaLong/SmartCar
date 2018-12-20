@@ -297,26 +297,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>JC3</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-            <spirit:vector>
-              <spirit:left>0</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>JC4</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-            <spirit:vector>
-              <spirit:left>0</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>JC7</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -957,16 +937,6 @@
         <spirit:name>In9_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="JC2"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="In9"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>In10_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="JC3"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="In10"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>In11_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="JC4"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="In11"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>In12_1</spirit:name>
