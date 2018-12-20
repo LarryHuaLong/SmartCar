@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Dec 19 16:36:30 2018
-# Process ID: 19952
+# Start of session at: Thu Dec 20 13:03:14 2018
+# Process ID: 4668
 # Log file: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/MIPSfpga_system_clk_wiz_0_0_synth_1/MIPSfpga_system_clk_wiz_0_0.vds
 # Journal file: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/MIPSfpga_system_clk_wiz_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -21,7 +21,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 250.023 ; gain = 76.727
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 250.535 ; gain = 77.500
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'MIPSfpga_system_clk_wiz_0_0' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0.v:70]
 INFO: [Synth 8-638] synthesizing module 'MIPSfpga_system_clk_wiz_0_0_clk_wiz' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0_clk_wiz.v:68]
@@ -70,7 +70,7 @@ INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Xilinx/Vivado/2015
 INFO: [Synth 8-256] done synthesizing module 'MIPSfpga_system_clk_wiz_0_0_clk_wiz' (4#1) [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0_clk_wiz.v:68]
 INFO: [Synth 8-256] done synthesizing module 'MIPSfpga_system_clk_wiz_0_0' (5#1) [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0.v:70]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 284.313 ; gain = 111.016
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 284.809 ; gain = 111.773
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -80,7 +80,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 284.313 ; gain = 111.016
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 284.809 ; gain = 111.773
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -105,26 +105,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 508.680 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 508.098 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 508.098 ; gain = 335.063
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 508.098 ; gain = 335.063
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 508.098 ; gain = 335.063
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 508.098 ; gain = 335.063
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -155,14 +155,14 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 508.680 ; gain = 335.383
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 508.098 ; gain = 335.063
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 508.098 ; gain = 335.063
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished Parallel Reinference  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 508.098 ; gain = 335.063
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -173,16 +173,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 508.098 ; gain = 335.063
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 508.098 ; gain = 335.063
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 508.680 ; gain = 335.383
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 508.098 ; gain = 335.063
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -190,10 +190,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 533.797 ; gain = 360.500
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 534.199 ; gain = 361.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 533.797 ; gain = 360.500
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 534.199 ; gain = 361.164
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -205,7 +205,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 543.457 ; gain = 370.160
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 543.883 ; gain = 370.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -223,7 +223,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.457 ; gain = 370.160
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.883 ; gain = 370.848
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -236,7 +236,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.457 ; gain = 370.160
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.883 ; gain = 370.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -248,13 +248,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.457 ; gain = 370.160
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.883 ; gain = 370.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.457 ; gain = 370.160
+Start Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.883 ; gain = 370.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.457 ; gain = 370.160
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.883 ; gain = 370.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -283,11 +283,11 @@ Report Instance Areas:
 |2     |  inst   |MIPSfpga_system_clk_wiz_0_0_clk_wiz |     5|
 +------+---------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 543.457 ; gain = 370.160
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.883 ; gain = 370.848
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 543.457 ; gain = 118.715
-Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 543.457 ; gain = 370.160
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 543.883 ; gain = 119.672
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 543.883 ; gain = 370.848
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -299,7 +299,7 @@ Finished Parsing XDC File [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018
 Parsing XDC File [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0.xdc] for cell 'inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0.xdc:56]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0.xdc:56]
-get_clocks: Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 888.551 ; gain = 345.094
+get_clocks: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 887.969 ; gain = 344.086
 Finished Parsing XDC File [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0.xdc] for cell 'inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -308,6 +308,6 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 30 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:36 ; elapsed = 00:01:39 . Memory (MB): peak = 888.922 ; gain = 688.547
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 888.922 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 19 16:38:17 2018...
+synth_design: Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 888.598 ; gain = 687.676
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 888.598 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 20 13:05:01 2018...

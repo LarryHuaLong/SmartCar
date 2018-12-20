@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Dec 19 16:30:02 2018
-# Process ID: 7144
+# Start of session at: Thu Dec 20 12:58:10 2018
+# Process ID: 9372
 # Log file: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0_synth_1/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0.vds
 # Journal file: C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -24,7 +24,7 @@ CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module RAMB4
 CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module RAMB4_S2 [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/imgtec.org/mips_microaptiv_up_v1_3_1/9bb0f3a7/rtl_up/RAMB4_S2.v:71]
 CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module RAMB4_S16 [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/imgtec.org/mips_microaptiv_up_v1_3_1/9bb0f3a7/rtl_up/RAMB4_S16.v:71]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 261.848 ; gain = 89.680
+Starting Synthesize : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 261.805 ; gain = 89.434
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'MIPSfpga_system_MIPS_MicroAptiv_UP_0_0' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0/synth/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'm14k_top_wrap' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/imgtec.org/mips_microaptiv_up_v1_3_1/9bb0f3a7/mips_block_project.srcs/sources_1/new/m14k_top_wrap.v:8]
@@ -4752,17 +4752,17 @@ WARNING: [Synth 8-3848] Net BistIn in module/entity m14k_top_wrap does not have 
 INFO: [Synth 8-256] done synthesizing module 'm14k_top_wrap' (139#1) [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/imgtec.org/mips_microaptiv_up_v1_3_1/9bb0f3a7/mips_block_project.srcs/sources_1/new/m14k_top_wrap.v:8]
 INFO: [Synth 8-256] done synthesizing module 'MIPSfpga_system_MIPS_MicroAptiv_UP_0_0' (140#1) [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0/synth/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0.v:56]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 466.227 ; gain = 294.059
+Finished Synthesize : Time (s): cpu = 00:00:54 ; elapsed = 00:01:01 . Memory (MB): peak = 467.078 ; gain = 294.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 466.227 ; gain = 294.059
+Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:01:05 . Memory (MB): peak = 467.078 ; gain = 294.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 466.227 ; gain = 294.059
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:01:05 . Memory (MB): peak = 467.078 ; gain = 294.707
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-5544] ROM "config0w_cnxt0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -4793,7 +4793,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'q_reg' [c:/Users/HUALONG/De
 INFO: [Synth 8-5562] The signal mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (8 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-5562] The signal mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (9 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:45 ; elapsed = 00:01:52 . Memory (MB): peak = 551.496 ; gain = 379.328
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:55 ; elapsed = 00:02:08 . Memory (MB): peak = 551.426 ; gain = 379.055
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'inst/m14k_top_i/cpu/core/clock_gate/buff_fclk' (m14k_clock_buf) to 'inst/m14k_top_i/cpu/core/clock_gate/buff_gclk'
 INFO: [Synth 8-223] decloning instance 'inst/m14k_top_i/cpu/core/clock_gate/buff_fclk' (m14k_clock_buf) to 'inst/m14k_top_i/cpu/core/clock_gate/buff_gtlbclk'
@@ -11540,7 +11540,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:48 ; elapsed = 00:01:55 . Memory (MB): peak = 551.496 ; gain = 379.328
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:58 ; elapsed = 00:02:12 . Memory (MB): peak = 551.426 ; gain = 379.055
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -11549,9 +11549,9 @@ INFO: [Synth 8-4471] merging register '_icc_parerr_data_pi/q_reg[0:0]' into '_ic
 INFO: [Synth 8-4471] merging register '_rd_str0_3_0_/q_reg[3:0]' into '_tag_rd_str_3_0_/q_reg[3:0]' [c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/imgtec.org/mips_microaptiv_up_v1_3_1/9bb0f3a7/rtl_up/mvp_register.v:89]
 WARNING: [Synth 8-3331] design MIPSfpga_system_MIPS_MicroAptiv_UP_0_0 has unconnected port EJ_TRST_N
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:02:06 ; elapsed = 00:02:14 . Memory (MB): peak = 552.250 ; gain = 380.082
+Finished Cross Boundary Optimization : Time (s): cpu = 00:02:17 ; elapsed = 00:02:31 . Memory (MB): peak = 551.883 ; gain = 379.512
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:02:06 ; elapsed = 00:02:14 . Memory (MB): peak = 552.250 ; gain = 380.082
+Finished Parallel Reinference  : Time (s): cpu = 00:02:17 ; elapsed = 00:02:31 . Memory (MB): peak = 551.883 ; gain = 379.512
 
 Report RTL Partitions: 
 +------+---------------+------------+----------+
@@ -11842,9 +11842,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (mmu/\tlba
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (mmu/\tlbarray/tlb0to15 /tlbentries8to11/\tlbentry1/_jtlb1entry_pipe_out/cregister/cregister/q_reg[43] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:04:52 ; elapsed = 00:05:07 . Memory (MB): peak = 910.684 ; gain = 738.516
+Finished Area Optimization : Time (s): cpu = 00:05:11 ; elapsed = 00:05:34 . Memory (MB): peak = 911.668 ; gain = 739.297
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:04:52 ; elapsed = 00:05:07 . Memory (MB): peak = 910.684 ; gain = 738.516
+Finished Parallel Area Optimization  : Time (s): cpu = 00:05:11 ; elapsed = 00:05:34 . Memory (MB): peak = 911.668 ; gain = 739.297
 
 Report RTL Partitions: 
 +------+---------------+------------+----------+
@@ -11855,13 +11855,13 @@ Report RTL Partitions:
 |3     |m14k_core__GB2 |           1|     10110|
 |4     |m14k_cpu__GC0  |           1|        90|
 +------+---------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:52 ; elapsed = 00:05:07 . Memory (MB): peak = 910.684 ; gain = 738.516
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:05:11 ; elapsed = 00:05:34 . Memory (MB): peak = 911.668 ; gain = 739.297
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:52 ; elapsed = 00:05:07 . Memory (MB): peak = 910.684 ; gain = 738.516
+Finished Timing Optimization : Time (s): cpu = 00:05:11 ; elapsed = 00:05:34 . Memory (MB): peak = 911.668 ; gain = 739.297
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11904,7 +11904,7 @@ INFO: [Synth 8-4480] The timing for the instance \inst/m14k_top_i/cpu/dcache/wsr
 INFO: [Synth 8-4480] The timing for the instance \inst/m14k_top_i/cpu/dcache/wsram/d_wsram___inst1/mem_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \inst/m14k_top_i/cpu/dcache/wsram/d_wsram___inst2/mem_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:12 ; elapsed = 00:05:28 . Memory (MB): peak = 933.574 ; gain = 761.406
+Finished Technology Mapping : Time (s): cpu = 00:05:33 ; elapsed = 00:05:56 . Memory (MB): peak = 936.352 ; gain = 763.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11922,7 +11922,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:16 ; elapsed = 00:05:31 . Memory (MB): peak = 933.574 ; gain = 761.406
+Finished IO Insertion : Time (s): cpu = 00:05:37 ; elapsed = 00:06:00 . Memory (MB): peak = 936.352 ; gain = 763.980
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -11935,7 +11935,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:16 ; elapsed = 00:05:32 . Memory (MB): peak = 933.574 ; gain = 761.406
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:37 ; elapsed = 00:06:00 . Memory (MB): peak = 936.352 ; gain = 763.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11947,13 +11947,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:24 ; elapsed = 00:05:39 . Memory (MB): peak = 933.574 ; gain = 761.406
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:45 ; elapsed = 00:06:08 . Memory (MB): peak = 936.352 ; gain = 763.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:05:24 ; elapsed = 00:05:39 . Memory (MB): peak = 933.574 ; gain = 761.406
+Start Renaming Generated Ports : Time (s): cpu = 00:05:45 ; elapsed = 00:06:08 . Memory (MB): peak = 936.352 ; gain = 763.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:27 ; elapsed = 00:05:42 . Memory (MB): peak = 933.574 ; gain = 761.406
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:48 ; elapsed = 00:06:11 . Memory (MB): peak = 936.352 ; gain = 763.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -13546,14 +13546,14 @@ Report Instance Areas:
 |1539  |            ram__tag_inst3                                                                     |RAMB4_S16__mod_2                           |     5|
 +------+-----------------------------------------------------------------------------------------------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:28 ; elapsed = 00:05:44 . Memory (MB): peak = 933.574 ; gain = 761.406
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:50 ; elapsed = 00:06:13 . Memory (MB): peak = 936.352 ; gain = 763.980
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 3 critical warnings and 1979 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:05:22 ; elapsed = 00:05:37 . Memory (MB): peak = 933.574 ; gain = 733.313
-Synthesis Optimization Complete : Time (s): cpu = 00:05:28 ; elapsed = 00:05:44 . Memory (MB): peak = 933.574 ; gain = 761.406
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:43 ; elapsed = 00:06:04 . Memory (MB): peak = 936.352 ; gain = 736.094
+Synthesis Optimization Complete : Time (s): cpu = 00:05:50 ; elapsed = 00:06:13 . Memory (MB): peak = 936.352 ; gain = 763.980
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 136 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -13562,11 +13562,11 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 3266 Infos, 166 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:44 ; elapsed = 00:05:59 . Memory (MB): peak = 933.574 ; gain = 733.313
+synth_design: Time (s): cpu = 00:06:07 ; elapsed = 00:06:29 . Memory (MB): peak = 936.352 ; gain = 736.094
 INFO: [Coretcl 2-1174] Renamed 1538 cell refs.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-write_checkpoint: Time (s): cpu = 00:00:52 ; elapsed = 00:00:47 . Memory (MB): peak = 1085.813 ; gain = 152.238
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.632 . Memory (MB): peak = 1085.813 ; gain = 0.000
-write_verilog: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1085.813 ; gain = 0.000
-write_vhdl: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1085.813 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 19 16:37:28 2018...
+write_checkpoint: Time (s): cpu = 00:00:52 ; elapsed = 00:00:48 . Memory (MB): peak = 1087.297 ; gain = 150.945
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.712 . Memory (MB): peak = 1087.297 ; gain = 0.000
+write_verilog: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1087.297 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1087.297 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 20 13:06:11 2018...

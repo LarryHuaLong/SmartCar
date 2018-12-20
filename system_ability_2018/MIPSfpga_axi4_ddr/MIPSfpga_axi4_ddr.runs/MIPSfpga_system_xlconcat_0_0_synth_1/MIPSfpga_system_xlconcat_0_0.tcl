@@ -16,6 +16,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/ip_repo [current_project]
 read_ip C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_xlconcat_0_0/MIPSfpga_system_xlconcat_0_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_xlconcat_0_0/MIPSfpga_system_xlconcat_0_0.dcp]
 set_property is_locked true [get_files C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_xlconcat_0_0/MIPSfpga_system_xlconcat_0_0.xci]
 
 synth_design -top MIPSfpga_system_xlconcat_0_0 -part xc7a100tcsg324-1 -mode out_of_context

@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:MotorDriver:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 (* X_CORE_INFO = "MotorDriver,Vivado 2015.2" *)
 (* CHECK_LICENSE_TYPE = "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{}" *)
-(* CORE_GENERATION_INFO = "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=MotorDriver,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,param_clk=50000,period=20,gear3=1048575,gear2=786432,gear1=393216,gear0=0}" *)
+(* CORE_GENERATION_INFO = "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=MotorDriver,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,param_clk=50000,period=20,gear3=1048575,gear2=786432,gear1=393216,gear0=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module MIPSfpga_system_MotorDriver_0_0 (
   CLK100MHZ,
