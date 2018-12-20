@@ -48,8 +48,8 @@ module MotorDriver(
     
     assign speed1 = speed_dir[15:14];
     assign speed2 = speed_dir[13:12];
-    assign speed3 = speed_dir[11:10];
-    assign speed4 = speed_dir[9:8];
+    assign speed4 = speed_dir[11:10];
+    assign speed3 = speed_dir[9:8];
     assign data = speed_dir[7:0];
   
     wire clk_1kHz;

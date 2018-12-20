@@ -1,8 +1,7 @@
 
 system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.cache
 system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.hw
-system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/synth_1
-system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/impl_1
+system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs
 system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.sim
 system_ability_2018/MIPSfpga_axi4_ddr/.Xil
 system_ability_2018/MotorDirver/.Xil
