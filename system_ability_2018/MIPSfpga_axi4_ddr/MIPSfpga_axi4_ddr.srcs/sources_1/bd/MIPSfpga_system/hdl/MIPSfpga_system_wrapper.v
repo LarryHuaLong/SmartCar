@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Thu Dec 20 15:09:24 2018
+//Date        : Thu Dec 20 19:21:58 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system_wrapper.bd
 //Design      : MIPSfpga_system_wrapper
@@ -28,6 +28,7 @@ module MIPSfpga_system_wrapper
     DDR2_SDRAM_odt,
     DDR2_SDRAM_ras_n,
     DDR2_SDRAM_we_n,
+    GREEN2,
     JB1,
     JB2,
     JB3,
@@ -51,6 +52,7 @@ module MIPSfpga_system_wrapper
     JD8,
     JD9,
     LED,
+    RED1,
     UART_RXD_OUT,
     UART_TXD_IN,
     dir_clk,
@@ -79,6 +81,7 @@ module MIPSfpga_system_wrapper
   output [0:0]DDR2_SDRAM_odt;
   output DDR2_SDRAM_ras_n;
   output DDR2_SDRAM_we_n;
+  output GREEN2;
   input JB1;
   input JB2;
   output JB3;
@@ -102,6 +105,7 @@ module MIPSfpga_system_wrapper
   input [0:0]JD8;
   input [0:0]JD9;
   output [15:0]LED;
+  output RED1;
   output UART_RXD_OUT;
   input UART_TXD_IN;
   output dir_clk;
@@ -131,6 +135,7 @@ module MIPSfpga_system_wrapper
   wire [0:0]DDR2_SDRAM_odt;
   wire DDR2_SDRAM_ras_n;
   wire DDR2_SDRAM_we_n;
+  wire GREEN2;
   wire JB1;
   wire JB2;
   wire JB3;
@@ -154,6 +159,7 @@ module MIPSfpga_system_wrapper
   wire [0:0]JD8;
   wire [0:0]JD9;
   wire [15:0]LED;
+  wire RED1;
   wire UART_RXD_OUT;
   wire UART_TXD_IN;
   wire dir_clk;
@@ -184,6 +190,7 @@ module MIPSfpga_system_wrapper
         .DDR2_SDRAM_odt(DDR2_SDRAM_odt),
         .DDR2_SDRAM_ras_n(DDR2_SDRAM_ras_n),
         .DDR2_SDRAM_we_n(DDR2_SDRAM_we_n),
+        .GREEN2(GREEN2),
         .JB1(JB1),
         .JB2(JB2),
         .JB3(JB3),
@@ -207,6 +214,7 @@ module MIPSfpga_system_wrapper
         .JD8(JD8),
         .JD9(JD9),
         .LED(LED),
+        .RED1(RED1),
         .UART_RXD_OUT(UART_RXD_OUT),
         .UART_TXD_IN(UART_TXD_IN),
         .dir_clk(dir_clk),

@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Thu Dec 20 15:09:24 2018
+//Date        : Thu Dec 20 19:21:57 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system.bd
 //Design      : MIPSfpga_system
@@ -29,6 +29,7 @@ module MIPSfpga_system
     DDR2_SDRAM_odt,
     DDR2_SDRAM_ras_n,
     DDR2_SDRAM_we_n,
+    GREEN2,
     JB1,
     JB2,
     JB3,
@@ -52,6 +53,7 @@ module MIPSfpga_system
     JD8,
     JD9,
     LED,
+    RED1,
     UART_RXD_OUT,
     UART_TXD_IN,
     dir_clk,
@@ -80,6 +82,7 @@ module MIPSfpga_system
   output [0:0]DDR2_SDRAM_odt;
   output DDR2_SDRAM_ras_n;
   output DDR2_SDRAM_we_n;
+  output GREEN2;
   input JB1;
   input JB2;
   output JB3;
@@ -103,6 +106,7 @@ module MIPSfpga_system
   input [0:0]JD8;
   input [0:0]JD9;
   output [15:0]LED;
+  output RED1;
   output UART_RXD_OUT;
   input UART_TXD_IN;
   output dir_clk;
@@ -389,6 +393,7 @@ module MIPSfpga_system
   assign EJ_TDI_1 = JB2;
   assign EJ_TMS_1 = JB1;
   assign EJ_TRST_N_1 = JB7;
+  assign GREEN2 = axi_intc_0_irq;
   assign In0_1 = JD1[0];
   assign In10_1 = JC3[0];
   assign In11_1 = JC4[0];
@@ -407,6 +412,7 @@ module MIPSfpga_system
   assign In9_1 = JC2[0];
   assign JB3 = MIPS_MicroAptiv_UP_0_EJ_TDO;
   assign LED[15:0] = axi_gpio_0_gpio2_io_o;
+  assign RED1 = axi_uart16550_1_ip2intc_irpt;
   assign SI_ColdReset_1 = JB8;
   assign SI_Reset_1 = CPU_RESETN;
   assign UART_RXD_OUT = axi_uart16550_0_sout;
