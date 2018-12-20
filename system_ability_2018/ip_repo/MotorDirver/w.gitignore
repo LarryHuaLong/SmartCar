@@ -1,0 +1,9 @@
+
+MotorDirver.Xil
+MotorDirver.cache
+MotorDirver.hw
+MotorDirver.runs
+MotorDirver.sim
+*.log
+*.jou
+*.zip

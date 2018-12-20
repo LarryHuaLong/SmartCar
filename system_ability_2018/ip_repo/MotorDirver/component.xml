@@ -456,10 +456,10 @@
 				<xilinx:taxonomy>/UserIP</xilinx:taxonomy>
 			</xilinx:taxonomies>
 			<xilinx:displayName>MotorDriver_v1_0</xilinx:displayName>
-			<xilinx:coreRevision>3</xilinx:coreRevision>
-			<xilinx:coreCreationDateTime>2018-12-20T03:01:28Z</xilinx:coreCreationDateTime>
+			<xilinx:coreRevision>4</xilinx:coreRevision>
+			<xilinx:coreCreationDateTime>2018-12-20T06:43:56Z</xilinx:coreCreationDateTime>
 			<xilinx:tags>
-				<xilinx:tag xilinx:name="xilinx.com:user:MotorDriver:1.0_ARCHIVE_LOCATION">D:/SmartCar/system_ability_2018/ip_repo</xilinx:tag>
+				<xilinx:tag xilinx:name="xilinx.com:user:MotorDriver:1.0_ARCHIVE_LOCATION">C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/ip_repo</xilinx:tag>
 			</xilinx:tags>
 		</xilinx:coreExtensions>
 		<xilinx:packagingInfo>
