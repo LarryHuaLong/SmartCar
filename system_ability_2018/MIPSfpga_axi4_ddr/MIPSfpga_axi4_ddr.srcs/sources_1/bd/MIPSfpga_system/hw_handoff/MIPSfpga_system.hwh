@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 19 22:17:53 2018" VIVADOVERSION="2015.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 20 12:57:17 2018" VIVADOVERSION="2015.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="MIPSfpga_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -269,7 +269,6 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_intc_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_uart16550_0" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="MotorDriver_0" PORT="CLK100MHZ"/>
             <CONNECTION INSTANCE="axi_uart16550_1" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_ACLK"/>
@@ -278,6 +277,7 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M04_ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M05_ACLK"/>
+            <CONNECTION INSTANCE="MotorDriver_0" PORT="CLK100MHZ"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="HRESETn" SIGIS="undef" SIGNAME="MIPS_MicroAptiv_UP_0_HRESETn">
@@ -288,7 +288,6 @@
             <CONNECTION INSTANCE="axi_intc_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_uart16550_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="mig_7series_0" PORT="aresetn"/>
-            <CONNECTION INSTANCE="MotorDriver_0" PORT="resetn"/>
             <CONNECTION INSTANCE="axi_uart16550_1" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_ARESETN"/>
@@ -297,6 +296,7 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M04_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M05_ARESETN"/>
+            <CONNECTION INSTANCE="MotorDriver_0" PORT="resetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="HRDATA" RIGHT="0" SIGIS="undef" SIGNAME="MIPS_MicroAptiv_UP_0_HRDATA">

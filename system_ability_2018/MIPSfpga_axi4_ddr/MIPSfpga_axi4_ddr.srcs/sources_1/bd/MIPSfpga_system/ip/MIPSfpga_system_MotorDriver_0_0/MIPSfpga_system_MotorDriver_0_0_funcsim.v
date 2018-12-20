@@ -1,7 +1,7 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-// Date        : Wed Dec 19 16:46:42 2018
+// Date        : Thu Dec 20 13:13:42 2018
 // Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_MotorDriver_0_0/MIPSfpga_system_MotorDriver_0_0_funcsim.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{}" *) (* CORE_GENERATION_INFO = "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=MotorDriver,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,param_clk=50000,period=20,gear3=1048575,gear2=786432,gear1=393216,gear0=0}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{}" *) (* CORE_GENERATION_INFO = "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=MotorDriver,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,param_clk=50000,period=20,gear3=1048575,gear2=786432,gear1=393216,gear0=0}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* X_CORE_INFO = "MotorDriver,Vivado 2015.2" *) 
 (* NotValidForBitStream *)
 module MIPSfpga_system_MotorDriver_0_0
@@ -375,16 +375,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     PWM_out_i_10__1
        (.I0(\wheel4/count_reg [10]),
         .I1(\wheel4/count_reg [11]),
-        .I2(speed_dir[2]),
-        .I3(speed_dir[3]),
+        .I2(speed_dir[0]),
+        .I3(speed_dir[1]),
         .O(PWM_out_i_10__1_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
     PWM_out_i_10__2
        (.I0(\wheel4/count_reg [10]),
         .I1(\wheel4/count_reg [11]),
-        .I2(speed_dir[0]),
-        .I3(speed_dir[1]),
+        .I2(speed_dir[2]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_10__2_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
@@ -407,16 +407,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     PWM_out_i_11__1
        (.I0(\wheel4/count_reg [8]),
         .I1(\wheel4/count_reg [9]),
-        .I2(speed_dir[2]),
-        .I3(speed_dir[3]),
+        .I2(speed_dir[0]),
+        .I3(speed_dir[1]),
         .O(PWM_out_i_11__1_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
     PWM_out_i_11__2
        (.I0(\wheel4/count_reg [8]),
         .I1(\wheel4/count_reg [9]),
-        .I2(speed_dir[0]),
-        .I3(speed_dir[1]),
+        .I2(speed_dir[2]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_11__2_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
@@ -438,16 +438,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     .INIT(16'h8015)) 
     PWM_out_i_12__1
        (.I0(\wheel4/count_reg [14]),
-        .I1(speed_dir[2]),
-        .I2(speed_dir[3]),
+        .I1(speed_dir[0]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [15]),
         .O(PWM_out_i_12__1_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
     PWM_out_i_12__2
        (.I0(\wheel4/count_reg [14]),
-        .I1(speed_dir[0]),
-        .I2(speed_dir[1]),
+        .I1(speed_dir[2]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [15]),
         .O(PWM_out_i_12__2_n_0));
   LUT4 #(
@@ -470,16 +470,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     .INIT(16'h8015)) 
     PWM_out_i_13__1
        (.I0(\wheel4/count_reg [12]),
-        .I1(speed_dir[2]),
-        .I2(speed_dir[3]),
+        .I1(speed_dir[0]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [13]),
         .O(PWM_out_i_13__1_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
     PWM_out_i_13__2
        (.I0(\wheel4/count_reg [12]),
-        .I1(speed_dir[0]),
-        .I2(speed_dir[1]),
+        .I1(speed_dir[2]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [13]),
         .O(PWM_out_i_13__2_n_0));
   LUT4 #(
@@ -502,16 +502,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     .INIT(16'h8015)) 
     PWM_out_i_14__1
        (.I0(\wheel4/count_reg [10]),
-        .I1(speed_dir[2]),
-        .I2(speed_dir[3]),
+        .I1(speed_dir[0]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [11]),
         .O(PWM_out_i_14__1_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
     PWM_out_i_14__2
        (.I0(\wheel4/count_reg [10]),
-        .I1(speed_dir[0]),
-        .I2(speed_dir[1]),
+        .I1(speed_dir[2]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [11]),
         .O(PWM_out_i_14__2_n_0));
   LUT4 #(
@@ -534,16 +534,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     .INIT(16'h8015)) 
     PWM_out_i_15__1
        (.I0(\wheel4/count_reg [8]),
-        .I1(speed_dir[2]),
-        .I2(speed_dir[3]),
+        .I1(speed_dir[0]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [9]),
         .O(PWM_out_i_15__1_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
     PWM_out_i_15__2
        (.I0(\wheel4/count_reg [8]),
-        .I1(speed_dir[0]),
-        .I2(speed_dir[1]),
+        .I1(speed_dir[2]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [9]),
         .O(PWM_out_i_15__2_n_0));
   LUT4 #(
@@ -567,16 +567,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     PWM_out_i_16__1
        (.I0(\wheel4/count_reg [6]),
         .I1(\wheel4/count_reg [7]),
-        .I2(speed_dir[2]),
-        .I3(speed_dir[3]),
+        .I2(speed_dir[0]),
+        .I3(speed_dir[1]),
         .O(PWM_out_i_16__1_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
     PWM_out_i_16__2
        (.I0(\wheel4/count_reg [6]),
         .I1(\wheel4/count_reg [7]),
-        .I2(speed_dir[0]),
-        .I3(speed_dir[1]),
+        .I2(speed_dir[2]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_16__2_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
@@ -599,16 +599,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     PWM_out_i_17__1
        (.I0(\wheel4/count_reg [4]),
         .I1(\wheel4/count_reg [5]),
-        .I2(speed_dir[2]),
-        .I3(speed_dir[3]),
+        .I2(speed_dir[0]),
+        .I3(speed_dir[1]),
         .O(PWM_out_i_17__1_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
     PWM_out_i_17__2
        (.I0(\wheel4/count_reg [4]),
         .I1(\wheel4/count_reg [5]),
-        .I2(speed_dir[0]),
-        .I3(speed_dir[1]),
+        .I2(speed_dir[2]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_17__2_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
@@ -631,16 +631,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     PWM_out_i_18__1
        (.I0(\wheel4/count_reg [2]),
         .I1(\wheel4/count_reg [3]),
-        .I2(speed_dir[2]),
-        .I3(speed_dir[3]),
+        .I2(speed_dir[0]),
+        .I3(speed_dir[1]),
         .O(PWM_out_i_18__1_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
     PWM_out_i_18__2
        (.I0(\wheel4/count_reg [2]),
         .I1(\wheel4/count_reg [3]),
-        .I2(speed_dir[0]),
-        .I3(speed_dir[1]),
+        .I2(speed_dir[2]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_18__2_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
@@ -663,16 +663,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     PWM_out_i_19__1
        (.I0(\wheel4/count_reg [0]),
         .I1(\wheel4/count_reg [1]),
-        .I2(speed_dir[2]),
-        .I3(speed_dir[3]),
+        .I2(speed_dir[0]),
+        .I3(speed_dir[1]),
         .O(PWM_out_i_19__1_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
     PWM_out_i_19__2
        (.I0(\wheel4/count_reg [0]),
         .I1(\wheel4/count_reg [1]),
-        .I2(speed_dir[0]),
-        .I3(speed_dir[1]),
+        .I2(speed_dir[2]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_19__2_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
@@ -694,16 +694,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     .INIT(16'h8015)) 
     PWM_out_i_20__1
        (.I0(\wheel4/count_reg [6]),
-        .I1(speed_dir[2]),
-        .I2(speed_dir[3]),
+        .I1(speed_dir[0]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [7]),
         .O(PWM_out_i_20__1_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
     PWM_out_i_20__2
        (.I0(\wheel4/count_reg [6]),
-        .I1(speed_dir[0]),
-        .I2(speed_dir[1]),
+        .I1(speed_dir[2]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [7]),
         .O(PWM_out_i_20__2_n_0));
   LUT4 #(
@@ -726,16 +726,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     .INIT(16'h8015)) 
     PWM_out_i_21__1
        (.I0(\wheel4/count_reg [4]),
-        .I1(speed_dir[2]),
-        .I2(speed_dir[3]),
+        .I1(speed_dir[0]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [5]),
         .O(PWM_out_i_21__1_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
     PWM_out_i_21__2
        (.I0(\wheel4/count_reg [4]),
-        .I1(speed_dir[0]),
-        .I2(speed_dir[1]),
+        .I1(speed_dir[2]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [5]),
         .O(PWM_out_i_21__2_n_0));
   LUT4 #(
@@ -758,16 +758,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     .INIT(16'h8015)) 
     PWM_out_i_22__1
        (.I0(\wheel4/count_reg [2]),
-        .I1(speed_dir[2]),
-        .I2(speed_dir[3]),
+        .I1(speed_dir[0]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [3]),
         .O(PWM_out_i_22__1_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
     PWM_out_i_22__2
        (.I0(\wheel4/count_reg [2]),
-        .I1(speed_dir[0]),
-        .I2(speed_dir[1]),
+        .I1(speed_dir[2]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [3]),
         .O(PWM_out_i_22__2_n_0));
   LUT4 #(
@@ -790,16 +790,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     .INIT(16'h8015)) 
     PWM_out_i_23__1
        (.I0(\wheel4/count_reg [0]),
-        .I1(speed_dir[2]),
-        .I2(speed_dir[3]),
+        .I1(speed_dir[0]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [1]),
         .O(PWM_out_i_23__1_n_0));
   LUT4 #(
     .INIT(16'h8015)) 
     PWM_out_i_23__2
        (.I0(\wheel4/count_reg [0]),
-        .I1(speed_dir[0]),
-        .I2(speed_dir[1]),
+        .I1(speed_dir[2]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [1]),
         .O(PWM_out_i_23__2_n_0));
   LUT4 #(
@@ -821,18 +821,18 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
   LUT4 #(
     .INIT(16'h3F02)) 
     PWM_out_i_3__1
-       (.I0(speed_dir[2]),
-        .I1(\wheel4/count_reg [18]),
-        .I2(\wheel4/count_reg [19]),
-        .I3(speed_dir[3]),
-        .O(PWM_out_i_3__1_n_0));
-  LUT4 #(
-    .INIT(16'h3F02)) 
-    PWM_out_i_3__2
        (.I0(speed_dir[0]),
         .I1(\wheel4/count_reg [18]),
         .I2(\wheel4/count_reg [19]),
         .I3(speed_dir[1]),
+        .O(PWM_out_i_3__1_n_0));
+  LUT4 #(
+    .INIT(16'h3F02)) 
+    PWM_out_i_3__2
+       (.I0(speed_dir[2]),
+        .I1(\wheel4/count_reg [18]),
+        .I2(\wheel4/count_reg [19]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_3__2_n_0));
   LUT4 #(
     .INIT(16'h2F00)) 
@@ -853,18 +853,18 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
   LUT4 #(
     .INIT(16'h2F00)) 
     PWM_out_i_4__1
-       (.I0(speed_dir[3]),
-        .I1(\wheel4/count_reg [16]),
-        .I2(\wheel4/count_reg [17]),
-        .I3(speed_dir[2]),
-        .O(PWM_out_i_4__1_n_0));
-  LUT4 #(
-    .INIT(16'h2F00)) 
-    PWM_out_i_4__2
        (.I0(speed_dir[1]),
         .I1(\wheel4/count_reg [16]),
         .I2(\wheel4/count_reg [17]),
         .I3(speed_dir[0]),
+        .O(PWM_out_i_4__1_n_0));
+  LUT4 #(
+    .INIT(16'h2F00)) 
+    PWM_out_i_4__2
+       (.I0(speed_dir[3]),
+        .I1(\wheel4/count_reg [16]),
+        .I2(\wheel4/count_reg [17]),
+        .I3(speed_dir[2]),
         .O(PWM_out_i_4__2_n_0));
   LUT4 #(
     .INIT(16'hC009)) 
@@ -885,17 +885,17 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
   LUT4 #(
     .INIT(16'hC009)) 
     PWM_out_i_5__1
-       (.I0(speed_dir[2]),
+       (.I0(speed_dir[0]),
         .I1(\wheel4/count_reg [18]),
-        .I2(speed_dir[3]),
+        .I2(speed_dir[1]),
         .I3(\wheel4/count_reg [19]),
         .O(PWM_out_i_5__1_n_0));
   LUT4 #(
     .INIT(16'hC009)) 
     PWM_out_i_5__2
-       (.I0(speed_dir[0]),
+       (.I0(speed_dir[2]),
         .I1(\wheel4/count_reg [18]),
-        .I2(speed_dir[1]),
+        .I2(speed_dir[3]),
         .I3(\wheel4/count_reg [19]),
         .O(PWM_out_i_5__2_n_0));
   LUT4 #(
@@ -917,17 +917,17 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
   LUT4 #(
     .INIT(16'h9003)) 
     PWM_out_i_6__1
-       (.I0(speed_dir[3]),
+       (.I0(speed_dir[1]),
         .I1(\wheel4/count_reg [16]),
-        .I2(speed_dir[2]),
+        .I2(speed_dir[0]),
         .I3(\wheel4/count_reg [17]),
         .O(PWM_out_i_6__1_n_0));
   LUT4 #(
     .INIT(16'h9003)) 
     PWM_out_i_6__2
-       (.I0(speed_dir[1]),
+       (.I0(speed_dir[3]),
         .I1(\wheel4/count_reg [16]),
-        .I2(speed_dir[0]),
+        .I2(speed_dir[2]),
         .I3(\wheel4/count_reg [17]),
         .O(PWM_out_i_6__2_n_0));
   LUT4 #(
@@ -951,16 +951,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     PWM_out_i_8__1
        (.I0(\wheel4/count_reg [14]),
         .I1(\wheel4/count_reg [15]),
-        .I2(speed_dir[2]),
-        .I3(speed_dir[3]),
+        .I2(speed_dir[0]),
+        .I3(speed_dir[1]),
         .O(PWM_out_i_8__1_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
     PWM_out_i_8__2
        (.I0(\wheel4/count_reg [14]),
         .I1(\wheel4/count_reg [15]),
-        .I2(speed_dir[0]),
-        .I3(speed_dir[1]),
+        .I2(speed_dir[2]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_8__2_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
@@ -983,16 +983,16 @@ module MIPSfpga_system_MotorDriver_0_0_PWM
     PWM_out_i_9__1
        (.I0(\wheel4/count_reg [12]),
         .I1(\wheel4/count_reg [13]),
-        .I2(speed_dir[2]),
-        .I3(speed_dir[3]),
+        .I2(speed_dir[0]),
+        .I3(speed_dir[1]),
         .O(PWM_out_i_9__1_n_0));
   LUT4 #(
     .INIT(16'h7000)) 
     PWM_out_i_9__2
        (.I0(\wheel4/count_reg [12]),
         .I1(\wheel4/count_reg [13]),
-        .I2(speed_dir[0]),
-        .I3(speed_dir[1]),
+        .I2(speed_dir[2]),
+        .I3(speed_dir[3]),
         .O(PWM_out_i_9__2_n_0));
   FDRE #(
     .INIT(1'b0)) 
