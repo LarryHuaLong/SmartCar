@@ -329,3 +329,9 @@ void syscall(void)
 	panic("undefined syscall %d, pid = %d, name = %s.\n",
 	      num, current->pid, current->name);
 }
+
+
+int sys_hello(){
+    panic(1,"kernel:hello world!");
+    return;
+}

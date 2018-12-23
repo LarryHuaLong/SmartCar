@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="URM_Driver_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="URM_Driver_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/div1/count" type="array">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/clk170khz" type="logic">
+      <obj_property name="ElementShortName">clk170khz</obj_property>
+      <obj_property name="ObjectShortName">clk170khz</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/trig" type="logic">
+      <obj_property name="ElementShortName">trig</obj_property>
+      <obj_property name="ObjectShortName">trig</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/count" type="array">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/echo" type="logic">
+      <obj_property name="ElementShortName">echo</obj_property>
+      <obj_property name="ObjectShortName">echo</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/last1_echo" type="logic">
+      <obj_property name="ElementShortName">last1_echo</obj_property>
+      <obj_property name="ObjectShortName">last1_echo</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/last2_echo" type="logic">
+      <obj_property name="ElementShortName">last2_echo</obj_property>
+      <obj_property name="ObjectShortName">last2_echo</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/counter" type="array">
+      <obj_property name="ElementShortName">counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/URM_Driver_tb/driver/distance" type="array">
+      <obj_property name="ElementShortName">distance[31:0]</obj_property>
+      <obj_property name="ObjectShortName">distance[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

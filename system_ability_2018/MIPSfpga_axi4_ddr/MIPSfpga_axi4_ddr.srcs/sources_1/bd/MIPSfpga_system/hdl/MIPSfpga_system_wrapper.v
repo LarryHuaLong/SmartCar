@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Thu Dec 20 21:07:32 2018
+//Date        : Sun Dec 23 18:23:15 2018
 //Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system_wrapper.bd
 //Design      : MIPSfpga_system_wrapper
@@ -28,7 +28,6 @@ module MIPSfpga_system_wrapper
     DDR2_SDRAM_odt,
     DDR2_SDRAM_ras_n,
     DDR2_SDRAM_we_n,
-    GREEN2,
     JB1,
     JB2,
     JB3,
@@ -38,29 +37,32 @@ module MIPSfpga_system_wrapper
     JC1,
     JC10,
     JC2,
+    JC3,
+    JC4,
     JC7,
     JC8,
     JC9,
     JD1,
-    JD10,
     JD2,
     JD3,
     JD4,
     JD7,
     JD8,
-    JD9,
     LED,
-    RED1,
+    LED16_G,
+    LED17_G,
     UART_RXD_OUT,
     UART_TXD_IN,
     dir_clk,
     dir_enable,
     dir_latch,
     dir_serial,
+    echo,
     pwm1,
     pwm2,
     pwm3,
-    pwm4);
+    pwm4,
+    trig);
   output BT_RXD_OUT;
   input BT_TXD_IN;
   input CLK100MHZ;
@@ -79,7 +81,6 @@ module MIPSfpga_system_wrapper
   output [0:0]DDR2_SDRAM_odt;
   output DDR2_SDRAM_ras_n;
   output DDR2_SDRAM_we_n;
-  output GREEN2;
   input JB1;
   input JB2;
   output JB3;
@@ -89,29 +90,32 @@ module MIPSfpga_system_wrapper
   input [0:0]JC1;
   input [0:0]JC10;
   input [0:0]JC2;
+  input [0:0]JC3;
+  input [0:0]JC4;
   input [0:0]JC7;
   input [0:0]JC8;
   input [0:0]JC9;
   input [0:0]JD1;
-  input [0:0]JD10;
   input [0:0]JD2;
   input [0:0]JD3;
   input [0:0]JD4;
   input [0:0]JD7;
   input [0:0]JD8;
-  input [0:0]JD9;
   output [15:0]LED;
-  output RED1;
+  output LED16_G;
+  output LED17_G;
   output UART_RXD_OUT;
   input UART_TXD_IN;
   output dir_clk;
   output dir_enable;
   output dir_latch;
   output dir_serial;
+  input echo;
   output pwm1;
   output pwm2;
   output pwm3;
   output pwm4;
+  output trig;
 
   wire BT_RXD_OUT;
   wire BT_TXD_IN;
@@ -131,7 +135,6 @@ module MIPSfpga_system_wrapper
   wire [0:0]DDR2_SDRAM_odt;
   wire DDR2_SDRAM_ras_n;
   wire DDR2_SDRAM_we_n;
-  wire GREEN2;
   wire JB1;
   wire JB2;
   wire JB3;
@@ -141,29 +144,32 @@ module MIPSfpga_system_wrapper
   wire [0:0]JC1;
   wire [0:0]JC10;
   wire [0:0]JC2;
+  wire [0:0]JC3;
+  wire [0:0]JC4;
   wire [0:0]JC7;
   wire [0:0]JC8;
   wire [0:0]JC9;
   wire [0:0]JD1;
-  wire [0:0]JD10;
   wire [0:0]JD2;
   wire [0:0]JD3;
   wire [0:0]JD4;
   wire [0:0]JD7;
   wire [0:0]JD8;
-  wire [0:0]JD9;
   wire [15:0]LED;
-  wire RED1;
+  wire LED16_G;
+  wire LED17_G;
   wire UART_RXD_OUT;
   wire UART_TXD_IN;
   wire dir_clk;
   wire dir_enable;
   wire dir_latch;
   wire dir_serial;
+  wire echo;
   wire pwm1;
   wire pwm2;
   wire pwm3;
   wire pwm4;
+  wire trig;
 
   MIPSfpga_system MIPSfpga_system_i
        (.BT_RXD_OUT(BT_RXD_OUT),
@@ -184,7 +190,6 @@ module MIPSfpga_system_wrapper
         .DDR2_SDRAM_odt(DDR2_SDRAM_odt),
         .DDR2_SDRAM_ras_n(DDR2_SDRAM_ras_n),
         .DDR2_SDRAM_we_n(DDR2_SDRAM_we_n),
-        .GREEN2(GREEN2),
         .JB1(JB1),
         .JB2(JB2),
         .JB3(JB3),
@@ -194,27 +199,30 @@ module MIPSfpga_system_wrapper
         .JC1(JC1),
         .JC10(JC10),
         .JC2(JC2),
+        .JC3(JC3),
+        .JC4(JC4),
         .JC7(JC7),
         .JC8(JC8),
         .JC9(JC9),
         .JD1(JD1),
-        .JD10(JD10),
         .JD2(JD2),
         .JD3(JD3),
         .JD4(JD4),
         .JD7(JD7),
         .JD8(JD8),
-        .JD9(JD9),
         .LED(LED),
-        .RED1(RED1),
+        .LED16_G(LED16_G),
+        .LED17_G(LED17_G),
         .UART_RXD_OUT(UART_RXD_OUT),
         .UART_TXD_IN(UART_TXD_IN),
         .dir_clk(dir_clk),
         .dir_enable(dir_enable),
         .dir_latch(dir_latch),
         .dir_serial(dir_serial),
+        .echo(echo),
         .pwm1(pwm1),
         .pwm2(pwm2),
         .pwm3(pwm3),
-        .pwm4(pwm4));
+        .pwm4(pwm4),
+        .trig(trig));
 endmodule
