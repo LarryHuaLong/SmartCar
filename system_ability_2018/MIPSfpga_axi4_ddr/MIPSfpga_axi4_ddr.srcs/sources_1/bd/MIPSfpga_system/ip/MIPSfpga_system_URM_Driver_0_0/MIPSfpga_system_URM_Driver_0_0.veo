@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:user:URM_Driver:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -55,10 +55,12 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 MIPSfpga_system_URM_Driver_0_0 your_instance_name (
-  .CLK100MHZ(CLK100MHZ),  // input wire CLK100MHZ
-  .echo(echo),            // input wire echo
-  .trig(trig),            // output wire trig
-  .distance(distance)    // output wire [31 : 0] distance
+  .CLK100MHZ(CLK100MHZ),      // input wire CLK100MHZ
+  .resetn(resetn),            // input wire resetn
+  .echo(echo),                // input wire echo
+  .trig(trig),                // output wire trig
+  .distance(distance),        // output wire [15 : 0] distance
+  .DangerClose(DangerClose)  // output wire DangerClose
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

@@ -25,27 +25,30 @@ module top_test(
     input CPU_RESETN,
     input echo,
     output trig,
+    output DangerClose,
     output [7:0] anodes,
-    output [7:0] cathodes,
-    output [15:0]LED,
-    output LED16_G
+    output [7:0] cathodes
     );
-    assign LED16_G = trig;
-    wire [31:0]distance;
-    URM_Driver#(.clk170khz_param(294)) driver(
+    parameter clk170khz_param = 294;
+    parameter clk10khz_param = 50000;
+    
+    wire [31:0]number;
+    wire [15:0]distance;
+    assign number = {16'h0000,distance};
+    URM_Driver#(.clk170khz_param(clk170khz_param))
+        driver(
         .CLK100MHZ(CLK100MHZ),
+        .resetn(CPU_RESETN),
         .echo(echo),
         .trig(trig),
-        .distance(distance)
+        .distance(distance),
+        .DangerClose(DangerClose)
         );
-    assign LED = distance[15:0];
     
-    wire clk10khz;
-    divider#(50000) div1(CLK100MHZ,clk10khz);
-    SegmentDisplay display(
-        .clk(clk10khz),
+    SegmentDisplay_0 display(
+        .CLK100MHZ(CLK100MHZ),
         .resetn(CPU_RESETN),
-        .number(distance),
+        .number(number),
         .anodes(anodes),
         .cathodes(cathodes)
         );

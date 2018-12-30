@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Thu Dec 20 15:29:25 2018
+-- Date        : Sun Dec 30 16:01:37 2018
 -- Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_MotorDriver_0_0/MIPSfpga_system_MotorDriver_0_0_funcsim.vhdl
@@ -232,8 +232,8 @@ PWM_out_i_10: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(10),
       I1 => \wheel4/count_reg\(11),
-      I2 => speed_dir(6),
-      I3 => speed_dir(7),
+      I2 => speed_dir(7),
+      I3 => speed_dir(6),
       O => PWM_out_i_10_n_0
     );
 \PWM_out_i_10__0\: unisim.vcomponents.LUT4
@@ -243,8 +243,8 @@ PWM_out_i_10: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(10),
       I1 => \wheel4/count_reg\(11),
-      I2 => speed_dir(4),
-      I3 => speed_dir(5),
+      I2 => speed_dir(5),
+      I3 => speed_dir(4),
       O => \PWM_out_i_10__0_n_0\
     );
 \PWM_out_i_10__1\: unisim.vcomponents.LUT4
@@ -254,8 +254,8 @@ PWM_out_i_10: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(10),
       I1 => \wheel4/count_reg\(11),
-      I2 => speed_dir(0),
-      I3 => speed_dir(1),
+      I2 => speed_dir(1),
+      I3 => speed_dir(0),
       O => \PWM_out_i_10__1_n_0\
     );
 \PWM_out_i_10__2\: unisim.vcomponents.LUT4
@@ -265,8 +265,8 @@ PWM_out_i_10: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(10),
       I1 => \wheel4/count_reg\(11),
-      I2 => speed_dir(2),
-      I3 => speed_dir(3),
+      I2 => speed_dir(3),
+      I3 => speed_dir(2),
       O => \PWM_out_i_10__2_n_0\
     );
 PWM_out_i_11: unisim.vcomponents.LUT4
@@ -276,8 +276,8 @@ PWM_out_i_11: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(8),
       I1 => \wheel4/count_reg\(9),
-      I2 => speed_dir(6),
-      I3 => speed_dir(7),
+      I2 => speed_dir(7),
+      I3 => speed_dir(6),
       O => PWM_out_i_11_n_0
     );
 \PWM_out_i_11__0\: unisim.vcomponents.LUT4
@@ -287,8 +287,8 @@ PWM_out_i_11: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(8),
       I1 => \wheel4/count_reg\(9),
-      I2 => speed_dir(4),
-      I3 => speed_dir(5),
+      I2 => speed_dir(5),
+      I3 => speed_dir(4),
       O => \PWM_out_i_11__0_n_0\
     );
 \PWM_out_i_11__1\: unisim.vcomponents.LUT4
@@ -298,8 +298,8 @@ PWM_out_i_11: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(8),
       I1 => \wheel4/count_reg\(9),
-      I2 => speed_dir(0),
-      I3 => speed_dir(1),
+      I2 => speed_dir(1),
+      I3 => speed_dir(0),
       O => \PWM_out_i_11__1_n_0\
     );
 \PWM_out_i_11__2\: unisim.vcomponents.LUT4
@@ -309,8 +309,8 @@ PWM_out_i_11: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(8),
       I1 => \wheel4/count_reg\(9),
-      I2 => speed_dir(2),
-      I3 => speed_dir(3),
+      I2 => speed_dir(3),
+      I3 => speed_dir(2),
       O => \PWM_out_i_11__2_n_0\
     );
 PWM_out_i_12: unisim.vcomponents.LUT4
@@ -319,8 +319,8 @@ PWM_out_i_12: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(14),
-      I1 => speed_dir(6),
-      I2 => speed_dir(7),
+      I1 => speed_dir(7),
+      I2 => speed_dir(6),
       I3 => \wheel4/count_reg\(15),
       O => PWM_out_i_12_n_0
     );
@@ -330,8 +330,8 @@ PWM_out_i_12: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(14),
-      I1 => speed_dir(4),
-      I2 => speed_dir(5),
+      I1 => speed_dir(5),
+      I2 => speed_dir(4),
       I3 => \wheel4/count_reg\(15),
       O => \PWM_out_i_12__0_n_0\
     );
@@ -341,8 +341,8 @@ PWM_out_i_12: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(14),
-      I1 => speed_dir(0),
-      I2 => speed_dir(1),
+      I1 => speed_dir(1),
+      I2 => speed_dir(0),
       I3 => \wheel4/count_reg\(15),
       O => \PWM_out_i_12__1_n_0\
     );
@@ -352,8 +352,8 @@ PWM_out_i_12: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(14),
-      I1 => speed_dir(2),
-      I2 => speed_dir(3),
+      I1 => speed_dir(3),
+      I2 => speed_dir(2),
       I3 => \wheel4/count_reg\(15),
       O => \PWM_out_i_12__2_n_0\
     );
@@ -363,8 +363,8 @@ PWM_out_i_13: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(12),
-      I1 => speed_dir(6),
-      I2 => speed_dir(7),
+      I1 => speed_dir(7),
+      I2 => speed_dir(6),
       I3 => \wheel4/count_reg\(13),
       O => PWM_out_i_13_n_0
     );
@@ -374,8 +374,8 @@ PWM_out_i_13: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(12),
-      I1 => speed_dir(4),
-      I2 => speed_dir(5),
+      I1 => speed_dir(5),
+      I2 => speed_dir(4),
       I3 => \wheel4/count_reg\(13),
       O => \PWM_out_i_13__0_n_0\
     );
@@ -385,8 +385,8 @@ PWM_out_i_13: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(12),
-      I1 => speed_dir(0),
-      I2 => speed_dir(1),
+      I1 => speed_dir(1),
+      I2 => speed_dir(0),
       I3 => \wheel4/count_reg\(13),
       O => \PWM_out_i_13__1_n_0\
     );
@@ -396,8 +396,8 @@ PWM_out_i_13: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(12),
-      I1 => speed_dir(2),
-      I2 => speed_dir(3),
+      I1 => speed_dir(3),
+      I2 => speed_dir(2),
       I3 => \wheel4/count_reg\(13),
       O => \PWM_out_i_13__2_n_0\
     );
@@ -407,8 +407,8 @@ PWM_out_i_14: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(10),
-      I1 => speed_dir(6),
-      I2 => speed_dir(7),
+      I1 => speed_dir(7),
+      I2 => speed_dir(6),
       I3 => \wheel4/count_reg\(11),
       O => PWM_out_i_14_n_0
     );
@@ -418,8 +418,8 @@ PWM_out_i_14: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(10),
-      I1 => speed_dir(4),
-      I2 => speed_dir(5),
+      I1 => speed_dir(5),
+      I2 => speed_dir(4),
       I3 => \wheel4/count_reg\(11),
       O => \PWM_out_i_14__0_n_0\
     );
@@ -429,8 +429,8 @@ PWM_out_i_14: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(10),
-      I1 => speed_dir(0),
-      I2 => speed_dir(1),
+      I1 => speed_dir(1),
+      I2 => speed_dir(0),
       I3 => \wheel4/count_reg\(11),
       O => \PWM_out_i_14__1_n_0\
     );
@@ -440,8 +440,8 @@ PWM_out_i_14: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(10),
-      I1 => speed_dir(2),
-      I2 => speed_dir(3),
+      I1 => speed_dir(3),
+      I2 => speed_dir(2),
       I3 => \wheel4/count_reg\(11),
       O => \PWM_out_i_14__2_n_0\
     );
@@ -451,8 +451,8 @@ PWM_out_i_15: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(8),
-      I1 => speed_dir(6),
-      I2 => speed_dir(7),
+      I1 => speed_dir(7),
+      I2 => speed_dir(6),
       I3 => \wheel4/count_reg\(9),
       O => PWM_out_i_15_n_0
     );
@@ -462,8 +462,8 @@ PWM_out_i_15: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(8),
-      I1 => speed_dir(4),
-      I2 => speed_dir(5),
+      I1 => speed_dir(5),
+      I2 => speed_dir(4),
       I3 => \wheel4/count_reg\(9),
       O => \PWM_out_i_15__0_n_0\
     );
@@ -473,8 +473,8 @@ PWM_out_i_15: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(8),
-      I1 => speed_dir(0),
-      I2 => speed_dir(1),
+      I1 => speed_dir(1),
+      I2 => speed_dir(0),
       I3 => \wheel4/count_reg\(9),
       O => \PWM_out_i_15__1_n_0\
     );
@@ -484,8 +484,8 @@ PWM_out_i_15: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(8),
-      I1 => speed_dir(2),
-      I2 => speed_dir(3),
+      I1 => speed_dir(3),
+      I2 => speed_dir(2),
       I3 => \wheel4/count_reg\(9),
       O => \PWM_out_i_15__2_n_0\
     );
@@ -496,8 +496,8 @@ PWM_out_i_16: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(6),
       I1 => \wheel4/count_reg\(7),
-      I2 => speed_dir(6),
-      I3 => speed_dir(7),
+      I2 => speed_dir(7),
+      I3 => speed_dir(6),
       O => PWM_out_i_16_n_0
     );
 \PWM_out_i_16__0\: unisim.vcomponents.LUT4
@@ -507,8 +507,8 @@ PWM_out_i_16: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(6),
       I1 => \wheel4/count_reg\(7),
-      I2 => speed_dir(4),
-      I3 => speed_dir(5),
+      I2 => speed_dir(5),
+      I3 => speed_dir(4),
       O => \PWM_out_i_16__0_n_0\
     );
 \PWM_out_i_16__1\: unisim.vcomponents.LUT4
@@ -518,8 +518,8 @@ PWM_out_i_16: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(6),
       I1 => \wheel4/count_reg\(7),
-      I2 => speed_dir(0),
-      I3 => speed_dir(1),
+      I2 => speed_dir(1),
+      I3 => speed_dir(0),
       O => \PWM_out_i_16__1_n_0\
     );
 \PWM_out_i_16__2\: unisim.vcomponents.LUT4
@@ -529,8 +529,8 @@ PWM_out_i_16: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(6),
       I1 => \wheel4/count_reg\(7),
-      I2 => speed_dir(2),
-      I3 => speed_dir(3),
+      I2 => speed_dir(3),
+      I3 => speed_dir(2),
       O => \PWM_out_i_16__2_n_0\
     );
 PWM_out_i_17: unisim.vcomponents.LUT4
@@ -540,8 +540,8 @@ PWM_out_i_17: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(4),
       I1 => \wheel4/count_reg\(5),
-      I2 => speed_dir(6),
-      I3 => speed_dir(7),
+      I2 => speed_dir(7),
+      I3 => speed_dir(6),
       O => PWM_out_i_17_n_0
     );
 \PWM_out_i_17__0\: unisim.vcomponents.LUT4
@@ -551,8 +551,8 @@ PWM_out_i_17: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(4),
       I1 => \wheel4/count_reg\(5),
-      I2 => speed_dir(4),
-      I3 => speed_dir(5),
+      I2 => speed_dir(5),
+      I3 => speed_dir(4),
       O => \PWM_out_i_17__0_n_0\
     );
 \PWM_out_i_17__1\: unisim.vcomponents.LUT4
@@ -562,8 +562,8 @@ PWM_out_i_17: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(4),
       I1 => \wheel4/count_reg\(5),
-      I2 => speed_dir(0),
-      I3 => speed_dir(1),
+      I2 => speed_dir(1),
+      I3 => speed_dir(0),
       O => \PWM_out_i_17__1_n_0\
     );
 \PWM_out_i_17__2\: unisim.vcomponents.LUT4
@@ -573,8 +573,8 @@ PWM_out_i_17: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(4),
       I1 => \wheel4/count_reg\(5),
-      I2 => speed_dir(2),
-      I3 => speed_dir(3),
+      I2 => speed_dir(3),
+      I3 => speed_dir(2),
       O => \PWM_out_i_17__2_n_0\
     );
 PWM_out_i_18: unisim.vcomponents.LUT4
@@ -584,8 +584,8 @@ PWM_out_i_18: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(2),
       I1 => \wheel4/count_reg\(3),
-      I2 => speed_dir(6),
-      I3 => speed_dir(7),
+      I2 => speed_dir(7),
+      I3 => speed_dir(6),
       O => PWM_out_i_18_n_0
     );
 \PWM_out_i_18__0\: unisim.vcomponents.LUT4
@@ -595,8 +595,8 @@ PWM_out_i_18: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(2),
       I1 => \wheel4/count_reg\(3),
-      I2 => speed_dir(4),
-      I3 => speed_dir(5),
+      I2 => speed_dir(5),
+      I3 => speed_dir(4),
       O => \PWM_out_i_18__0_n_0\
     );
 \PWM_out_i_18__1\: unisim.vcomponents.LUT4
@@ -606,8 +606,8 @@ PWM_out_i_18: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(2),
       I1 => \wheel4/count_reg\(3),
-      I2 => speed_dir(0),
-      I3 => speed_dir(1),
+      I2 => speed_dir(1),
+      I3 => speed_dir(0),
       O => \PWM_out_i_18__1_n_0\
     );
 \PWM_out_i_18__2\: unisim.vcomponents.LUT4
@@ -617,8 +617,8 @@ PWM_out_i_18: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(2),
       I1 => \wheel4/count_reg\(3),
-      I2 => speed_dir(2),
-      I3 => speed_dir(3),
+      I2 => speed_dir(3),
+      I3 => speed_dir(2),
       O => \PWM_out_i_18__2_n_0\
     );
 PWM_out_i_19: unisim.vcomponents.LUT4
@@ -628,8 +628,8 @@ PWM_out_i_19: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(0),
       I1 => \wheel4/count_reg\(1),
-      I2 => speed_dir(6),
-      I3 => speed_dir(7),
+      I2 => speed_dir(7),
+      I3 => speed_dir(6),
       O => PWM_out_i_19_n_0
     );
 \PWM_out_i_19__0\: unisim.vcomponents.LUT4
@@ -639,8 +639,8 @@ PWM_out_i_19: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(0),
       I1 => \wheel4/count_reg\(1),
-      I2 => speed_dir(4),
-      I3 => speed_dir(5),
+      I2 => speed_dir(5),
+      I3 => speed_dir(4),
       O => \PWM_out_i_19__0_n_0\
     );
 \PWM_out_i_19__1\: unisim.vcomponents.LUT4
@@ -650,8 +650,8 @@ PWM_out_i_19: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(0),
       I1 => \wheel4/count_reg\(1),
-      I2 => speed_dir(0),
-      I3 => speed_dir(1),
+      I2 => speed_dir(1),
+      I3 => speed_dir(0),
       O => \PWM_out_i_19__1_n_0\
     );
 \PWM_out_i_19__2\: unisim.vcomponents.LUT4
@@ -661,8 +661,8 @@ PWM_out_i_19: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(0),
       I1 => \wheel4/count_reg\(1),
-      I2 => speed_dir(2),
-      I3 => speed_dir(3),
+      I2 => speed_dir(3),
+      I3 => speed_dir(2),
       O => \PWM_out_i_19__2_n_0\
     );
 PWM_out_i_20: unisim.vcomponents.LUT4
@@ -671,8 +671,8 @@ PWM_out_i_20: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(6),
-      I1 => speed_dir(6),
-      I2 => speed_dir(7),
+      I1 => speed_dir(7),
+      I2 => speed_dir(6),
       I3 => \wheel4/count_reg\(7),
       O => PWM_out_i_20_n_0
     );
@@ -682,8 +682,8 @@ PWM_out_i_20: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(6),
-      I1 => speed_dir(4),
-      I2 => speed_dir(5),
+      I1 => speed_dir(5),
+      I2 => speed_dir(4),
       I3 => \wheel4/count_reg\(7),
       O => \PWM_out_i_20__0_n_0\
     );
@@ -693,8 +693,8 @@ PWM_out_i_20: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(6),
-      I1 => speed_dir(0),
-      I2 => speed_dir(1),
+      I1 => speed_dir(1),
+      I2 => speed_dir(0),
       I3 => \wheel4/count_reg\(7),
       O => \PWM_out_i_20__1_n_0\
     );
@@ -704,8 +704,8 @@ PWM_out_i_20: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(6),
-      I1 => speed_dir(2),
-      I2 => speed_dir(3),
+      I1 => speed_dir(3),
+      I2 => speed_dir(2),
       I3 => \wheel4/count_reg\(7),
       O => \PWM_out_i_20__2_n_0\
     );
@@ -715,8 +715,8 @@ PWM_out_i_21: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(4),
-      I1 => speed_dir(6),
-      I2 => speed_dir(7),
+      I1 => speed_dir(7),
+      I2 => speed_dir(6),
       I3 => \wheel4/count_reg\(5),
       O => PWM_out_i_21_n_0
     );
@@ -726,8 +726,8 @@ PWM_out_i_21: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(4),
-      I1 => speed_dir(4),
-      I2 => speed_dir(5),
+      I1 => speed_dir(5),
+      I2 => speed_dir(4),
       I3 => \wheel4/count_reg\(5),
       O => \PWM_out_i_21__0_n_0\
     );
@@ -737,8 +737,8 @@ PWM_out_i_21: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(4),
-      I1 => speed_dir(0),
-      I2 => speed_dir(1),
+      I1 => speed_dir(1),
+      I2 => speed_dir(0),
       I3 => \wheel4/count_reg\(5),
       O => \PWM_out_i_21__1_n_0\
     );
@@ -748,8 +748,8 @@ PWM_out_i_21: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(4),
-      I1 => speed_dir(2),
-      I2 => speed_dir(3),
+      I1 => speed_dir(3),
+      I2 => speed_dir(2),
       I3 => \wheel4/count_reg\(5),
       O => \PWM_out_i_21__2_n_0\
     );
@@ -759,8 +759,8 @@ PWM_out_i_22: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(2),
-      I1 => speed_dir(6),
-      I2 => speed_dir(7),
+      I1 => speed_dir(7),
+      I2 => speed_dir(6),
       I3 => \wheel4/count_reg\(3),
       O => PWM_out_i_22_n_0
     );
@@ -770,8 +770,8 @@ PWM_out_i_22: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(2),
-      I1 => speed_dir(4),
-      I2 => speed_dir(5),
+      I1 => speed_dir(5),
+      I2 => speed_dir(4),
       I3 => \wheel4/count_reg\(3),
       O => \PWM_out_i_22__0_n_0\
     );
@@ -781,8 +781,8 @@ PWM_out_i_22: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(2),
-      I1 => speed_dir(0),
-      I2 => speed_dir(1),
+      I1 => speed_dir(1),
+      I2 => speed_dir(0),
       I3 => \wheel4/count_reg\(3),
       O => \PWM_out_i_22__1_n_0\
     );
@@ -792,8 +792,8 @@ PWM_out_i_22: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(2),
-      I1 => speed_dir(2),
-      I2 => speed_dir(3),
+      I1 => speed_dir(3),
+      I2 => speed_dir(2),
       I3 => \wheel4/count_reg\(3),
       O => \PWM_out_i_22__2_n_0\
     );
@@ -803,8 +803,8 @@ PWM_out_i_23: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(0),
-      I1 => speed_dir(6),
-      I2 => speed_dir(7),
+      I1 => speed_dir(7),
+      I2 => speed_dir(6),
       I3 => \wheel4/count_reg\(1),
       O => PWM_out_i_23_n_0
     );
@@ -814,8 +814,8 @@ PWM_out_i_23: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(0),
-      I1 => speed_dir(4),
-      I2 => speed_dir(5),
+      I1 => speed_dir(5),
+      I2 => speed_dir(4),
       I3 => \wheel4/count_reg\(1),
       O => \PWM_out_i_23__0_n_0\
     );
@@ -825,8 +825,8 @@ PWM_out_i_23: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(0),
-      I1 => speed_dir(0),
-      I2 => speed_dir(1),
+      I1 => speed_dir(1),
+      I2 => speed_dir(0),
       I3 => \wheel4/count_reg\(1),
       O => \PWM_out_i_23__1_n_0\
     );
@@ -836,8 +836,8 @@ PWM_out_i_23: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \wheel4/count_reg\(0),
-      I1 => speed_dir(2),
-      I2 => speed_dir(3),
+      I1 => speed_dir(3),
+      I2 => speed_dir(2),
       I3 => \wheel4/count_reg\(1),
       O => \PWM_out_i_23__2_n_0\
     );
@@ -1024,8 +1024,8 @@ PWM_out_i_8: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(14),
       I1 => \wheel4/count_reg\(15),
-      I2 => speed_dir(6),
-      I3 => speed_dir(7),
+      I2 => speed_dir(7),
+      I3 => speed_dir(6),
       O => PWM_out_i_8_n_0
     );
 \PWM_out_i_8__0\: unisim.vcomponents.LUT4
@@ -1035,8 +1035,8 @@ PWM_out_i_8: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(14),
       I1 => \wheel4/count_reg\(15),
-      I2 => speed_dir(4),
-      I3 => speed_dir(5),
+      I2 => speed_dir(5),
+      I3 => speed_dir(4),
       O => \PWM_out_i_8__0_n_0\
     );
 \PWM_out_i_8__1\: unisim.vcomponents.LUT4
@@ -1046,8 +1046,8 @@ PWM_out_i_8: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(14),
       I1 => \wheel4/count_reg\(15),
-      I2 => speed_dir(0),
-      I3 => speed_dir(1),
+      I2 => speed_dir(1),
+      I3 => speed_dir(0),
       O => \PWM_out_i_8__1_n_0\
     );
 \PWM_out_i_8__2\: unisim.vcomponents.LUT4
@@ -1057,8 +1057,8 @@ PWM_out_i_8: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(14),
       I1 => \wheel4/count_reg\(15),
-      I2 => speed_dir(2),
-      I3 => speed_dir(3),
+      I2 => speed_dir(3),
+      I3 => speed_dir(2),
       O => \PWM_out_i_8__2_n_0\
     );
 PWM_out_i_9: unisim.vcomponents.LUT4
@@ -1068,8 +1068,8 @@ PWM_out_i_9: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(12),
       I1 => \wheel4/count_reg\(13),
-      I2 => speed_dir(6),
-      I3 => speed_dir(7),
+      I2 => speed_dir(7),
+      I3 => speed_dir(6),
       O => PWM_out_i_9_n_0
     );
 \PWM_out_i_9__0\: unisim.vcomponents.LUT4
@@ -1079,8 +1079,8 @@ PWM_out_i_9: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(12),
       I1 => \wheel4/count_reg\(13),
-      I2 => speed_dir(4),
-      I3 => speed_dir(5),
+      I2 => speed_dir(5),
+      I3 => speed_dir(4),
       O => \PWM_out_i_9__0_n_0\
     );
 \PWM_out_i_9__1\: unisim.vcomponents.LUT4
@@ -1090,8 +1090,8 @@ PWM_out_i_9: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(12),
       I1 => \wheel4/count_reg\(13),
-      I2 => speed_dir(0),
-      I3 => speed_dir(1),
+      I2 => speed_dir(1),
+      I3 => speed_dir(0),
       O => \PWM_out_i_9__1_n_0\
     );
 \PWM_out_i_9__2\: unisim.vcomponents.LUT4
@@ -1101,8 +1101,8 @@ PWM_out_i_9: unisim.vcomponents.LUT4
         port map (
       I0 => \wheel4/count_reg\(12),
       I1 => \wheel4/count_reg\(13),
-      I2 => speed_dir(2),
-      I3 => speed_dir(3),
+      I2 => speed_dir(3),
+      I3 => speed_dir(2),
       O => \PWM_out_i_9__2_n_0\
     );
 PWM_out_reg: unisim.vcomponents.FDRE
@@ -1914,7 +1914,7 @@ entity MIPSfpga_system_MotorDriver_0_0_dirController is
   port (
     dir_serial : out STD_LOGIC;
     dir_latch : out STD_LOGIC;
-    clkout_reg : in STD_LOGIC;
+    clkout_buf_reg : in STD_LOGIC;
     speed_dir : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -1968,7 +1968,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => '1',
       D => changed_i_1_n_0,
       Q => changed,
@@ -2015,7 +2015,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => '1',
       D => \counter[0]_i_1_n_0\,
       Q => counter(0),
@@ -2026,7 +2026,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => '1',
       D => \counter[1]_i_1_n_0\,
       Q => counter(1),
@@ -2037,7 +2037,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => '1',
       D => \counter[2]_i_1_n_0\,
       Q => counter(2),
@@ -2095,7 +2095,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => \dir_last[7]_i_1_n_0\,
       D => speed_dir(7),
       Q => \dir_last_reg_n_0_[0]\,
@@ -2106,7 +2106,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => \dir_last[7]_i_1_n_0\,
       D => speed_dir(3),
       Q => p_0_in,
@@ -2117,7 +2117,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => \dir_last[7]_i_1_n_0\,
       D => speed_dir(1),
       Q => p_1_in,
@@ -2128,7 +2128,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => \dir_last[7]_i_1_n_0\,
       D => speed_dir(0),
       Q => p_2_in,
@@ -2139,7 +2139,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => \dir_last[7]_i_1_n_0\,
       D => speed_dir(2),
       Q => p_3_in,
@@ -2150,7 +2150,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => \dir_last[7]_i_1_n_0\,
       D => speed_dir(4),
       Q => p_4_in,
@@ -2161,7 +2161,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => \dir_last[7]_i_1_n_0\,
       D => speed_dir(6),
       Q => \dir_last_reg_n_0_[6]\,
@@ -2172,7 +2172,7 @@ changed_reg: unisim.vcomponents.FDRE
       INIT => '0'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => \dir_last[7]_i_1_n_0\,
       D => speed_dir(5),
       Q => \dir_last_reg_n_0_[7]\,
@@ -2184,7 +2184,7 @@ dir_latch_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => latch,
-      I1 => clkout_reg,
+      I1 => clkout_buf_reg,
       O => dir_latch
     );
 latch_i_1: unisim.vcomponents.LUT5
@@ -2204,7 +2204,7 @@ latch_reg: unisim.vcomponents.FDRE
       IS_C_INVERTED => '1'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => '1',
       D => latch_i_1_n_0,
       Q => latch,
@@ -2228,7 +2228,7 @@ load_reg: unisim.vcomponents.FDRE
       IS_C_INVERTED => '1'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => '1',
       D => load_i_1_n_0,
       Q => load,
@@ -2265,7 +2265,7 @@ serial_reg: unisim.vcomponents.FDRE
       IS_C_INVERTED => '1'
     )
         port map (
-      C => clkout_reg,
+      C => clkout_buf_reg,
       CE => '1',
       D => serial_reg_i_1_n_0,
       Q => dir_serial,
@@ -2293,16 +2293,16 @@ entity MIPSfpga_system_MotorDriver_0_0_divider is
 end MIPSfpga_system_MotorDriver_0_0_divider;
 
 architecture STRUCTURE of MIPSfpga_system_MotorDriver_0_0_divider is
-  signal clkout : STD_LOGIC;
-  signal clkout_i_1_n_0 : STD_LOGIC;
-  signal clkout_i_2_n_0 : STD_LOGIC;
-  signal clkout_i_3_n_0 : STD_LOGIC;
-  signal clkout_i_4_n_0 : STD_LOGIC;
-  signal clkout_i_5_n_0 : STD_LOGIC;
-  signal clkout_i_6_n_0 : STD_LOGIC;
-  signal clkout_i_7_n_0 : STD_LOGIC;
-  signal clkout_i_8_n_0 : STD_LOGIC;
-  signal clkout_i_9_n_0 : STD_LOGIC;
+  signal clkout_buf : STD_LOGIC;
+  signal clkout_buf_i_1_n_0 : STD_LOGIC;
+  signal clkout_buf_i_2_n_0 : STD_LOGIC;
+  signal clkout_buf_i_3_n_0 : STD_LOGIC;
+  signal clkout_buf_i_4_n_0 : STD_LOGIC;
+  signal clkout_buf_i_5_n_0 : STD_LOGIC;
+  signal clkout_buf_i_6_n_0 : STD_LOGIC;
+  signal clkout_buf_i_7_n_0 : STD_LOGIC;
+  signal clkout_buf_i_8_n_0 : STD_LOGIC;
+  signal clkout_buf_i_9_n_0 : STD_LOGIC;
   signal count : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \count[12]_i_2_n_0\ : STD_LOGIC;
   signal \count[12]_i_3_n_0\ : STD_LOGIC;
@@ -2401,36 +2401,36 @@ architecture STRUCTURE of MIPSfpga_system_MotorDriver_0_0_divider is
   signal \NLW_count_reg[31]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_count_reg[31]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of clkout_i_1 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of clkout_buf_i_1 : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \count[0]_i_1\ : label is "soft_lutpair1";
 begin
   dir_clk <= \^dir_clk\;
-clkout_i_1: unisim.vcomponents.LUT5
+clkout_buf_i_1: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFE0001"
     )
         port map (
-      I0 => clkout_i_2_n_0,
-      I1 => clkout_i_3_n_0,
-      I2 => clkout_i_4_n_0,
+      I0 => clkout_buf_i_2_n_0,
+      I1 => clkout_buf_i_3_n_0,
+      I2 => clkout_buf_i_4_n_0,
       I3 => count(0),
       I4 => \^dir_clk\,
-      O => clkout_i_1_n_0
+      O => clkout_buf_i_1_n_0
     );
-clkout_i_2: unisim.vcomponents.LUT6
+clkout_buf_i_2: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => clkout_i_5_n_0,
-      I1 => clkout_i_6_n_0,
+      I0 => clkout_buf_i_5_n_0,
+      I1 => clkout_buf_i_6_n_0,
       I2 => count(31),
       I3 => count(30),
       I4 => count(1),
-      I5 => clkout_i_7_n_0,
-      O => clkout_i_2_n_0
+      I5 => clkout_buf_i_7_n_0,
+      O => clkout_buf_i_2_n_0
     );
-clkout_i_3: unisim.vcomponents.LUT5
+clkout_buf_i_3: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFFFFFB"
     )
@@ -2439,10 +2439,10 @@ clkout_i_3: unisim.vcomponents.LUT5
       I1 => count(4),
       I2 => count(2),
       I3 => count(3),
-      I4 => clkout_i_8_n_0,
-      O => clkout_i_3_n_0
+      I4 => clkout_buf_i_8_n_0,
+      O => clkout_buf_i_3_n_0
     );
-clkout_i_4: unisim.vcomponents.LUT5
+clkout_buf_i_4: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFFFFFE"
     )
@@ -2451,10 +2451,10 @@ clkout_i_4: unisim.vcomponents.LUT5
       I1 => count(13),
       I2 => count(10),
       I3 => count(11),
-      I4 => clkout_i_9_n_0,
-      O => clkout_i_4_n_0
+      I4 => clkout_buf_i_9_n_0,
+      O => clkout_buf_i_4_n_0
     );
-clkout_i_5: unisim.vcomponents.LUT4
+clkout_buf_i_5: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
@@ -2463,9 +2463,9 @@ clkout_i_5: unisim.vcomponents.LUT4
       I1 => count(22),
       I2 => count(25),
       I3 => count(24),
-      O => clkout_i_5_n_0
+      O => clkout_buf_i_5_n_0
     );
-clkout_i_6: unisim.vcomponents.LUT4
+clkout_buf_i_6: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
@@ -2474,9 +2474,9 @@ clkout_i_6: unisim.vcomponents.LUT4
       I1 => count(18),
       I2 => count(21),
       I3 => count(20),
-      O => clkout_i_6_n_0
+      O => clkout_buf_i_6_n_0
     );
-clkout_i_7: unisim.vcomponents.LUT4
+clkout_buf_i_7: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
@@ -2485,9 +2485,9 @@ clkout_i_7: unisim.vcomponents.LUT4
       I1 => count(26),
       I2 => count(29),
       I3 => count(28),
-      O => clkout_i_7_n_0
+      O => clkout_buf_i_7_n_0
     );
-clkout_i_8: unisim.vcomponents.LUT4
+clkout_buf_i_8: unisim.vcomponents.LUT4
     generic map(
       INIT => X"DFFF"
     )
@@ -2496,9 +2496,9 @@ clkout_i_8: unisim.vcomponents.LUT4
       I1 => count(7),
       I2 => count(9),
       I3 => count(8),
-      O => clkout_i_8_n_0
+      O => clkout_buf_i_8_n_0
     );
-clkout_i_9: unisim.vcomponents.LUT4
+clkout_buf_i_9: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFF7"
     )
@@ -2507,16 +2507,16 @@ clkout_i_9: unisim.vcomponents.LUT4
       I1 => count(14),
       I2 => count(17),
       I3 => count(16),
-      O => clkout_i_9_n_0
+      O => clkout_buf_i_9_n_0
     );
-clkout_reg: unisim.vcomponents.FDRE
+clkout_buf_reg: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => CLK100MHZ,
       CE => '1',
-      D => clkout_i_1_n_0,
+      D => clkout_buf_i_1_n_0,
       Q => \^dir_clk\,
       R => '0'
     );
@@ -2525,9 +2525,9 @@ clkout_reg: unisim.vcomponents.FDRE
       INIT => X"00FE"
     )
         port map (
-      I0 => clkout_i_2_n_0,
-      I1 => clkout_i_3_n_0,
-      I2 => clkout_i_4_n_0,
+      I0 => clkout_buf_i_2_n_0,
+      I1 => clkout_buf_i_3_n_0,
+      I2 => clkout_buf_i_4_n_0,
       I3 => count(0),
       O => count_0(0)
     );
@@ -2696,11 +2696,11 @@ clkout_reg: unisim.vcomponents.FDRE
       INIT => X"0001"
     )
         port map (
-      I0 => clkout_i_2_n_0,
-      I1 => clkout_i_3_n_0,
-      I2 => clkout_i_4_n_0,
+      I0 => clkout_buf_i_2_n_0,
+      I1 => clkout_buf_i_3_n_0,
+      I2 => clkout_buf_i_4_n_0,
       I3 => count(0),
-      O => clkout
+      O => clkout_buf
     );
 \count[31]_i_3\: unisim.vcomponents.LUT1
     generic map(
@@ -2810,7 +2810,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[12]_i_1_n_6\,
       Q => count(10),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[11]\: unisim.vcomponents.FDRE
     generic map(
@@ -2821,7 +2821,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[12]_i_1_n_5\,
       Q => count(11),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[12]\: unisim.vcomponents.FDRE
     generic map(
@@ -2832,7 +2832,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[12]_i_1_n_4\,
       Q => count(12),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[12]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -2864,7 +2864,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[16]_i_1_n_7\,
       Q => count(13),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[14]\: unisim.vcomponents.FDRE
     generic map(
@@ -2875,7 +2875,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[16]_i_1_n_6\,
       Q => count(14),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[15]\: unisim.vcomponents.FDRE
     generic map(
@@ -2886,7 +2886,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[16]_i_1_n_5\,
       Q => count(15),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[16]\: unisim.vcomponents.FDRE
     generic map(
@@ -2897,7 +2897,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[16]_i_1_n_4\,
       Q => count(16),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[16]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -2929,7 +2929,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[20]_i_1_n_7\,
       Q => count(17),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[18]\: unisim.vcomponents.FDRE
     generic map(
@@ -2940,7 +2940,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[20]_i_1_n_6\,
       Q => count(18),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[19]\: unisim.vcomponents.FDRE
     generic map(
@@ -2951,7 +2951,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[20]_i_1_n_5\,
       Q => count(19),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -2962,7 +2962,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[4]_i_1_n_7\,
       Q => count(1),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[20]\: unisim.vcomponents.FDRE
     generic map(
@@ -2973,7 +2973,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[20]_i_1_n_4\,
       Q => count(20),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[20]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -3005,7 +3005,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[24]_i_1_n_7\,
       Q => count(21),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[22]\: unisim.vcomponents.FDRE
     generic map(
@@ -3016,7 +3016,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[24]_i_1_n_6\,
       Q => count(22),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[23]\: unisim.vcomponents.FDRE
     generic map(
@@ -3027,7 +3027,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[24]_i_1_n_5\,
       Q => count(23),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[24]\: unisim.vcomponents.FDRE
     generic map(
@@ -3038,7 +3038,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[24]_i_1_n_4\,
       Q => count(24),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[24]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -3070,7 +3070,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[28]_i_1_n_7\,
       Q => count(25),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[26]\: unisim.vcomponents.FDRE
     generic map(
@@ -3081,7 +3081,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[28]_i_1_n_6\,
       Q => count(26),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[27]\: unisim.vcomponents.FDRE
     generic map(
@@ -3092,7 +3092,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[28]_i_1_n_5\,
       Q => count(27),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[28]\: unisim.vcomponents.FDRE
     generic map(
@@ -3103,7 +3103,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[28]_i_1_n_4\,
       Q => count(28),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[28]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -3135,7 +3135,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[31]_i_2_n_7\,
       Q => count(29),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -3146,7 +3146,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[4]_i_1_n_6\,
       Q => count(2),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[30]\: unisim.vcomponents.FDRE
     generic map(
@@ -3157,7 +3157,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[31]_i_2_n_6\,
       Q => count(30),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[31]\: unisim.vcomponents.FDRE
     generic map(
@@ -3168,7 +3168,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[31]_i_2_n_5\,
       Q => count(31),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[31]_i_2\: unisim.vcomponents.CARRY4
      port map (
@@ -3199,7 +3199,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[4]_i_1_n_5\,
       Q => count(3),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -3210,7 +3210,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[4]_i_1_n_4\,
       Q => count(4),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[4]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -3242,7 +3242,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[8]_i_1_n_7\,
       Q => count(5),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[6]\: unisim.vcomponents.FDRE
     generic map(
@@ -3253,7 +3253,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[8]_i_1_n_6\,
       Q => count(6),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[7]\: unisim.vcomponents.FDRE
     generic map(
@@ -3264,7 +3264,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[8]_i_1_n_5\,
       Q => count(7),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[8]\: unisim.vcomponents.FDRE
     generic map(
@@ -3275,7 +3275,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[8]_i_1_n_4\,
       Q => count(8),
-      R => clkout
+      R => clkout_buf
     );
 \count_reg[8]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -3307,7 +3307,7 @@ clkout_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \count_reg[12]_i_1_n_7\,
       Q => count(9),
-      R => clkout
+      R => clkout_buf
     );
 end STRUCTURE;
 library IEEE;
@@ -3340,7 +3340,7 @@ begin
   dir_clk <= \^dir_clk\;
 dirctrl: entity work.MIPSfpga_system_MotorDriver_0_0_dirController
      port map (
-      clkout_reg => \^dir_clk\,
+      clkout_buf_reg => \^dir_clk\,
       dir_latch => dir_latch,
       dir_serial => dir_serial,
       speed_dir(7 downto 0) => speed_dir(7 downto 0)
@@ -3402,7 +3402,7 @@ entity MIPSfpga_system_MotorDriver_0_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of MIPSfpga_system_MotorDriver_0_0 : entity is "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of MIPSfpga_system_MotorDriver_0_0 : entity is "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=MotorDriver,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,param_clk=50000,period=20,gear3=1048575,gear2=786432,gear1=393216,gear0=0}";
+  attribute CORE_GENERATION_INFO of MIPSfpga_system_MotorDriver_0_0 : entity is "MIPSfpga_system_MotorDriver_0_0,MotorDriver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=MotorDriver,x_ipVersion=1.0,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,param_clk=50000,period=20,gear3=1048575,gear2=786432,gear1=393216,gear0=0}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of MIPSfpga_system_MotorDriver_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;

@@ -1,0 +1,262 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sun Dec 30 15:32:01 2018
+| Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'MIPSfpga_system_URM_Driver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of MIPSfpga_system_URM_Driver_0_0 (xilinx.com:user:URM_Driver:1.0) from (Rev. 6) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. Note that parameter names and IDs are case sensitive.
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'MIPSfpga_system_URM_Driver_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'anodes'
+-upgrade has removed port 'cathodes'
+
+4. Customization warnings
+-------------------------
+
+WARNING: Parameter 'clk10khz_param' is no longer present on the upgraded IP 'MIPSfpga_system_URM_Driver_0_0', and cannot be set to '50000'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  Please consult the warnings from the previous sections, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:URM_Driver:1.0 -user_name MIPSfpga_system_URM_Driver_0_0
+set_property -dict "\
+  CONFIG.clk170khz_param 294 \
+  CONFIG.Component_Name MIPSfpga_system_URM_Driver_0_0 " [get_ips MIPSfpga_system_URM_Driver_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Dec 29 23:19:14 2018
+| Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'MIPSfpga_system_URM_Driver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of MIPSfpga_system_URM_Driver_0_0 (xilinx.com:user:URM_Driver:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. Note that parameter names and IDs are case sensitive.
+
+
+3. Customization warnings
+-------------------------
+
+WARNING: Parameter 'mask' is no longer present on the upgraded IP 'MIPSfpga_system_URM_Driver_0_0', and cannot be set to '0xFFF8'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  Please consult the warnings from the previous sections, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:URM_Driver:1.0 -user_name MIPSfpga_system_URM_Driver_0_0
+set_property -dict "\
+  CONFIG.clk170khz_param 588 \
+  CONFIG.clk10khz_param 50000 \
+  CONFIG.Component_Name MIPSfpga_system_URM_Driver_0_0 " [get_ips MIPSfpga_system_URM_Driver_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Dec 29 22:40:21 2018
+| Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'MIPSfpga_system_URM_Driver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of MIPSfpga_system_URM_Driver_0_0 (xilinx.com:user:URM_Driver:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'MIPSfpga_system_URM_Driver_0_0'. These changes may impact your design.
+
+
+-upgrade has added port 'DangerClose'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Dec 29 19:11:26 2018
+| Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'MIPSfpga_system_URM_Driver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of MIPSfpga_system_URM_Driver_0_0 (xilinx.com:user:URM_Driver:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Dec 29 18:58:33 2018
+| Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'MIPSfpga_system_URM_Driver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of MIPSfpga_system_URM_Driver_0_0 (xilinx.com:user:URM_Driver:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Dec 29 18:24:00 2018
+| Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'MIPSfpga_system_URM_Driver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of MIPSfpga_system_URM_Driver_0_0 (xilinx.com:user:URM_Driver:1.0 (Rev. 2)) to current project options.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'MIPSfpga_system_URM_Driver_0_0'.
+
+
+-upgrade has removed interface 'CPU_RESETN'
+-upgrade has added interface 'resetn'
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'MIPSfpga_system_URM_Driver_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'CPU_RESETN'
+-upgrade has added port 'distance'
+-upgrade has added port 'resetn'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Dec 29 17:17:52 2018
+| Host         : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'MIPSfpga_system_URM_Driver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of MIPSfpga_system_URM_Driver_0_0 (xilinx.com:user:URM_Driver:1.0 (Rev. 2)) to current project options.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'MIPSfpga_system_URM_Driver_0_0'.
+
+
+-upgrade has added interface 'CPU_RESETN'
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'MIPSfpga_system_URM_Driver_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'distance'
+-upgrade has added port 'CPU_RESETN'
+-upgrade has added port 'anodes'
+-upgrade has added port 'cathodes'
+

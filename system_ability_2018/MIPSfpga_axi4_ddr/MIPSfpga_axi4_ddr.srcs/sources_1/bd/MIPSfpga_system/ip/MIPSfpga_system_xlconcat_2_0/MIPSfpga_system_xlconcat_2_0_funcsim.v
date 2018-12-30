@@ -1,7 +1,7 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-// Date        : Thu Dec 20 15:29:08 2018
+// Date        : Sun Dec 30 16:35:25 2018
 // Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_xlconcat_2_0/MIPSfpga_system_xlconcat_2_0_funcsim.v
@@ -12,78 +12,26 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "MIPSfpga_system_xlconcat_2_0,xlconcat,{}" *) (* CORE_GENERATION_INFO = "MIPSfpga_system_xlconcat_2_0,xlconcat,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconcat,x_ipVersion=2.1,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,IN0_WIDTH=1,IN1_WIDTH=1,IN2_WIDTH=1,IN3_WIDTH=1,IN4_WIDTH=1,IN5_WIDTH=1,IN6_WIDTH=1,IN7_WIDTH=1,IN8_WIDTH=1,IN9_WIDTH=1,IN10_WIDTH=1,IN11_WIDTH=1,IN12_WIDTH=1,IN13_WIDTH=1,IN14_WIDTH=1,IN15_WIDTH=1,IN16_WIDTH=1,IN17_WIDTH=1,IN18_WIDTH=1,IN19_WIDTH=1,IN20_WIDTH=1,IN21_WIDTH=1,IN22_WIDTH=1,IN23_WIDTH=1,IN24_WIDTH=1,IN25_WIDTH=1,IN26_WIDTH=1,IN27_WIDTH=1,IN28_WIDTH=1,IN29_WIDTH=1,IN30_WIDTH=1,IN31_WIDTH=1,dout_width=16,NUM_PORTS=16}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "MIPSfpga_system_xlconcat_2_0,xlconcat,{}" *) (* CORE_GENERATION_INFO = "MIPSfpga_system_xlconcat_2_0,xlconcat,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconcat,x_ipVersion=2.1,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,IN0_WIDTH=5,IN1_WIDTH=11,IN2_WIDTH=16,IN3_WIDTH=1,IN4_WIDTH=1,IN5_WIDTH=16,IN6_WIDTH=1,IN7_WIDTH=1,IN8_WIDTH=1,IN9_WIDTH=1,IN10_WIDTH=1,IN11_WIDTH=1,IN12_WIDTH=1,IN13_WIDTH=1,IN14_WIDTH=1,IN15_WIDTH=1,IN16_WIDTH=1,IN17_WIDTH=1,IN18_WIDTH=1,IN19_WIDTH=1,IN20_WIDTH=1,IN21_WIDTH=1,IN22_WIDTH=1,IN23_WIDTH=1,IN24_WIDTH=1,IN25_WIDTH=1,IN26_WIDTH=1,IN27_WIDTH=1,IN28_WIDTH=1,IN29_WIDTH=1,IN30_WIDTH=1,IN31_WIDTH=1,dout_width=32,NUM_PORTS=3}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* X_CORE_INFO = "xlconcat,Vivado 2015.2" *) 
 (* NotValidForBitStream *)
 module MIPSfpga_system_xlconcat_2_0
    (In0,
     In1,
     In2,
-    In3,
-    In4,
-    In5,
-    In6,
-    In7,
-    In8,
-    In9,
-    In10,
-    In11,
-    In12,
-    In13,
-    In14,
-    In15,
     dout);
-  input [0:0]In0;
-  input [0:0]In1;
-  input [0:0]In2;
-  input [0:0]In3;
-  input [0:0]In4;
-  input [0:0]In5;
-  input [0:0]In6;
-  input [0:0]In7;
-  input [0:0]In8;
-  input [0:0]In9;
-  input [0:0]In10;
-  input [0:0]In11;
-  input [0:0]In12;
-  input [0:0]In13;
-  input [0:0]In14;
-  input [0:0]In15;
-  output [15:0]dout;
+  input [4:0]In0;
+  input [10:0]In1;
+  input [15:0]In2;
+  output [31:0]dout;
 
-  wire [0:0]In0;
-  wire [0:0]In1;
-  wire [0:0]In10;
-  wire [0:0]In11;
-  wire [0:0]In12;
-  wire [0:0]In13;
-  wire [0:0]In14;
-  wire [0:0]In15;
-  wire [0:0]In2;
-  wire [0:0]In3;
-  wire [0:0]In4;
-  wire [0:0]In5;
-  wire [0:0]In6;
-  wire [0:0]In7;
-  wire [0:0]In8;
-  wire [0:0]In9;
+  wire [4:0]In0;
+  wire [10:0]In1;
+  wire [15:0]In2;
 
-  assign dout[15] = In15;
-  assign dout[14] = In14;
-  assign dout[13] = In13;
-  assign dout[12] = In12;
-  assign dout[11] = In11;
-  assign dout[10] = In10;
-  assign dout[9] = In9;
-  assign dout[8] = In8;
-  assign dout[7] = In7;
-  assign dout[6] = In6;
-  assign dout[5] = In5;
-  assign dout[4] = In4;
-  assign dout[3] = In3;
-  assign dout[2] = In2;
-  assign dout[1] = In1;
-  assign dout[0] = In0;
+  assign dout[31:16] = In2;
+  assign dout[15:5] = In1;
+  assign dout[4:0] = In0;
 endmodule
 `ifndef GLBL
 `define GLBL

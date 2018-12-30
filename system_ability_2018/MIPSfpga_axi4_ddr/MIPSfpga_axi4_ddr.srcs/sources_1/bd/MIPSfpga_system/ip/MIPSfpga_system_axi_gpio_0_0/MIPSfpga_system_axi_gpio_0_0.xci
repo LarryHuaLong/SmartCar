@@ -10,7 +10,7 @@
       <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="axi_gpio" spirit:version="2.0"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_TRI_DEFAULT">0xFFFFFFFF</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_GPIO_WIDTH">16</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_GPIO_WIDTH">32</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_GPIO2_WIDTH">16</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_IS_DUAL">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ALL_INPUTS">1</spirit:configurableElementValue>
@@ -26,7 +26,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ALL_OUTPUTS">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ALL_OUTPUTS_2">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_FAMILY">artix7</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_GPIO_WIDTH">16</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_GPIO_WIDTH">32</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_GPIO2_WIDTH">16</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_ALL_INPUTS">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_ALL_INPUTS_2">0</spirit:configurableElementValue>
@@ -82,6 +82,7 @@
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_IS_DUAL" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ALL_INPUTS" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ALL_INPUTS_2" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_INTERRUPT_PRESENT" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ALL_OUTPUTS" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ALL_OUTPUTS_2" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PROTOCOL" xilinx:valueSource="constant"/>

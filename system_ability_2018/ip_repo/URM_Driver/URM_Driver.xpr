@@ -12,7 +12,7 @@
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/."/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../ip_repo"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
   </Configuration>
@@ -33,28 +33,22 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/SegmentDisplay.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/top_test.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/ip/SegmentDisplay_0/SegmentDisplay_0.upgrade_log"/>
       <File Path="$PPRDIR/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="URM_Driver"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -91,6 +85,19 @@
         <Option Name="XSimWcfgFile" Val="$PPRDIR/URM_Driver_tb_behav.wcfg"/>
       </Config>
     </FileSet>
+    <FileSet Name="SegmentDisplay_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/SegmentDisplay_0">
+      <File Path="$PSRCDIR/sources_1/ip/SegmentDisplay_0/SegmentDisplay_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="SegmentDisplay_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -117,14 +124,19 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="9">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
+    <Run Id="SegmentDisplay_0_synth_1" Type="Ft3:Synth" SrcSet="SegmentDisplay_0" Part="xc7a100tcsg324-1" ConstrsSet="SegmentDisplay_0" Description="Vivado Synthesis Defaults">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
@@ -137,7 +149,20 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="SegmentDisplay_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="SegmentDisplay_0" Description="Vivado Implementation Defaults" SynthRun="SegmentDisplay_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
     </Run>
   </Runs>
 </Project>

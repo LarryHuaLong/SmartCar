@@ -1,7 +1,7 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-// Date        : Thu Dec 20 15:19:29 2018
+// Date        : Sun Dec 30 16:27:46 2018
 // Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0_funcsim.v
@@ -12,34 +12,40 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "MIPSfpga_system_clk_wiz_0_0,clk_wiz_v5_1,{component_name=MIPSfpga_system_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=2,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *) 
+(* CORE_GENERATION_INFO = "MIPSfpga_system_clk_wiz_0_0,clk_wiz_v5_1,{component_name=MIPSfpga_system_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=3,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *) 
 (* NotValidForBitStream *)
 module MIPSfpga_system_clk_wiz_0_0
    (clk_in1,
     clk_out1,
-    clk_out2);
+    clk_out2,
+    clk_out3);
   input clk_in1;
   output clk_out1;
   output clk_out2;
+  output clk_out3;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
   wire clk_out2;
+  wire clk_out3;
 
   MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
-        .clk_out2(clk_out2));
+        .clk_out2(clk_out2),
+        .clk_out3(clk_out3));
 endmodule
 
 (* ORIG_REF_NAME = "MIPSfpga_system_clk_wiz_0_0_clk_wiz" *) 
 module MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wiz
    (clk_in1,
     clk_out1,
-    clk_out2);
+    clk_out2,
+    clk_out3);
   input clk_in1;
   output clk_out1;
   output clk_out2;
+  output clk_out3;
 
   wire clk_in1;
   wire clk_in1_MIPSfpga_system_clk_wiz_0_0;
@@ -47,9 +53,10 @@ module MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wiz
   wire clk_out1_MIPSfpga_system_clk_wiz_0_0;
   wire clk_out2;
   wire clk_out2_MIPSfpga_system_clk_wiz_0_0;
+  wire clk_out3;
+  wire clk_out3_MIPSfpga_system_clk_wiz_0_0;
   wire clkfbout_MIPSfpga_system_clk_wiz_0_0;
   wire clkfbout_buf_MIPSfpga_system_clk_wiz_0_0;
-  wire NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED;
@@ -79,6 +86,10 @@ module MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wiz
        (.I(clk_out2_MIPSfpga_system_clk_wiz_0_0),
         .O(clk_out2));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout3_buf
+       (.I(clk_out3_MIPSfpga_system_clk_wiz_0_0),
+        .O(clk_out3));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT(8),
@@ -91,7 +102,7 @@ module MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wiz
     .CLKOUT1_DIVIDE(4),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(8),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT3_DIVIDE(1),
@@ -119,7 +130,7 @@ module MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wiz
         .CLKINSEL(1'b1),
         .CLKOUT0(clk_out1_MIPSfpga_system_clk_wiz_0_0),
         .CLKOUT1(clk_out2_MIPSfpga_system_clk_wiz_0_0),
-        .CLKOUT2(NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_out3_MIPSfpga_system_clk_wiz_0_0),
         .CLKOUT3(NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT4(NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED),

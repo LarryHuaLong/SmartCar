@@ -48,29 +48,36 @@
 
 
 // IP VLNV: xilinx.com:user:URM_Driver:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module MIPSfpga_system_URM_Driver_0_0 (
   CLK100MHZ,
+  resetn,
   echo,
   trig,
-  distance
+  distance,
+  DangerClose
 );
 
 input wire CLK100MHZ;
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 resetn RST" *)
+input wire resetn;
 input wire echo;
 output wire trig;
-output wire [31 : 0] distance;
+output wire [15 : 0] distance;
+output wire DangerClose;
 
   URM_Driver #(
-    .clk170khz_param(588)
+    .clk170khz_param(294)
   ) inst (
     .CLK100MHZ(CLK100MHZ),
+    .resetn(resetn),
     .echo(echo),
     .trig(trig),
-    .distance(distance)
+    .distance(distance),
+    .DangerClose(DangerClose)
   );
 endmodule

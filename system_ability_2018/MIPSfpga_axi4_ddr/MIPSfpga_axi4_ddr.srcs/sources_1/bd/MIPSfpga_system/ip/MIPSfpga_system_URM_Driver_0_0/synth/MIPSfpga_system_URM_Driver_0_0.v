@@ -48,30 +48,37 @@
 
 
 // IP VLNV: xilinx.com:user:URM_Driver:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 (* X_CORE_INFO = "URM_Driver,Vivado 2015.2" *)
 (* CHECK_LICENSE_TYPE = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{}" *)
-(* CORE_GENERATION_INFO = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=588}" *)
+(* CORE_GENERATION_INFO = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=294}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module MIPSfpga_system_URM_Driver_0_0 (
   CLK100MHZ,
+  resetn,
   echo,
   trig,
-  distance
+  distance,
+  DangerClose
 );
 
 input wire CLK100MHZ;
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 resetn RST" *)
+input wire resetn;
 input wire echo;
 output wire trig;
-output wire [31 : 0] distance;
+output wire [15 : 0] distance;
+output wire DangerClose;
 
   URM_Driver #(
-    .clk170khz_param(588)
+    .clk170khz_param(294)
   ) inst (
     .CLK100MHZ(CLK100MHZ),
+    .resetn(resetn),
     .echo(echo),
     .trig(trig),
-    .distance(distance)
+    .distance(distance),
+    .DangerClose(DangerClose)
   );
 endmodule

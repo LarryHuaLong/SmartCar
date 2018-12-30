@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Thu Dec 20 15:19:29 2018
+-- Date        : Sun Dec 30 16:27:46 2018
 -- Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0_funcsim.vhdl
@@ -18,7 +18,8 @@ entity MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wiz is
   port (
     clk_in1 : in STD_LOGIC;
     clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC
+    clk_out2 : out STD_LOGIC;
+    clk_out3 : out STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wiz : entity is "MIPSfpga_system_clk_wiz_0_0_clk_wiz";
@@ -28,9 +29,9 @@ architecture STRUCTURE of MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_
   signal clk_in1_MIPSfpga_system_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out1_MIPSfpga_system_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out2_MIPSfpga_system_clk_wiz_0_0 : STD_LOGIC;
+  signal clk_out3_MIPSfpga_system_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_MIPSfpga_system_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_buf_MIPSfpga_system_clk_wiz_0_0 : STD_LOGIC;
-  signal NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
@@ -48,6 +49,7 @@ architecture STRUCTURE of MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_
   attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of plle2_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -73,6 +75,11 @@ clkout2_buf: unisim.vcomponents.BUFG
       I => clk_out2_MIPSfpga_system_clk_wiz_0_0,
       O => clk_out2
     );
+clkout3_buf: unisim.vcomponents.BUFG
+     port map (
+      I => clk_out3_MIPSfpga_system_clk_wiz_0_0,
+      O => clk_out3
+    );
 plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
@@ -86,7 +93,7 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       CLKOUT1_DIVIDE => 4,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
-      CLKOUT2_DIVIDE => 1,
+      CLKOUT2_DIVIDE => 8,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
       CLKOUT3_DIVIDE => 1,
@@ -115,7 +122,7 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       CLKINSEL => '1',
       CLKOUT0 => clk_out1_MIPSfpga_system_clk_wiz_0_0,
       CLKOUT1 => clk_out2_MIPSfpga_system_clk_wiz_0_0,
-      CLKOUT2 => NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED,
+      CLKOUT2 => clk_out3_MIPSfpga_system_clk_wiz_0_0,
       CLKOUT3 => NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED,
       CLKOUT4 => NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED,
       CLKOUT5 => NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED,
@@ -160,12 +167,13 @@ entity MIPSfpga_system_clk_wiz_0_0 is
   port (
     clk_in1 : in STD_LOGIC;
     clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC
+    clk_out2 : out STD_LOGIC;
+    clk_out3 : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of MIPSfpga_system_clk_wiz_0_0 : entity is true;
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of MIPSfpga_system_clk_wiz_0_0 : entity is "MIPSfpga_system_clk_wiz_0_0,clk_wiz_v5_1,{component_name=MIPSfpga_system_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=2,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}";
+  attribute CORE_GENERATION_INFO of MIPSfpga_system_clk_wiz_0_0 : entity is "MIPSfpga_system_clk_wiz_0_0,clk_wiz_v5_1,{component_name=MIPSfpga_system_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=3,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}";
 end MIPSfpga_system_clk_wiz_0_0;
 
 architecture STRUCTURE of MIPSfpga_system_clk_wiz_0_0 is
@@ -174,6 +182,7 @@ inst: entity work.MIPSfpga_system_clk_wiz_0_0_MIPSfpga_system_clk_wiz_0_0_clk_wi
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,
-      clk_out2 => clk_out2
+      clk_out2 => clk_out2,
+      clk_out3 => clk_out3
     );
 end STRUCTURE;

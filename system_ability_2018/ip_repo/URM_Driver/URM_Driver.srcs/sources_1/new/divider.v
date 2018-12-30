@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2018/12/14 10:19:49
+// Create Date: 2018/12/30 13:18:28
 // Design Name: 
 // Module Name: divider
 // Project Name: 
@@ -19,25 +19,28 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module divider(clk,
-               clkout);
-    input clk;
-    output reg clkout;
+
+module divider(
+    input clk,
+    output clkout
+    );
+	parameter n = 50000;
 	
+	reg clkout_buf;
     reg [31:0] count;
     
-    parameter n = 100000;
-	
-    initial count = 32'd0;
-	initial clkout = 0;
+    assign clkout = clkout_buf;
+    
+    initial count = 0;
+	initial clkout_buf = 0;
     always@(posedge clk)
     begin
         if(count == n)
 			begin
-				clkout <= ~clkout;
+				clkout_buf <= ~clkout_buf;
 				count <= 0;
 			end
         else
-            count <= count + 32'd1;
+            count <= count + 1;
     end
 endmodule

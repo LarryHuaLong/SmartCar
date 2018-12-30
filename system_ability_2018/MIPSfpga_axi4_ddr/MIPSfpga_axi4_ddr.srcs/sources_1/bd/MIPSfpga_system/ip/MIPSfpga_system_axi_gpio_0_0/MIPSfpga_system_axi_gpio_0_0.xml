@@ -419,7 +419,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5055b4f6</spirit:value>
+            <spirit:value>ef58592e</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -427,7 +427,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>3d46635b</spirit:value>
+            <spirit:value>522882c9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -435,7 +435,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 20 07:09:35 UTC 2018</spirit:value>
+            <spirit:value>Sun Dec 30 07:56:57 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -463,7 +463,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5055b4f6</spirit:value>
+            <spirit:value>ef58592e</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -471,7 +471,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>3d46635b</spirit:value>
+            <spirit:value>522882c9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -479,7 +479,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 20 07:09:35 UTC 2018</spirit:value>
+            <spirit:value>Sun Dec 30 07:56:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -498,7 +498,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5055b4f6</spirit:value>
+            <spirit:value>ef58592e</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -506,7 +506,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>3d46635b</spirit:value>
+            <spirit:value>522882c9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -514,7 +514,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 20 07:09:35 UTC 2018</spirit:value>
+            <spirit:value>Sun Dec 30 07:56:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -542,7 +542,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>9eafbef3</spirit:value>
+            <spirit:value>7a610463</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -550,7 +550,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>3d46635b</spirit:value>
+            <spirit:value>522882c9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -558,7 +558,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 20 07:09:35 UTC 2018</spirit:value>
+            <spirit:value>Sun Dec 30 07:56:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -577,7 +577,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>9eafbef3</spirit:value>
+            <spirit:value>7a610463</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -585,7 +585,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>3d46635b</spirit:value>
+            <spirit:value>522882c9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -593,7 +593,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 20 07:09:35 UTC 2018</spirit:value>
+            <spirit:value>Sun Dec 30 07:56:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -611,7 +611,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5055b4f6</spirit:value>
+            <spirit:value>ef58592e</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -619,7 +619,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>3d46635b</spirit:value>
+            <spirit:value>522882c9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -627,7 +627,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 20 07:09:36 UTC 2018</spirit:value>
+            <spirit:value>Sun Dec 30 07:56:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -645,7 +645,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5055b4f6</spirit:value>
+            <spirit:value>ef58592e</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -653,7 +653,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>3d46635b</spirit:value>
+            <spirit:value>522882c9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -661,7 +661,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 20 07:09:36 UTC 2018</spirit:value>
+            <spirit:value>Sun Dec 30 07:56:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -679,7 +679,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5055b4f6</spirit:value>
+            <spirit:value>ef58592e</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -687,7 +687,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>3d46635b</spirit:value>
+            <spirit:value>522882c9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -1172,7 +1172,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPIO_WIDTH&apos;)) - 1)">15</spirit:left>
+            <spirit:left spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPIO_WIDTH&apos;)) - 1)">31</spirit:left>
             <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1200,7 +1200,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPIO_WIDTH&apos;)) - 1)">15</spirit:left>
+            <spirit:left spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPIO_WIDTH&apos;)) - 1)">31</spirit:left>
             <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1225,7 +1225,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPIO_WIDTH&apos;)) - 1)">15</spirit:left>
+            <spirit:left spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPIO_WIDTH&apos;)) - 1)">31</spirit:left>
             <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1342,7 +1342,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_GPIO_WIDTH</spirit:name>
         <spirit:displayName>GPIO Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPIO_WIDTH" spirit:minimum="1" spirit:maximum="32">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPIO_WIDTH" spirit:minimum="1" spirit:maximum="32">32</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_GPIO2_WIDTH</spirit:name>
@@ -1704,7 +1704,7 @@
     <spirit:parameter>
       <spirit:name>C_GPIO_WIDTH</spirit:name>
       <spirit:displayName>GPIO Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPIO_WIDTH" spirit:order="1900" spirit:minimum="1" spirit:maximum="32">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPIO_WIDTH" spirit:order="1900" spirit:minimum="1" spirit:maximum="32">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1928,6 +1928,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ALL_OUTPUTS_2" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_GPIO2_WIDTH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_IS_DUAL" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_INTERRUPT_PRESENT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="ip_propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="ip_propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated"/>

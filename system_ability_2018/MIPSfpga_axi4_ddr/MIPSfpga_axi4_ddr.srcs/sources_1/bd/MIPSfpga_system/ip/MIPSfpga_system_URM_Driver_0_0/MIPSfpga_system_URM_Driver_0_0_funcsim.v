@@ -1,10 +1,10 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-// Date        : Sun Dec 23 18:27:52 2018
+// Date        : Sun Dec 30 16:01:36 2018
 // Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_URM_Driver_0_0/MIPSfpga_system_URM_Driver_0_0_funcsim.v
+//               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_URM_Driver_0_0/MIPSfpga_system_URM_Driver_0_0_funcsim.v
 // Design      : MIPSfpga_system_URM_Driver_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,31 +12,39 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{}" *) (* CORE_GENERATION_INFO = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=588}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{}" *) (* CORE_GENERATION_INFO = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=294}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* X_CORE_INFO = "URM_Driver,Vivado 2015.2" *) 
 (* NotValidForBitStream *)
 module MIPSfpga_system_URM_Driver_0_0
    (CLK100MHZ,
+    resetn,
     echo,
     trig,
-    distance);
+    distance,
+    DangerClose);
   input CLK100MHZ;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 resetn RST" *) input resetn;
   input echo;
   output trig;
-  output [31:0]distance;
+  output [15:0]distance;
+  output DangerClose;
 
   wire CLK100MHZ;
+  wire DangerClose;
   wire clk170khz;
-  wire [31:0]distance;
+  wire [15:0]distance;
   wire echo;
+  wire resetn;
   wire trig;
 
   MIPSfpga_system_URM_Driver_0_0_URM_Driver inst
        (.CLK100MHZ(CLK100MHZ),
+        .DangerClose(DangerClose),
         .clk170khz(clk170khz),
-        .clkout_reg(clk170khz),
+        .clkout_buf_reg(clk170khz),
         .distance(distance),
         .echo(echo),
+        .resetn(resetn),
         .trig(trig));
 endmodule
 
@@ -44,29 +52,36 @@ endmodule
 module MIPSfpga_system_URM_Driver_0_0_URM_Driver
    (trig,
     clk170khz,
+    DangerClose,
     distance,
     echo,
-    clkout_reg,
-    CLK100MHZ);
+    clkout_buf_reg,
+    CLK100MHZ,
+    resetn);
   output trig;
   output clk170khz;
-  output [31:0]distance;
+  output DangerClose;
+  output [15:0]distance;
   input echo;
-  input clkout_reg;
+  input clkout_buf_reg;
   input CLK100MHZ;
+  input resetn;
 
   wire CLK100MHZ;
+  wire DangerClose;
+  wire DangerClose_buf_i_1_n_0;
+  wire DangerClose_buf_i_2_n_0;
+  wire DangerClose_buf_i_3_n_0;
+  wire DangerClose_buf_i_4_n_0;
   wire clear;
   wire clk170khz;
-  wire clkout_reg;
-  wire \count[0]_i_10_n_0 ;
+  wire clkout_buf_reg;
   wire \count[0]_i_3_n_0 ;
-  wire \count[0]_i_4_n_0 ;
-  wire \count[0]_i_5_n_0 ;
+  wire \count[0]_i_4__0_n_0 ;
+  wire \count[0]_i_5__0_n_0 ;
   wire \count[0]_i_6__0_n_0 ;
-  wire \count[0]_i_7__0_n_0 ;
-  wire \count[0]_i_8__0_n_0 ;
-  wire \count[0]_i_9_n_0 ;
+  wire \count[0]_i_7_n_0 ;
+  wire \count[0]_i_8_n_0 ;
   wire \count[12]_i_2_n_0 ;
   wire \count[12]_i_3_n_0 ;
   wire \count[12]_i_4_n_0 ;
@@ -159,7 +174,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire \count_reg[8]_i_1_n_5 ;
   wire \count_reg[8]_i_1_n_6 ;
   wire \count_reg[8]_i_1_n_7 ;
-  wire [31:1]counter0;
+  wire [15:1]counter0;
   wire \counter[0]_i_10_n_0 ;
   wire \counter[0]_i_11_n_0 ;
   wire \counter[0]_i_12_n_0 ;
@@ -170,7 +185,6 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire \counter[0]_i_6_n_0 ;
   wire \counter[0]_i_7_n_0 ;
   wire \counter[0]_i_8_n_0 ;
-  wire \counter[12]_i_10_n_0 ;
   wire \counter[12]_i_2_n_0 ;
   wire \counter[12]_i_3_n_0 ;
   wire \counter[12]_i_4_n_0 ;
@@ -178,37 +192,6 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire \counter[12]_i_7_n_0 ;
   wire \counter[12]_i_8_n_0 ;
   wire \counter[12]_i_9_n_0 ;
-  wire \counter[16]_i_10_n_0 ;
-  wire \counter[16]_i_2_n_0 ;
-  wire \counter[16]_i_3_n_0 ;
-  wire \counter[16]_i_4_n_0 ;
-  wire \counter[16]_i_5_n_0 ;
-  wire \counter[16]_i_7_n_0 ;
-  wire \counter[16]_i_8_n_0 ;
-  wire \counter[16]_i_9_n_0 ;
-  wire \counter[20]_i_10_n_0 ;
-  wire \counter[20]_i_2_n_0 ;
-  wire \counter[20]_i_3_n_0 ;
-  wire \counter[20]_i_4_n_0 ;
-  wire \counter[20]_i_5_n_0 ;
-  wire \counter[20]_i_7_n_0 ;
-  wire \counter[20]_i_8_n_0 ;
-  wire \counter[20]_i_9_n_0 ;
-  wire \counter[24]_i_10_n_0 ;
-  wire \counter[24]_i_2_n_0 ;
-  wire \counter[24]_i_3_n_0 ;
-  wire \counter[24]_i_4_n_0 ;
-  wire \counter[24]_i_5_n_0 ;
-  wire \counter[24]_i_7_n_0 ;
-  wire \counter[24]_i_8_n_0 ;
-  wire \counter[24]_i_9_n_0 ;
-  wire \counter[28]_i_2_n_0 ;
-  wire \counter[28]_i_3_n_0 ;
-  wire \counter[28]_i_4_n_0 ;
-  wire \counter[28]_i_5_n_0 ;
-  wire \counter[28]_i_7_n_0 ;
-  wire \counter[28]_i_8_n_0 ;
-  wire \counter[28]_i_9_n_0 ;
   wire \counter[4]_i_10_n_0 ;
   wire \counter[4]_i_2_n_0 ;
   wire \counter[4]_i_3_n_0 ;
@@ -225,7 +208,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire \counter[8]_i_7_n_0 ;
   wire \counter[8]_i_8_n_0 ;
   wire \counter[8]_i_9_n_0 ;
-  wire [31:0]counter_reg;
+  wire [15:0]counter_reg;
   wire \counter_reg[0]_i_2_n_0 ;
   wire \counter_reg[0]_i_2_n_1 ;
   wire \counter_reg[0]_i_2_n_2 ;
@@ -238,7 +221,6 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire \counter_reg[0]_i_9_n_1 ;
   wire \counter_reg[0]_i_9_n_2 ;
   wire \counter_reg[0]_i_9_n_3 ;
-  wire \counter_reg[12]_i_1_n_0 ;
   wire \counter_reg[12]_i_1_n_1 ;
   wire \counter_reg[12]_i_1_n_2 ;
   wire \counter_reg[12]_i_1_n_3 ;
@@ -246,55 +228,8 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire \counter_reg[12]_i_1_n_5 ;
   wire \counter_reg[12]_i_1_n_6 ;
   wire \counter_reg[12]_i_1_n_7 ;
-  wire \counter_reg[12]_i_6_n_0 ;
-  wire \counter_reg[12]_i_6_n_1 ;
   wire \counter_reg[12]_i_6_n_2 ;
   wire \counter_reg[12]_i_6_n_3 ;
-  wire \counter_reg[16]_i_1_n_0 ;
-  wire \counter_reg[16]_i_1_n_1 ;
-  wire \counter_reg[16]_i_1_n_2 ;
-  wire \counter_reg[16]_i_1_n_3 ;
-  wire \counter_reg[16]_i_1_n_4 ;
-  wire \counter_reg[16]_i_1_n_5 ;
-  wire \counter_reg[16]_i_1_n_6 ;
-  wire \counter_reg[16]_i_1_n_7 ;
-  wire \counter_reg[16]_i_6_n_0 ;
-  wire \counter_reg[16]_i_6_n_1 ;
-  wire \counter_reg[16]_i_6_n_2 ;
-  wire \counter_reg[16]_i_6_n_3 ;
-  wire \counter_reg[20]_i_1_n_0 ;
-  wire \counter_reg[20]_i_1_n_1 ;
-  wire \counter_reg[20]_i_1_n_2 ;
-  wire \counter_reg[20]_i_1_n_3 ;
-  wire \counter_reg[20]_i_1_n_4 ;
-  wire \counter_reg[20]_i_1_n_5 ;
-  wire \counter_reg[20]_i_1_n_6 ;
-  wire \counter_reg[20]_i_1_n_7 ;
-  wire \counter_reg[20]_i_6_n_0 ;
-  wire \counter_reg[20]_i_6_n_1 ;
-  wire \counter_reg[20]_i_6_n_2 ;
-  wire \counter_reg[20]_i_6_n_3 ;
-  wire \counter_reg[24]_i_1_n_0 ;
-  wire \counter_reg[24]_i_1_n_1 ;
-  wire \counter_reg[24]_i_1_n_2 ;
-  wire \counter_reg[24]_i_1_n_3 ;
-  wire \counter_reg[24]_i_1_n_4 ;
-  wire \counter_reg[24]_i_1_n_5 ;
-  wire \counter_reg[24]_i_1_n_6 ;
-  wire \counter_reg[24]_i_1_n_7 ;
-  wire \counter_reg[24]_i_6_n_0 ;
-  wire \counter_reg[24]_i_6_n_1 ;
-  wire \counter_reg[24]_i_6_n_2 ;
-  wire \counter_reg[24]_i_6_n_3 ;
-  wire \counter_reg[28]_i_1_n_1 ;
-  wire \counter_reg[28]_i_1_n_2 ;
-  wire \counter_reg[28]_i_1_n_3 ;
-  wire \counter_reg[28]_i_1_n_4 ;
-  wire \counter_reg[28]_i_1_n_5 ;
-  wire \counter_reg[28]_i_1_n_6 ;
-  wire \counter_reg[28]_i_1_n_7 ;
-  wire \counter_reg[28]_i_6_n_2 ;
-  wire \counter_reg[28]_i_6_n_3 ;
   wire \counter_reg[4]_i_1_n_0 ;
   wire \counter_reg[4]_i_1_n_1 ;
   wire \counter_reg[4]_i_1_n_2 ;
@@ -319,11 +254,12 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire \counter_reg[8]_i_6_n_1 ;
   wire \counter_reg[8]_i_6_n_2 ;
   wire \counter_reg[8]_i_6_n_3 ;
-  wire [31:0]distance;
-  wire \distance_buf[31]_i_1_n_0 ;
+  wire [15:0]distance;
+  wire \distance_buf[15]_i_1_n_0 ;
   wire echo;
   wire last1_echo;
   wire last2_echo;
+  wire resetn;
   wire trig;
   wire trig_buf_i_1_n_0;
   wire trig_buf_i_2_n_0;
@@ -332,76 +268,101 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire trig_buf_i_5_n_0;
   wire trig_buf_i_6_n_0;
   wire trig_buf_i_7_n_0;
+  wire trig_buf_i_8_n_0;
+  wire trig_buf_i_9_n_0;
   wire [3:3]\NLW_count_reg[28]_i_1_CO_UNCONNECTED ;
-  wire [3:3]\NLW_counter_reg[28]_i_1_CO_UNCONNECTED ;
-  wire [3:2]\NLW_counter_reg[28]_i_6_CO_UNCONNECTED ;
-  wire [3:3]\NLW_counter_reg[28]_i_6_O_UNCONNECTED ;
+  wire [3:3]\NLW_counter_reg[12]_i_1_CO_UNCONNECTED ;
+  wire [3:2]\NLW_counter_reg[12]_i_6_CO_UNCONNECTED ;
+  wire [3:3]\NLW_counter_reg[12]_i_6_O_UNCONNECTED ;
 
-  LUT6 #(
-    .INIT(64'hFFFFFEFFFEFEFEFE)) 
-    \count[0]_i_1 
-       (.I0(\count[0]_i_3_n_0 ),
-        .I1(trig_buf_i_4_n_0),
-        .I2(trig_buf_i_3_n_0),
-        .I3(\count[0]_i_4_n_0 ),
-        .I4(\count[0]_i_5_n_0 ),
-        .I5(count_reg[14]),
-        .O(clear));
-  LUT6 #(
-    .INIT(64'h000000005555557F)) 
-    \count[0]_i_10 
-       (.I0(count_reg[9]),
-        .I1(count_reg[5]),
-        .I2(count_reg[6]),
-        .I3(count_reg[7]),
-        .I4(count_reg[8]),
-        .I5(count_reg[10]),
-        .O(\count[0]_i_10_n_0 ));
+  LUT4 #(
+    .INIT(16'h0020)) 
+    DangerClose_buf_i_1
+       (.I0(resetn),
+        .I1(DangerClose_buf_i_2_n_0),
+        .I2(DangerClose_buf_i_3_n_0),
+        .I3(DangerClose_buf_i_4_n_0),
+        .O(DangerClose_buf_i_1_n_0));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    DangerClose_buf_i_2
+       (.I0(distance[9]),
+        .I1(distance[7]),
+        .I2(distance[8]),
+        .I3(distance[11]),
+        .I4(distance[10]),
+        .O(DangerClose_buf_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    DangerClose_buf_i_3
+       (.I0(distance[4]),
+        .I1(distance[3]),
+        .I2(distance[5]),
+        .I3(distance[6]),
+        .O(DangerClose_buf_i_3_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \count[0]_i_3 
-       (.I0(count_reg[22]),
-        .I1(count_reg[16]),
-        .I2(count_reg[21]),
-        .I3(count_reg[15]),
-        .O(\count[0]_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h01)) 
-    \count[0]_i_4 
-       (.I0(count_reg[11]),
-        .I1(count_reg[12]),
-        .I2(count_reg[13]),
-        .O(\count[0]_i_4_n_0 ));
+    DangerClose_buf_i_4
+       (.I0(distance[13]),
+        .I1(distance[12]),
+        .I2(distance[14]),
+        .I3(distance[15]),
+        .O(DangerClose_buf_i_4_n_0));
+  FDRE DangerClose_buf_reg
+       (.C(clk170khz),
+        .CE(1'b1),
+        .D(DangerClose_buf_i_1_n_0),
+        .Q(DangerClose),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'hFFDFDDDD)) 
+    \count[0]_i_1 
+       (.I0(trig_buf_i_2_n_0),
+        .I1(trig_buf_i_3_n_0),
+        .I2(\count[0]_i_3_n_0 ),
+        .I3(trig_buf_i_5_n_0),
+        .I4(count_reg[14]),
+        .O(clear));
   LUT6 #(
-    .INIT(64'h00000000FFFFAAA8)) 
-    \count[0]_i_5 
+    .INIT(64'hAAAAAAAABBBBBBBF)) 
+    \count[0]_i_3 
+       (.I0(\count[0]_i_8_n_0 ),
+        .I1(count_reg[3]),
+        .I2(count_reg[1]),
+        .I3(count_reg[2]),
+        .I4(count_reg[0]),
+        .I5(trig_buf_i_4_n_0),
+        .O(\count[0]_i_3_n_0 ));
+  LUT1 #(
+    .INIT(2'h2)) 
+    \count[0]_i_4__0 
        (.I0(count_reg[3]),
-        .I1(count_reg[1]),
-        .I2(count_reg[2]),
-        .I3(count_reg[0]),
-        .I4(trig_buf_i_5_n_0),
-        .I5(\count[0]_i_10_n_0 ),
-        .O(\count[0]_i_5_n_0 ));
+        .O(\count[0]_i_4__0_n_0 ));
+  LUT1 #(
+    .INIT(2'h2)) 
+    \count[0]_i_5__0 
+       (.I0(count_reg[2]),
+        .O(\count[0]_i_5__0_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
     \count[0]_i_6__0 
-       (.I0(count_reg[3]),
+       (.I0(count_reg[1]),
         .O(\count[0]_i_6__0_n_0 ));
   LUT1 #(
-    .INIT(2'h2)) 
-    \count[0]_i_7__0 
-       (.I0(count_reg[2]),
-        .O(\count[0]_i_7__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \count[0]_i_8__0 
-       (.I0(count_reg[1]),
-        .O(\count[0]_i_8__0_n_0 ));
-  LUT1 #(
     .INIT(2'h1)) 
-    \count[0]_i_9 
+    \count[0]_i_7 
        (.I0(count_reg[0]),
-        .O(\count[0]_i_9_n_0 ));
+        .O(\count[0]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h0055005700570057)) 
+    \count[0]_i_8 
+       (.I0(count_reg[9]),
+        .I1(count_reg[7]),
+        .I2(count_reg[8]),
+        .I3(count_reg[10]),
+        .I4(count_reg[5]),
+        .I5(count_reg[6]),
+        .O(\count[0]_i_8_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
     \count[12]_i_2 
@@ -556,7 +517,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\count_reg[0]_i_2_n_4 ,\count_reg[0]_i_2_n_5 ,\count_reg[0]_i_2_n_6 ,\count_reg[0]_i_2_n_7 }),
-        .S({\count[0]_i_6__0_n_0 ,\count[0]_i_7__0_n_0 ,\count[0]_i_8__0_n_0 ,\count[0]_i_9_n_0 }));
+        .S({\count[0]_i_4__0_n_0 ,\count[0]_i_5__0_n_0 ,\count[0]_i_6__0_n_0 ,\count[0]_i_7_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[10] 
@@ -918,11 +879,6 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
         .I1(counter_reg[0]),
         .I2(last1_echo),
         .O(\counter[0]_i_8_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[12]_i_10 
-       (.I0(counter_reg[13]),
-        .O(\counter[12]_i_10_n_0 ));
   LUT4 #(
     .INIT(16'hB888)) 
     \counter[12]_i_2 
@@ -958,221 +914,18 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   LUT1 #(
     .INIT(2'h2)) 
     \counter[12]_i_7 
-       (.I0(counter_reg[16]),
+       (.I0(counter_reg[15]),
         .O(\counter[12]_i_7_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
     \counter[12]_i_8 
-       (.I0(counter_reg[15]),
+       (.I0(counter_reg[14]),
         .O(\counter[12]_i_8_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
     \counter[12]_i_9 
-       (.I0(counter_reg[14]),
+       (.I0(counter_reg[13]),
         .O(\counter[12]_i_9_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[16]_i_10 
-       (.I0(counter_reg[17]),
-        .O(\counter[16]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[16]_i_2 
-       (.I0(counter_reg[19]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[19]),
-        .O(\counter[16]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[16]_i_3 
-       (.I0(counter_reg[18]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[18]),
-        .O(\counter[16]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[16]_i_4 
-       (.I0(counter_reg[17]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[17]),
-        .O(\counter[16]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[16]_i_5 
-       (.I0(counter_reg[16]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[16]),
-        .O(\counter[16]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[16]_i_7 
-       (.I0(counter_reg[20]),
-        .O(\counter[16]_i_7_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[16]_i_8 
-       (.I0(counter_reg[19]),
-        .O(\counter[16]_i_8_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[16]_i_9 
-       (.I0(counter_reg[18]),
-        .O(\counter[16]_i_9_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[20]_i_10 
-       (.I0(counter_reg[21]),
-        .O(\counter[20]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[20]_i_2 
-       (.I0(counter_reg[23]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[23]),
-        .O(\counter[20]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[20]_i_3 
-       (.I0(counter_reg[22]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[22]),
-        .O(\counter[20]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[20]_i_4 
-       (.I0(counter_reg[21]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[21]),
-        .O(\counter[20]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[20]_i_5 
-       (.I0(counter_reg[20]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[20]),
-        .O(\counter[20]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[20]_i_7 
-       (.I0(counter_reg[24]),
-        .O(\counter[20]_i_7_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[20]_i_8 
-       (.I0(counter_reg[23]),
-        .O(\counter[20]_i_8_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[20]_i_9 
-       (.I0(counter_reg[22]),
-        .O(\counter[20]_i_9_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[24]_i_10 
-       (.I0(counter_reg[25]),
-        .O(\counter[24]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[24]_i_2 
-       (.I0(counter_reg[27]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[27]),
-        .O(\counter[24]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[24]_i_3 
-       (.I0(counter_reg[26]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[26]),
-        .O(\counter[24]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[24]_i_4 
-       (.I0(counter_reg[25]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[25]),
-        .O(\counter[24]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[24]_i_5 
-       (.I0(counter_reg[24]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[24]),
-        .O(\counter[24]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[24]_i_7 
-       (.I0(counter_reg[28]),
-        .O(\counter[24]_i_7_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[24]_i_8 
-       (.I0(counter_reg[27]),
-        .O(\counter[24]_i_8_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[24]_i_9 
-       (.I0(counter_reg[26]),
-        .O(\counter[24]_i_9_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[28]_i_2 
-       (.I0(counter_reg[31]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[31]),
-        .O(\counter[28]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[28]_i_3 
-       (.I0(counter_reg[30]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[30]),
-        .O(\counter[28]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[28]_i_4 
-       (.I0(counter_reg[29]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[29]),
-        .O(\counter[28]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hB888)) 
-    \counter[28]_i_5 
-       (.I0(counter_reg[28]),
-        .I1(last1_echo),
-        .I2(last2_echo),
-        .I3(counter0[28]),
-        .O(\counter[28]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[28]_i_7 
-       (.I0(counter_reg[31]),
-        .O(\counter[28]_i_7_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[28]_i_8 
-       (.I0(counter_reg[30]),
-        .O(\counter[28]_i_8_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \counter[28]_i_9 
-       (.I0(counter_reg[29]),
-        .O(\counter[28]_i_9_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
     \counter[4]_i_10 
@@ -1281,7 +1034,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[0] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[0]_i_2_n_7 ),
         .Q(counter_reg[0]),
@@ -1304,7 +1057,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[10] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[8]_i_1_n_5 ),
         .Q(counter_reg[10]),
@@ -1313,7 +1066,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[11] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[8]_i_1_n_4 ),
         .Q(counter_reg[11]),
@@ -1322,30 +1075,30 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[12] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[12]_i_1_n_7 ),
         .Q(counter_reg[12]),
         .R(1'b0));
   CARRY4 \counter_reg[12]_i_1 
        (.CI(\counter_reg[8]_i_1_n_0 ),
-        .CO({\counter_reg[12]_i_1_n_0 ,\counter_reg[12]_i_1_n_1 ,\counter_reg[12]_i_1_n_2 ,\counter_reg[12]_i_1_n_3 }),
+        .CO({\NLW_counter_reg[12]_i_1_CO_UNCONNECTED [3],\counter_reg[12]_i_1_n_1 ,\counter_reg[12]_i_1_n_2 ,\counter_reg[12]_i_1_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\counter_reg[12]_i_1_n_4 ,\counter_reg[12]_i_1_n_5 ,\counter_reg[12]_i_1_n_6 ,\counter_reg[12]_i_1_n_7 }),
         .S({\counter[12]_i_2_n_0 ,\counter[12]_i_3_n_0 ,\counter[12]_i_4_n_0 ,\counter[12]_i_5_n_0 }));
   CARRY4 \counter_reg[12]_i_6 
        (.CI(\counter_reg[8]_i_6_n_0 ),
-        .CO({\counter_reg[12]_i_6_n_0 ,\counter_reg[12]_i_6_n_1 ,\counter_reg[12]_i_6_n_2 ,\counter_reg[12]_i_6_n_3 }),
+        .CO({\NLW_counter_reg[12]_i_6_CO_UNCONNECTED [3:2],\counter_reg[12]_i_6_n_2 ,\counter_reg[12]_i_6_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(counter0[16:13]),
-        .S({\counter[12]_i_7_n_0 ,\counter[12]_i_8_n_0 ,\counter[12]_i_9_n_0 ,\counter[12]_i_10_n_0 }));
+        .O({\NLW_counter_reg[12]_i_6_O_UNCONNECTED [3],counter0[15:13]}),
+        .S({1'b0,\counter[12]_i_7_n_0 ,\counter[12]_i_8_n_0 ,\counter[12]_i_9_n_0 }));
   FDRE #(
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[13] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[12]_i_1_n_6 ),
         .Q(counter_reg[13]),
@@ -1354,7 +1107,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[14] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[12]_i_1_n_5 ),
         .Q(counter_reg[14]),
@@ -1363,7 +1116,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[15] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[12]_i_1_n_4 ),
         .Q(counter_reg[15]),
@@ -1371,58 +1124,8 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   FDRE #(
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
-    \counter_reg[16] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[16]_i_1_n_7 ),
-        .Q(counter_reg[16]),
-        .R(1'b0));
-  CARRY4 \counter_reg[16]_i_1 
-       (.CI(\counter_reg[12]_i_1_n_0 ),
-        .CO({\counter_reg[16]_i_1_n_0 ,\counter_reg[16]_i_1_n_1 ,\counter_reg[16]_i_1_n_2 ,\counter_reg[16]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\counter_reg[16]_i_1_n_4 ,\counter_reg[16]_i_1_n_5 ,\counter_reg[16]_i_1_n_6 ,\counter_reg[16]_i_1_n_7 }),
-        .S({\counter[16]_i_2_n_0 ,\counter[16]_i_3_n_0 ,\counter[16]_i_4_n_0 ,\counter[16]_i_5_n_0 }));
-  CARRY4 \counter_reg[16]_i_6 
-       (.CI(\counter_reg[12]_i_6_n_0 ),
-        .CO({\counter_reg[16]_i_6_n_0 ,\counter_reg[16]_i_6_n_1 ,\counter_reg[16]_i_6_n_2 ,\counter_reg[16]_i_6_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(counter0[20:17]),
-        .S({\counter[16]_i_7_n_0 ,\counter[16]_i_8_n_0 ,\counter[16]_i_9_n_0 ,\counter[16]_i_10_n_0 }));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[17] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[16]_i_1_n_6 ),
-        .Q(counter_reg[17]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[18] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[16]_i_1_n_5 ),
-        .Q(counter_reg[18]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[19] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[16]_i_1_n_4 ),
-        .Q(counter_reg[19]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
     \counter_reg[1] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[0]_i_2_n_6 ),
         .Q(counter_reg[1]),
@@ -1430,140 +1133,8 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   FDRE #(
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
-    \counter_reg[20] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[20]_i_1_n_7 ),
-        .Q(counter_reg[20]),
-        .R(1'b0));
-  CARRY4 \counter_reg[20]_i_1 
-       (.CI(\counter_reg[16]_i_1_n_0 ),
-        .CO({\counter_reg[20]_i_1_n_0 ,\counter_reg[20]_i_1_n_1 ,\counter_reg[20]_i_1_n_2 ,\counter_reg[20]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\counter_reg[20]_i_1_n_4 ,\counter_reg[20]_i_1_n_5 ,\counter_reg[20]_i_1_n_6 ,\counter_reg[20]_i_1_n_7 }),
-        .S({\counter[20]_i_2_n_0 ,\counter[20]_i_3_n_0 ,\counter[20]_i_4_n_0 ,\counter[20]_i_5_n_0 }));
-  CARRY4 \counter_reg[20]_i_6 
-       (.CI(\counter_reg[16]_i_6_n_0 ),
-        .CO({\counter_reg[20]_i_6_n_0 ,\counter_reg[20]_i_6_n_1 ,\counter_reg[20]_i_6_n_2 ,\counter_reg[20]_i_6_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(counter0[24:21]),
-        .S({\counter[20]_i_7_n_0 ,\counter[20]_i_8_n_0 ,\counter[20]_i_9_n_0 ,\counter[20]_i_10_n_0 }));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[21] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[20]_i_1_n_6 ),
-        .Q(counter_reg[21]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[22] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[20]_i_1_n_5 ),
-        .Q(counter_reg[22]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[23] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[20]_i_1_n_4 ),
-        .Q(counter_reg[23]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[24] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[24]_i_1_n_7 ),
-        .Q(counter_reg[24]),
-        .R(1'b0));
-  CARRY4 \counter_reg[24]_i_1 
-       (.CI(\counter_reg[20]_i_1_n_0 ),
-        .CO({\counter_reg[24]_i_1_n_0 ,\counter_reg[24]_i_1_n_1 ,\counter_reg[24]_i_1_n_2 ,\counter_reg[24]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\counter_reg[24]_i_1_n_4 ,\counter_reg[24]_i_1_n_5 ,\counter_reg[24]_i_1_n_6 ,\counter_reg[24]_i_1_n_7 }),
-        .S({\counter[24]_i_2_n_0 ,\counter[24]_i_3_n_0 ,\counter[24]_i_4_n_0 ,\counter[24]_i_5_n_0 }));
-  CARRY4 \counter_reg[24]_i_6 
-       (.CI(\counter_reg[20]_i_6_n_0 ),
-        .CO({\counter_reg[24]_i_6_n_0 ,\counter_reg[24]_i_6_n_1 ,\counter_reg[24]_i_6_n_2 ,\counter_reg[24]_i_6_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(counter0[28:25]),
-        .S({\counter[24]_i_7_n_0 ,\counter[24]_i_8_n_0 ,\counter[24]_i_9_n_0 ,\counter[24]_i_10_n_0 }));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[25] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[24]_i_1_n_6 ),
-        .Q(counter_reg[25]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[26] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[24]_i_1_n_5 ),
-        .Q(counter_reg[26]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[27] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[24]_i_1_n_4 ),
-        .Q(counter_reg[27]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[28] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[28]_i_1_n_7 ),
-        .Q(counter_reg[28]),
-        .R(1'b0));
-  CARRY4 \counter_reg[28]_i_1 
-       (.CI(\counter_reg[24]_i_1_n_0 ),
-        .CO({\NLW_counter_reg[28]_i_1_CO_UNCONNECTED [3],\counter_reg[28]_i_1_n_1 ,\counter_reg[28]_i_1_n_2 ,\counter_reg[28]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\counter_reg[28]_i_1_n_4 ,\counter_reg[28]_i_1_n_5 ,\counter_reg[28]_i_1_n_6 ,\counter_reg[28]_i_1_n_7 }),
-        .S({\counter[28]_i_2_n_0 ,\counter[28]_i_3_n_0 ,\counter[28]_i_4_n_0 ,\counter[28]_i_5_n_0 }));
-  CARRY4 \counter_reg[28]_i_6 
-       (.CI(\counter_reg[24]_i_6_n_0 ),
-        .CO({\NLW_counter_reg[28]_i_6_CO_UNCONNECTED [3:2],\counter_reg[28]_i_6_n_2 ,\counter_reg[28]_i_6_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_counter_reg[28]_i_6_O_UNCONNECTED [3],counter0[31:29]}),
-        .S({1'b0,\counter[28]_i_7_n_0 ,\counter[28]_i_8_n_0 ,\counter[28]_i_9_n_0 }));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[29] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[28]_i_1_n_6 ),
-        .Q(counter_reg[29]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
     \counter_reg[2] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[0]_i_2_n_5 ),
         .Q(counter_reg[2]),
@@ -1571,26 +1142,8 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   FDRE #(
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
-    \counter_reg[30] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[28]_i_1_n_5 ),
-        .Q(counter_reg[30]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \counter_reg[31] 
-       (.C(clkout_reg),
-        .CE(\counter[0]_i_1_n_0 ),
-        .D(\counter_reg[28]_i_1_n_4 ),
-        .Q(counter_reg[31]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
     \counter_reg[3] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[0]_i_2_n_4 ),
         .Q(counter_reg[3]),
@@ -1599,7 +1152,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[4] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[4]_i_1_n_7 ),
         .Q(counter_reg[4]),
@@ -1622,7 +1175,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[5] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[4]_i_1_n_6 ),
         .Q(counter_reg[5]),
@@ -1631,7 +1184,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[6] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[4]_i_1_n_5 ),
         .Q(counter_reg[6]),
@@ -1640,7 +1193,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[7] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[4]_i_1_n_4 ),
         .Q(counter_reg[7]),
@@ -1649,7 +1202,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[8] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[8]_i_1_n_7 ),
         .Q(counter_reg[8]),
@@ -1672,23 +1225,23 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \counter_reg[9] 
-       (.C(clkout_reg),
+       (.C(clkout_buf_reg),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[8]_i_1_n_6 ),
         .Q(counter_reg[9]),
         .R(1'b0));
   LUT2 #(
     .INIT(4'h2)) 
-    \distance_buf[31]_i_1 
+    \distance_buf[15]_i_1 
        (.I0(last2_echo),
         .I1(last1_echo),
-        .O(\distance_buf[31]_i_1_n_0 ));
+        .O(\distance_buf[15]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[0] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[0]),
         .Q(distance[0]),
         .R(1'b0));
@@ -1697,7 +1250,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[10] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[10]),
         .Q(distance[10]),
         .R(1'b0));
@@ -1706,7 +1259,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[11] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[11]),
         .Q(distance[11]),
         .R(1'b0));
@@ -1715,7 +1268,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[12] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[12]),
         .Q(distance[12]),
         .R(1'b0));
@@ -1724,7 +1277,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[13] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[13]),
         .Q(distance[13]),
         .R(1'b0));
@@ -1733,7 +1286,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[14] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[14]),
         .Q(distance[14]),
         .R(1'b0));
@@ -1742,178 +1295,34 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[15] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[15]),
         .Q(distance[15]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[16] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[16]),
-        .Q(distance[16]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[17] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[17]),
-        .Q(distance[17]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[18] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[18]),
-        .Q(distance[18]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[19] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[19]),
-        .Q(distance[19]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[1] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[1]),
         .Q(distance[1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[20] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[20]),
-        .Q(distance[20]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[21] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[21]),
-        .Q(distance[21]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[22] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[22]),
-        .Q(distance[22]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[23] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[23]),
-        .Q(distance[23]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[24] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[24]),
-        .Q(distance[24]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[25] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[25]),
-        .Q(distance[25]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[26] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[26]),
-        .Q(distance[26]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[27] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[27]),
-        .Q(distance[27]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[28] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[28]),
-        .Q(distance[28]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[29] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[29]),
-        .Q(distance[29]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[2] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[2]),
         .Q(distance[2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0),
     .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[30] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[30]),
-        .Q(distance[30]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \distance_buf_reg[31] 
-       (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
-        .D(counter_reg[31]),
-        .Q(distance[31]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[3] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[3]),
         .Q(distance[3]),
         .R(1'b0));
@@ -1922,7 +1331,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[4] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[4]),
         .Q(distance[4]),
         .R(1'b0));
@@ -1931,7 +1340,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[5] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[5]),
         .Q(distance[5]),
         .R(1'b0));
@@ -1940,7 +1349,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[6] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[6]),
         .Q(distance[6]),
         .R(1'b0));
@@ -1949,7 +1358,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[7] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[7]),
         .Q(distance[7]),
         .R(1'b0));
@@ -1958,7 +1367,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[8] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[8]),
         .Q(distance[8]),
         .R(1'b0));
@@ -1967,7 +1376,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
     .IS_C_INVERTED(1'b1)) 
     \distance_buf_reg[9] 
        (.C(clk170khz),
-        .CE(\distance_buf[31]_i_1_n_0 ),
+        .CE(\distance_buf[15]_i_1_n_0 ),
         .D(counter_reg[9]),
         .Q(distance[9]),
         .R(1'b0));
@@ -1986,68 +1395,81 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
         .D(last1_echo),
         .Q(last2_echo),
         .R(1'b0));
-  LUT4 #(
-    .INIT(16'h0002)) 
+  LUT5 #(
+    .INIT(32'h00000002)) 
     trig_buf_i_1
        (.I0(trig_buf_i_2_n_0),
         .I1(trig_buf_i_3_n_0),
         .I2(trig_buf_i_4_n_0),
         .I3(trig_buf_i_5_n_0),
+        .I4(trig_buf_i_6_n_0),
         .O(trig_buf_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000000002)) 
+  LUT5 #(
+    .INIT(32'h00000001)) 
     trig_buf_i_2
-       (.I0(trig_buf_i_6_n_0),
-        .I1(count_reg[2]),
-        .I2(count_reg[1]),
-        .I3(count_reg[14]),
-        .I4(count_reg[5]),
-        .I5(\count[0]_i_3_n_0 ),
-        .O(trig_buf_i_2_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    trig_buf_i_3
-       (.I0(count_reg[29]),
-        .I1(count_reg[30]),
+       (.I0(count_reg[25]),
+        .I1(count_reg[29]),
         .I2(count_reg[28]),
         .I3(trig_buf_i_7_n_0),
-        .O(trig_buf_i_3_n_0));
+        .I4(trig_buf_i_8_n_0),
+        .O(trig_buf_i_2_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    trig_buf_i_4
-       (.I0(count_reg[24]),
-        .I1(count_reg[23]),
-        .I2(count_reg[17]),
-        .I3(count_reg[18]),
-        .I4(count_reg[20]),
-        .I5(count_reg[19]),
-        .O(trig_buf_i_4_n_0));
+    trig_buf_i_3
+       (.I0(count_reg[18]),
+        .I1(count_reg[19]),
+        .I2(count_reg[20]),
+        .I3(count_reg[24]),
+        .I4(count_reg[23]),
+        .I5(count_reg[17]),
+        .O(trig_buf_i_3_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    trig_buf_i_5
+    trig_buf_i_4
        (.I0(count_reg[4]),
         .I1(count_reg[10]),
         .I2(count_reg[8]),
         .I3(count_reg[7]),
+        .O(trig_buf_i_4_n_0));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    trig_buf_i_5
+       (.I0(count_reg[11]),
+        .I1(count_reg[13]),
+        .I2(count_reg[12]),
         .O(trig_buf_i_5_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     trig_buf_i_6
-       (.I0(count_reg[13]),
-        .I1(count_reg[12]),
-        .I2(count_reg[11]),
+       (.I0(count_reg[6]),
+        .I1(count_reg[3]),
+        .I2(count_reg[5]),
         .I3(count_reg[9]),
-        .I4(count_reg[3]),
-        .I5(count_reg[6]),
+        .I4(count_reg[14]),
+        .I5(trig_buf_i_9_n_0),
         .O(trig_buf_i_6_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     trig_buf_i_7
-       (.I0(count_reg[25]),
+       (.I0(count_reg[30]),
         .I1(count_reg[27]),
-        .I2(count_reg[31]),
-        .I3(count_reg[26]),
+        .I2(count_reg[26]),
+        .I3(count_reg[16]),
         .O(trig_buf_i_7_n_0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    trig_buf_i_8
+       (.I0(count_reg[21]),
+        .I1(count_reg[15]),
+        .I2(count_reg[31]),
+        .I3(count_reg[22]),
+        .O(trig_buf_i_8_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    trig_buf_i_9
+       (.I0(count_reg[1]),
+        .I1(count_reg[2]),
+        .O(trig_buf_i_9_n_0));
   FDRE #(
     .IS_C_INVERTED(1'b1)) 
     trig_buf_reg
@@ -2067,17 +1489,17 @@ module MIPSfpga_system_URM_Driver_0_0_divider
 
   wire CLK;
   wire CLK100MHZ;
-  wire clkout;
-  wire clkout_i_1_n_0;
+  wire clkout_buf;
+  wire clkout_buf_i_1_n_0;
   wire [31:0]count;
   wire \count[0]_i_2_n_0 ;
   wire \count[0]_i_3__0_n_0 ;
-  wire \count[0]_i_4__0_n_0 ;
-  wire \count[0]_i_5__0_n_0 ;
+  wire \count[0]_i_4_n_0 ;
+  wire \count[0]_i_5_n_0 ;
   wire \count[0]_i_6_n_0 ;
-  wire \count[0]_i_7_n_0 ;
-  wire \count[0]_i_8_n_0 ;
-  wire \count[0]_i_9__0_n_0 ;
+  wire \count[0]_i_7__0_n_0 ;
+  wire \count[0]_i_8__0_n_0 ;
+  wire \count[0]_i_9_n_0 ;
   wire \count[12]_i_2__0_n_0 ;
   wire \count[12]_i_3__0_n_0 ;
   wire \count[12]_i_4__0_n_0 ;
@@ -2147,19 +1569,19 @@ module MIPSfpga_system_URM_Driver_0_0_divider
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFFFE0001)) 
-    clkout_i_1
+    clkout_buf_i_1
        (.I0(count[0]),
-        .I1(\count[0]_i_4__0_n_0 ),
+        .I1(\count[0]_i_4_n_0 ),
         .I2(\count[0]_i_3__0_n_0 ),
         .I3(\count[0]_i_2_n_0 ),
         .I4(CLK),
-        .O(clkout_i_1_n_0));
+        .O(clkout_buf_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
-    clkout_reg
+    clkout_buf_reg
        (.C(CLK100MHZ),
         .CE(1'b1),
-        .D(clkout_i_1_n_0),
+        .D(clkout_buf_i_1_n_0),
         .Q(CLK),
         .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
@@ -2168,45 +1590,45 @@ module MIPSfpga_system_URM_Driver_0_0_divider
     \count[0]_i_1__0 
        (.I0(\count[0]_i_2_n_0 ),
         .I1(\count[0]_i_3__0_n_0 ),
-        .I2(\count[0]_i_4__0_n_0 ),
+        .I2(\count[0]_i_4_n_0 ),
         .I3(count[0]),
         .O(count_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'hFFFFFFFFFFFEFFFF)) 
     \count[0]_i_2 
-       (.I0(\count[0]_i_5__0_n_0 ),
+       (.I0(\count[0]_i_5_n_0 ),
         .I1(\count[0]_i_6_n_0 ),
         .I2(count[31]),
         .I3(count[30]),
         .I4(count[1]),
-        .I5(\count[0]_i_7_n_0 ),
+        .I5(\count[0]_i_7__0_n_0 ),
         .O(\count[0]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFFEFFF)) 
+    .INIT(32'hFFFFFBFF)) 
     \count[0]_i_3__0 
        (.I0(count[4]),
         .I1(count[5]),
-        .I2(count[2]),
-        .I3(count[3]),
-        .I4(\count[0]_i_8_n_0 ),
+        .I2(count[3]),
+        .I3(count[2]),
+        .I4(\count[0]_i_8__0_n_0 ),
         .O(\count[0]_i_3__0_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \count[0]_i_4__0 
+    \count[0]_i_4 
        (.I0(count[12]),
         .I1(count[13]),
         .I2(count[10]),
         .I3(count[11]),
-        .I4(\count[0]_i_9__0_n_0 ),
-        .O(\count[0]_i_4__0_n_0 ));
+        .I4(\count[0]_i_9_n_0 ),
+        .O(\count[0]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \count[0]_i_5__0 
+    \count[0]_i_5 
        (.I0(count[23]),
         .I1(count[22]),
         .I2(count[25]),
         .I3(count[24]),
-        .O(\count[0]_i_5__0_n_0 ));
+        .O(\count[0]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \count[0]_i_6 
@@ -2217,28 +1639,28 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .O(\count[0]_i_6_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \count[0]_i_7 
+    \count[0]_i_7__0 
        (.I0(count[27]),
         .I1(count[26]),
         .I2(count[29]),
         .I3(count[28]),
-        .O(\count[0]_i_7_n_0 ));
+        .O(\count[0]_i_7__0_n_0 ));
   LUT4 #(
-    .INIT(16'hFFDF)) 
-    \count[0]_i_8 
-       (.I0(count[6]),
-        .I1(count[7]),
-        .I2(count[9]),
-        .I3(count[8]),
-        .O(\count[0]_i_8_n_0 ));
+    .INIT(16'hFFEF)) 
+    \count[0]_i_8__0 
+       (.I0(count[7]),
+        .I1(count[6]),
+        .I2(count[8]),
+        .I3(count[9]),
+        .O(\count[0]_i_8__0_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \count[0]_i_9__0 
+    \count[0]_i_9 
        (.I0(count[15]),
         .I1(count[14]),
         .I2(count[17]),
         .I3(count[16]),
-        .O(\count[0]_i_9__0_n_0 ));
+        .O(\count[0]_i_9_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
     \count[12]_i_2__0 
@@ -2343,10 +1765,10 @@ module MIPSfpga_system_URM_Driver_0_0_divider
     .INIT(16'h0001)) 
     \count[31]_i_1 
        (.I0(count[0]),
-        .I1(\count[0]_i_4__0_n_0 ),
+        .I1(\count[0]_i_4_n_0 ),
         .I2(\count[0]_i_3__0_n_0 ),
         .I3(\count[0]_i_2_n_0 ),
-        .O(clkout));
+        .O(clkout_buf));
   LUT1 #(
     .INIT(2'h2)) 
     \count[31]_i_3 
@@ -2417,7 +1839,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[10]),
         .Q(count[10]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[11] 
@@ -2425,7 +1847,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[11]),
         .Q(count[11]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[12] 
@@ -2433,7 +1855,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[12]),
         .Q(count[12]),
-        .R(clkout));
+        .R(clkout_buf));
   CARRY4 \count_reg[12]_i_1__0 
        (.CI(\count_reg[8]_i_1__0_n_0 ),
         .CO({\count_reg[12]_i_1__0_n_0 ,\count_reg[12]_i_1__0_n_1 ,\count_reg[12]_i_1__0_n_2 ,\count_reg[12]_i_1__0_n_3 }),
@@ -2448,7 +1870,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[13]),
         .Q(count[13]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[14] 
@@ -2456,7 +1878,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[14]),
         .Q(count[14]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[15] 
@@ -2464,7 +1886,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[15]),
         .Q(count[15]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[16] 
@@ -2472,7 +1894,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[16]),
         .Q(count[16]),
-        .R(clkout));
+        .R(clkout_buf));
   CARRY4 \count_reg[16]_i_1__0 
        (.CI(\count_reg[12]_i_1__0_n_0 ),
         .CO({\count_reg[16]_i_1__0_n_0 ,\count_reg[16]_i_1__0_n_1 ,\count_reg[16]_i_1__0_n_2 ,\count_reg[16]_i_1__0_n_3 }),
@@ -2487,7 +1909,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[17]),
         .Q(count[17]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[18] 
@@ -2495,7 +1917,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[18]),
         .Q(count[18]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[19] 
@@ -2503,7 +1925,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[19]),
         .Q(count[19]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[1] 
@@ -2511,7 +1933,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[1]),
         .Q(count[1]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[20] 
@@ -2519,7 +1941,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[20]),
         .Q(count[20]),
-        .R(clkout));
+        .R(clkout_buf));
   CARRY4 \count_reg[20]_i_1__0 
        (.CI(\count_reg[16]_i_1__0_n_0 ),
         .CO({\count_reg[20]_i_1__0_n_0 ,\count_reg[20]_i_1__0_n_1 ,\count_reg[20]_i_1__0_n_2 ,\count_reg[20]_i_1__0_n_3 }),
@@ -2534,7 +1956,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[21]),
         .Q(count[21]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[22] 
@@ -2542,7 +1964,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[22]),
         .Q(count[22]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[23] 
@@ -2550,7 +1972,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[23]),
         .Q(count[23]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[24] 
@@ -2558,7 +1980,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[24]),
         .Q(count[24]),
-        .R(clkout));
+        .R(clkout_buf));
   CARRY4 \count_reg[24]_i_1__0 
        (.CI(\count_reg[20]_i_1__0_n_0 ),
         .CO({\count_reg[24]_i_1__0_n_0 ,\count_reg[24]_i_1__0_n_1 ,\count_reg[24]_i_1__0_n_2 ,\count_reg[24]_i_1__0_n_3 }),
@@ -2573,7 +1995,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[25]),
         .Q(count[25]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[26] 
@@ -2581,7 +2003,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[26]),
         .Q(count[26]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[27] 
@@ -2589,7 +2011,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[27]),
         .Q(count[27]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[28] 
@@ -2597,7 +2019,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[28]),
         .Q(count[28]),
-        .R(clkout));
+        .R(clkout_buf));
   CARRY4 \count_reg[28]_i_1__0 
        (.CI(\count_reg[24]_i_1__0_n_0 ),
         .CO({\count_reg[28]_i_1__0_n_0 ,\count_reg[28]_i_1__0_n_1 ,\count_reg[28]_i_1__0_n_2 ,\count_reg[28]_i_1__0_n_3 }),
@@ -2612,7 +2034,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[29]),
         .Q(count[29]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[2] 
@@ -2620,7 +2042,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[2]),
         .Q(count[2]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[30] 
@@ -2628,7 +2050,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[30]),
         .Q(count[30]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[31] 
@@ -2636,7 +2058,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[31]),
         .Q(count[31]),
-        .R(clkout));
+        .R(clkout_buf));
   CARRY4 \count_reg[31]_i_2 
        (.CI(\count_reg[28]_i_1__0_n_0 ),
         .CO({\NLW_count_reg[31]_i_2_CO_UNCONNECTED [3:2],\count_reg[31]_i_2_n_2 ,\count_reg[31]_i_2_n_3 }),
@@ -2651,7 +2073,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[3]),
         .Q(count[3]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[4] 
@@ -2659,7 +2081,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[4]),
         .Q(count[4]),
-        .R(clkout));
+        .R(clkout_buf));
   CARRY4 \count_reg[4]_i_1__0 
        (.CI(1'b0),
         .CO({\count_reg[4]_i_1__0_n_0 ,\count_reg[4]_i_1__0_n_1 ,\count_reg[4]_i_1__0_n_2 ,\count_reg[4]_i_1__0_n_3 }),
@@ -2674,7 +2096,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[5]),
         .Q(count[5]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[6] 
@@ -2682,7 +2104,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[6]),
         .Q(count[6]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[7] 
@@ -2690,7 +2112,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[7]),
         .Q(count[7]),
-        .R(clkout));
+        .R(clkout_buf));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[8] 
@@ -2698,7 +2120,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[8]),
         .Q(count[8]),
-        .R(clkout));
+        .R(clkout_buf));
   CARRY4 \count_reg[8]_i_1__0 
        (.CI(\count_reg[4]_i_1__0_n_0 ),
         .CO({\count_reg[8]_i_1__0_n_0 ,\count_reg[8]_i_1__0_n_1 ,\count_reg[8]_i_1__0_n_2 ,\count_reg[8]_i_1__0_n_3 }),
@@ -2713,7 +2135,7 @@ module MIPSfpga_system_URM_Driver_0_0_divider
         .CE(1'b1),
         .D(data0[9]),
         .Q(count[9]),
-        .R(clkout));
+        .R(clkout_buf));
 endmodule
 `ifndef GLBL
 `define GLBL

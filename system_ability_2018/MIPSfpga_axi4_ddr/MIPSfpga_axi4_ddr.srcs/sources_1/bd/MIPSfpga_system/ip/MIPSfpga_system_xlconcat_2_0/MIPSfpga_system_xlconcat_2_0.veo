@@ -55,23 +55,10 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 MIPSfpga_system_xlconcat_2_0 your_instance_name (
-  .In0(In0),    // input wire [0 : 0] In0
-  .In1(In1),    // input wire [0 : 0] In1
-  .In2(In2),    // input wire [0 : 0] In2
-  .In3(In3),    // input wire [0 : 0] In3
-  .In4(In4),    // input wire [0 : 0] In4
-  .In5(In5),    // input wire [0 : 0] In5
-  .In6(In6),    // input wire [0 : 0] In6
-  .In7(In7),    // input wire [0 : 0] In7
-  .In8(In8),    // input wire [0 : 0] In8
-  .In9(In9),    // input wire [0 : 0] In9
-  .In10(In10),  // input wire [0 : 0] In10
-  .In11(In11),  // input wire [0 : 0] In11
-  .In12(In12),  // input wire [0 : 0] In12
-  .In13(In13),  // input wire [0 : 0] In13
-  .In14(In14),  // input wire [0 : 0] In14
-  .In15(In15),  // input wire [0 : 0] In15
-  .dout(dout)  // output wire [15 : 0] dout
+  .In0(In0),    // input wire [4 : 0] In0
+  .In1(In1),    // input wire [10 : 0] In1
+  .In2(In2),    // input wire [15 : 0] In2
+  .dout(dout)  // output wire [31 : 0] dout
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

@@ -57,6 +57,7 @@
 //----------------------------------------------------------------------------
 // CLK_OUT1____50.000______0.000______50.0______167.017____114.212
 // CLK_OUT2___200.000______0.000______50.0______126.455____114.212
+// CLK_OUT3___100.000______0.000______50.0______144.719____114.212
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,7 +71,8 @@ module MIPSfpga_system_clk_wiz_0_0_clk_wiz
   input         clk_in1,
   // Clock out ports
   output        clk_out1,
-  output        clk_out2
+  output        clk_out2,
+  output        clk_out3
  );
 
   // Input buffering
@@ -94,7 +96,6 @@ module MIPSfpga_system_clk_wiz_0_0_clk_wiz
   wire        clkfbout_MIPSfpga_system_clk_wiz_0_0;
   wire        clkfbout_buf_MIPSfpga_system_clk_wiz_0_0;
   wire        clkfboutb_unused;
-   wire clkout2_unused;
    wire clkout3_unused;
    wire clkout4_unused;
   wire        clkout5_unused;
@@ -114,6 +115,9 @@ module MIPSfpga_system_clk_wiz_0_0_clk_wiz
     .CLKOUT1_DIVIDE       (4),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
+    .CLKOUT2_DIVIDE       (8),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKIN1_PERIOD        (10.0))
   plle2_adv_inst
     // Output clocks
@@ -121,7 +125,7 @@ module MIPSfpga_system_clk_wiz_0_0_clk_wiz
     .CLKFBOUT            (clkfbout_MIPSfpga_system_clk_wiz_0_0),
     .CLKOUT0             (clk_out1_MIPSfpga_system_clk_wiz_0_0),
     .CLKOUT1             (clk_out2_MIPSfpga_system_clk_wiz_0_0),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (clk_out3_MIPSfpga_system_clk_wiz_0_0),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT4             (clkout4_unused),
     .CLKOUT5             (clkout5_unused),
@@ -163,6 +167,10 @@ module MIPSfpga_system_clk_wiz_0_0_clk_wiz
   BUFG clkout2_buf
    (.O   (clk_out2),
     .I   (clk_out2_MIPSfpga_system_clk_wiz_0_0));
+
+  BUFG clkout3_buf
+   (.O   (clk_out3),
+    .I   (clk_out3_MIPSfpga_system_clk_wiz_0_0));
 
 
 

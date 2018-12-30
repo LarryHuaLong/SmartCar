@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Sun Dec 23 18:44:42 2018
+-- Date        : Sun Dec 30 16:15:58 2018
 -- Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_auto_us_0/MIPSfpga_system_auto_us_0_funcsim.vhdl
