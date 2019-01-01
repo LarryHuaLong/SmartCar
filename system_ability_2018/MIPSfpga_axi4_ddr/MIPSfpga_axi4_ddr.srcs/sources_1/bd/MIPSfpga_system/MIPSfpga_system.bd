@@ -614,6 +614,9 @@
         <spirit:internalPortReference spirit:componentRef="axi_uart16550_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_uart16550_1" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="MotorDriver_0" spirit:portRef="resetn"/>
+        <spirit:internalPortReference spirit:componentRef="URM_Driver_0" spirit:portRef="resetn"/>
+        <spirit:internalPortReference spirit:componentRef="SegmentDisplay_0" spirit:portRef="resetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ARESETN"/>
@@ -622,9 +625,6 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M05_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M06_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="MotorDriver_0" spirit:portRef="resetn"/>
-        <spirit:internalPortReference spirit:componentRef="URM_Driver_0" spirit:portRef="resetn"/>
-        <spirit:internalPortReference spirit:componentRef="SegmentDisplay_0" spirit:portRef="resetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>SI_ColdReset_1</spirit:name>
@@ -828,7 +828,6 @@
       <spirit:adHocConnection>
         <spirit:name>xlconstant_4_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlconstant_4" spirit:portRef="dout"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In0"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In1"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In2"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In3"/>
@@ -874,6 +873,7 @@
         <spirit:name>URM_Driver_0_DangerClose</spirit:name>
         <spirit:internalPortReference spirit:componentRef="URM_Driver_0" spirit:portRef="DangerClose"/>
         <spirit:externalPortReference spirit:portRef="LED16_R"/>
+        <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out3</spirit:name>

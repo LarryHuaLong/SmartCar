@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec 30 16:00:17 2018" VIVADOVERSION="2015.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 01 16:43:44 2019" VIVADOVERSION="2015.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="MIPSfpga_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -240,6 +240,9 @@
             <CONNECTION INSTANCE="axi_uart16550_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="mig_7series_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="axi_uart16550_1" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="MotorDriver_0" PORT="resetn"/>
+            <CONNECTION INSTANCE="URM_Driver_0" PORT="resetn"/>
+            <CONNECTION INSTANCE="SegmentDisplay_0" PORT="resetn"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_ARESETN"/>
@@ -248,9 +251,6 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M05_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M06_ARESETN"/>
-            <CONNECTION INSTANCE="MotorDriver_0" PORT="resetn"/>
-            <CONNECTION INSTANCE="URM_Driver_0" PORT="resetn"/>
-            <CONNECTION INSTANCE="SegmentDisplay_0" PORT="resetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="HRDATA" RIGHT="0" SIGIS="undef" SIGNAME="MIPS_MicroAptiv_UP_0_HRDATA">
@@ -515,6 +515,7 @@
         <PORT DIR="O" NAME="DangerClose" SIGIS="undef" SIGNAME="URM_Driver_0_DangerClose">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="LED16_R"/>
+            <CONNECTION INSTANCE="axi_intc_0" PORT="intr"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1493,7 +1494,7 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M04_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="intr" RIGHT="0" SENSITIVITY="NULL:NULL:LEVEL_HIGH:LEVEL_HIGH:NULL:NULL:NULL:NULL" SIGIS="INTERRUPT" SIGNAME="xlconstant_4_dout &amp; xlconstant_4_dout &amp; axi_uart16550_0_ip2intc_irpt &amp; axi_uart16550_1_ip2intc_irpt &amp; xlconstant_4_dout &amp; xlconstant_4_dout &amp; xlconstant_4_dout &amp; xlconstant_4_dout">
+        <PORT DIR="I" LEFT="7" NAME="intr" RIGHT="0" SENSITIVITY="NULL:NULL:LEVEL_HIGH:LEVEL_HIGH:NULL:NULL:NULL:NULL" SIGIS="INTERRUPT" SIGNAME="xlconstant_4_dout &amp; xlconstant_4_dout &amp; axi_uart16550_0_ip2intc_irpt &amp; axi_uart16550_1_ip2intc_irpt &amp; xlconstant_4_dout &amp; xlconstant_4_dout &amp; xlconstant_4_dout &amp; URM_Driver_0_DangerClose">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconstant_4" PORT="dout"/>
             <CONNECTION INSTANCE="xlconstant_4" PORT="dout"/>
@@ -1502,7 +1503,7 @@
             <CONNECTION INSTANCE="xlconstant_4" PORT="dout"/>
             <CONNECTION INSTANCE="xlconstant_4" PORT="dout"/>
             <CONNECTION INSTANCE="xlconstant_4" PORT="dout"/>
-            <CONNECTION INSTANCE="xlconstant_4" PORT="dout"/>
+            <CONNECTION INSTANCE="URM_Driver_0" PORT="DangerClose"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="irq" SIGIS="undef" SIGNAME="axi_intc_0_irq">
@@ -5852,7 +5853,6 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_4_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_intc_0" PORT="intr"/>
             <CONNECTION INSTANCE="axi_intc_0" PORT="intr"/>
             <CONNECTION INSTANCE="axi_intc_0" PORT="intr"/>
             <CONNECTION INSTANCE="axi_intc_0" PORT="intr"/>

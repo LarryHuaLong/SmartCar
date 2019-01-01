@@ -472,7 +472,7 @@ CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} \
   connect_bd_net -net MotorDriver_0_pwm4 [get_bd_ports pwm4] [get_bd_pins MotorDriver_0/pwm4]
   connect_bd_net -net SI_ColdReset_1 [get_bd_ports JB8] [get_bd_pins util_vector_logic_1/Op1]
   connect_bd_net -net SI_Reset_1 [get_bd_ports CPU_RESETN] [get_bd_pins mig_7series_0/sys_rst] [get_bd_pins util_vector_logic_0/Op1]
-  connect_bd_net -net URM_Driver_0_DangerClose [get_bd_ports LED16_R] [get_bd_pins URM_Driver_0/DangerClose]
+  connect_bd_net -net URM_Driver_0_DangerClose [get_bd_ports LED16_R] [get_bd_pins URM_Driver_0/DangerClose] [get_bd_pins xlconcat_1/In0]
   connect_bd_net -net URM_Driver_0_anodes [get_bd_ports anodes] [get_bd_pins SegmentDisplay_0/anodes]
   connect_bd_net -net URM_Driver_0_cathodes [get_bd_ports cathodes] [get_bd_pins SegmentDisplay_0/cathodes]
   connect_bd_net -net URM_Driver_0_distance [get_bd_pins URM_Driver_0/distance] [get_bd_pins xlconcat_2/In2]
@@ -503,7 +503,7 @@ CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} \
   connect_bd_net -net xlconstant_1_dout [get_bd_pins xlconcat_0/In0] [get_bd_pins xlconcat_0/In1] [get_bd_pins xlconcat_0/In2] [get_bd_pins xlconcat_0/In3] [get_bd_pins xlconcat_0/In5] [get_bd_pins xlconcat_0/In6] [get_bd_pins xlconcat_0/In7] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_pins MIPS_MicroAptiv_UP_0/EJ_DINT] [get_bd_pins xlconstant_2/dout]
   connect_bd_net -net xlconstant_3_dout [get_bd_pins axi_uart16550_0/freeze] [get_bd_pins axi_uart16550_1/freeze] [get_bd_pins xlconstant_3/dout]
-  connect_bd_net -net xlconstant_4_dout [get_bd_pins xlconcat_1/In0] [get_bd_pins xlconcat_1/In1] [get_bd_pins xlconcat_1/In2] [get_bd_pins xlconcat_1/In3] [get_bd_pins xlconcat_1/In6] [get_bd_pins xlconcat_1/In7] [get_bd_pins xlconstant_4/dout]
+  connect_bd_net -net xlconstant_4_dout [get_bd_pins xlconcat_1/In1] [get_bd_pins xlconcat_1/In2] [get_bd_pins xlconcat_1/In3] [get_bd_pins xlconcat_1/In6] [get_bd_pins xlconcat_1/In7] [get_bd_pins xlconstant_4/dout]
   connect_bd_net -net xlconstant_5_dout [get_bd_pins xlconcat_2/In1] [get_bd_pins xlconstant_5/dout]
 
   # Create address segments

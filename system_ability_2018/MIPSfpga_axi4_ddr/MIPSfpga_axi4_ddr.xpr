@@ -25,60 +25,37 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_SegmentDisplay_0_0/MIPSfpga_system_SegmentDisplay_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_SegmentDisplay_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_3_0/MIPSfpga_system_xlconstant_3_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_xlconstant_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_2_0/MIPSfpga_system_xlconstant_2_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_xlconstant_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_1_0/MIPSfpga_system_xlconstant_1_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_xlconstant_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_0_0/MIPSfpga_system_xlconstant_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_xlconstant_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_util_vector_logic_1_0/MIPSfpga_system_util_vector_logic_1_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_util_vector_logic_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_util_vector_logic_0_0/MIPSfpga_system_util_vector_logic_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_util_vector_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_util_ds_buf_0_0/MIPSfpga_system_util_ds_buf_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_util_ds_buf_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_mig_7series_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconcat_1_0/MIPSfpga_system_xlconcat_1_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_xlconcat_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconcat_0_0/MIPSfpga_system_xlconcat_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_xlconcat_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_util_vector_logic_2_0/MIPSfpga_system_util_vector_logic_2_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_util_vector_logic_2_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_clk_wiz_0_0/MIPSfpga_system_clk_wiz_0_0.xci">
           <Proxy FileSetName="MIPSfpga_system_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_blk_mem_gen_0_0/MIPSfpga_system_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="MIPSfpga_system_blk_mem_gen_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_SegmentDisplay_0_0/MIPSfpga_system_SegmentDisplay_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_SegmentDisplay_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="hdl/MIPSfpga_system.v"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_interconnect_0_0/MIPSfpga_system_axi_interconnect_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_intc_0_0/MIPSfpga_system_axi_intc_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_axi_intc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_gpio_0_0/MIPSfpga_system_axi_gpio_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_bram_ctrl_0_0/MIPSfpga_system_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_axi_bram_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_ahblite_axi_bridge_0_0/MIPSfpga_system_ahblite_axi_bridge_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_ahblite_axi_bridge_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_MIPS_MicroAptiv_UP_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_uart16550_0_0/MIPSfpga_system_axi_uart16550_0_0.xci">
           <Proxy FileSetName="MIPSfpga_system_axi_uart16550_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xbar_0/MIPSfpga_system_xbar_0.xci">
           <Proxy FileSetName="MIPSfpga_system_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_interconnect_0_0/MIPSfpga_system_axi_interconnect_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_intc_0_0/MIPSfpga_system_axi_intc_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_axi_intc_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_4_0/MIPSfpga_system_xlconstant_4_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_xlconstant_4_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_1_1/MIPSfpga_system_xlconstant_1_1.xci">
           <Proxy FileSetName="MIPSfpga_system_xlconstant_1_1"/>
@@ -95,26 +72,68 @@
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_MotorDriver_0_0/MIPSfpga_system_MotorDriver_0_0.xci">
           <Proxy FileSetName="MIPSfpga_system_MotorDriver_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_3/MIPSfpga_system_auto_ds_3.xci">
-          <Proxy FileSetName="MIPSfpga_system_auto_ds_3"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_3_0/MIPSfpga_system_xlconstant_3_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_xlconstant_3_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_pc_1/MIPSfpga_system_auto_pc_1.xci">
-          <Proxy FileSetName="MIPSfpga_system_auto_pc_1"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_2_0/MIPSfpga_system_xlconstant_2_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_xlconstant_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_2/MIPSfpga_system_auto_ds_2.xci">
-          <Proxy FileSetName="MIPSfpga_system_auto_ds_2"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_1_0/MIPSfpga_system_xlconstant_1_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_xlconstant_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_1/MIPSfpga_system_auto_ds_1.xci">
-          <Proxy FileSetName="MIPSfpga_system_auto_ds_1"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_0_0/MIPSfpga_system_xlconstant_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_xlconstant_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconcat_1_0/MIPSfpga_system_xlconcat_1_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_xlconcat_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconcat_0_0/MIPSfpga_system_xlconcat_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_xlconcat_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_util_vector_logic_2_0/MIPSfpga_system_util_vector_logic_2_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_util_vector_logic_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_xlconstant_4_0/MIPSfpga_system_xlconstant_4_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_xlconstant_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_util_vector_logic_1_0/MIPSfpga_system_util_vector_logic_1_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_util_vector_logic_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_util_vector_logic_0_0/MIPSfpga_system_util_vector_logic_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_util_vector_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_util_ds_buf_0_0/MIPSfpga_system_util_ds_buf_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_util_ds_buf_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_mig_7series_0_0/MIPSfpga_system_mig_7series_0_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_mig_7series_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="MIPSfpga_system_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="hw_handoff/MIPSfpga_system_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="hdl/MIPSfpga_system.hwdef"/>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_0/MIPSfpga_system_auto_ds_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_auto_ds_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_pc_0/MIPSfpga_system_auto_pc_0.xci">
           <Proxy FileSetName="MIPSfpga_system_auto_pc_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="hw_handoff/MIPSfpga_system_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="hdl/MIPSfpga_system.hwdef"/>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="hw_handoff/MIPSfpga_system.hwh"/>
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_4/MIPSfpga_system_auto_ds_4.xci">
           <Proxy FileSetName="MIPSfpga_system_auto_ds_4"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_cc_0/MIPSfpga_system_auto_cc_0.xci">
+          <Proxy FileSetName="MIPSfpga_system_auto_cc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_1/MIPSfpga_system_auto_ds_1.xci">
+          <Proxy FileSetName="MIPSfpga_system_auto_ds_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_2/MIPSfpga_system_auto_ds_2.xci">
+          <Proxy FileSetName="MIPSfpga_system_auto_ds_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_pc_1/MIPSfpga_system_auto_pc_1.xci">
+          <Proxy FileSetName="MIPSfpga_system_auto_pc_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_3/MIPSfpga_system_auto_ds_3.xci">
+          <Proxy FileSetName="MIPSfpga_system_auto_ds_3"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_pc_2/MIPSfpga_system_auto_pc_2.xci">
           <Proxy FileSetName="MIPSfpga_system_auto_pc_2"/>
@@ -125,26 +144,7 @@
         <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_us_0/MIPSfpga_system_auto_us_0.xci">
           <Proxy FileSetName="MIPSfpga_system_auto_us_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_ds_0/MIPSfpga_system_auto_ds_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_auto_ds_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="MIPSfpga_system_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="hdl/MIPSfpga_system.v"/>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_auto_cc_0/MIPSfpga_system_auto_cc_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_auto_cc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0/MIPSfpga_system_MIPS_MicroAptiv_UP_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_MIPS_MicroAptiv_UP_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_gpio_0_0/MIPSfpga_system_axi_gpio_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_axi_bram_ctrl_0_0/MIPSfpga_system_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="ip/MIPSfpga_system_ahblite_axi_bridge_0_0/MIPSfpga_system_ahblite_axi_bridge_0_0.xci">
-          <Proxy FileSetName="MIPSfpga_system_ahblite_axi_bridge_0_0"/>
-        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="MIPSfpga_system.bd" FileRelPathName="hw_handoff/MIPSfpga_system.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/MIPSfpga_system/hdl/MIPSfpga_system_wrapper.v">
         <FileInfo>
@@ -168,7 +168,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_MotorDriver_0_0/MIPSfpga_system_MotorDriver_0_0.upgrade_log"/>
       <File Path="$PSRCDIR/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_URM_Driver_0_0/MIPSfpga_system_URM_Driver_0_0.upgrade_log"/>
-      <File Path="$PSRCDIR/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_multiplexer_0_0/MIPSfpga_system_multiplexer_0_0.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="MIPSfpga_system_wrapper"/>
@@ -630,27 +629,21 @@
     </Run>
     <Run Id="MIPSfpga_system_MotorDriver_0_0_synth_1" Type="Ft3:Synth" SrcSet="MIPSfpga_system_MotorDriver_0_0" Part="xc7a100tcsg324-1" ConstrsSet="MIPSfpga_system_MotorDriver_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/MIPSfpga_system_MotorDriver_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="MIPSfpga_system_URM_Driver_0_0_synth_1" Type="Ft3:Synth" SrcSet="MIPSfpga_system_URM_Driver_0_0" Part="xc7a100tcsg324-1" ConstrsSet="MIPSfpga_system_URM_Driver_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/MIPSfpga_system_URM_Driver_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="MIPSfpga_system_SegmentDisplay_0_0_synth_1" Type="Ft3:Synth" SrcSet="MIPSfpga_system_SegmentDisplay_0_0" Part="xc7a100tcsg324-1" ConstrsSet="MIPSfpga_system_SegmentDisplay_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/MIPSfpga_system_SegmentDisplay_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1107,9 +1100,7 @@
     </Run>
     <Run Id="MIPSfpga_system_MotorDriver_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="MIPSfpga_system_MotorDriver_0_0" Description="Vivado Implementation Defaults" SynthRun="MIPSfpga_system_MotorDriver_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1123,9 +1114,7 @@
     </Run>
     <Run Id="MIPSfpga_system_URM_Driver_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="MIPSfpga_system_URM_Driver_0_0" Description="Vivado Implementation Defaults" SynthRun="MIPSfpga_system_URM_Driver_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1139,9 +1128,7 @@
     </Run>
     <Run Id="MIPSfpga_system_SegmentDisplay_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="MIPSfpga_system_SegmentDisplay_0_0" Description="Vivado Implementation Defaults" SynthRun="MIPSfpga_system_SegmentDisplay_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
