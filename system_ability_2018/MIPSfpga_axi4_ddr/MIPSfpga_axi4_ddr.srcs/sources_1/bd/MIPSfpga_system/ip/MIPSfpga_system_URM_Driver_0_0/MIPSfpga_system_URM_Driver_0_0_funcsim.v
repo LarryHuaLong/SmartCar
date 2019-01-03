@@ -1,7 +1,7 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-// Date        : Sun Dec 30 16:01:36 2018
+// Date        : Thu Jan 03 15:26:45 2019
 // Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_URM_Driver_0_0/MIPSfpga_system_URM_Driver_0_0_funcsim.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{}" *) (* CORE_GENERATION_INFO = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=294}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{}" *) (* CORE_GENERATION_INFO = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=294}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* X_CORE_INFO = "URM_Driver,Vivado 2015.2" *) 
 (* NotValidForBitStream *)
 module MIPSfpga_system_URM_Driver_0_0
@@ -69,6 +69,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
 
   wire CLK100MHZ;
   wire DangerClose;
+  wire DangerClose_buf;
   wire DangerClose_buf_i_1_n_0;
   wire DangerClose_buf_i_2_n_0;
   wire DangerClose_buf_i_3_n_0;
@@ -275,6 +276,12 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
   wire [3:2]\NLW_counter_reg[12]_i_6_CO_UNCONNECTED ;
   wire [3:3]\NLW_counter_reg[12]_i_6_O_UNCONNECTED ;
 
+  LUT2 #(
+    .INIT(4'h8)) 
+    DangerClose_INST_0
+       (.I0(DangerClose_buf),
+        .I1(trig),
+        .O(DangerClose));
   LUT4 #(
     .INIT(16'h0020)) 
     DangerClose_buf_i_1
@@ -312,7 +319,7 @@ module MIPSfpga_system_URM_Driver_0_0_URM_Driver
        (.C(clk170khz),
         .CE(1'b1),
         .D(DangerClose_buf_i_1_n_0),
-        .Q(DangerClose),
+        .Q(DangerClose_buf),
         .R(1'b0));
   LUT5 #(
     .INIT(32'hFFDFDDDD)) 

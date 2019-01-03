@@ -76,7 +76,7 @@ module URM_Driver(
         end
         
     reg DangerClose_buf;    
-    assign DangerClose = DangerClose_buf;
+    assign DangerClose = DangerClose_buf & trig_buf;
     always @(posedge clk170khz)
         if(!resetn)
             DangerClose_buf <= 0; 

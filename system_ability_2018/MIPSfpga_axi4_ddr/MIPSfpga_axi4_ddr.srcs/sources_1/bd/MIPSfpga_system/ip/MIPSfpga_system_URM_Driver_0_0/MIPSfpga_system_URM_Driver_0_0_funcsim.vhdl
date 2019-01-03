@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Sun Dec 30 16:01:36 2018
+-- Date        : Thu Jan 03 15:26:46 2019
 -- Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ip/MIPSfpga_system_URM_Driver_0_0/MIPSfpga_system_URM_Driver_0_0_funcsim.vhdl
@@ -1008,6 +1008,7 @@ entity MIPSfpga_system_URM_Driver_0_0_URM_Driver is
 end MIPSfpga_system_URM_Driver_0_0_URM_Driver;
 
 architecture STRUCTURE of MIPSfpga_system_URM_Driver_0_0_URM_Driver is
+  signal DangerClose_buf : STD_LOGIC;
   signal DangerClose_buf_i_1_n_0 : STD_LOGIC;
   signal DangerClose_buf_i_2_n_0 : STD_LOGIC;
   signal DangerClose_buf_i_3_n_0 : STD_LOGIC;
@@ -1196,6 +1197,7 @@ architecture STRUCTURE of MIPSfpga_system_URM_Driver_0_0_URM_Driver is
   signal \distance_buf[15]_i_1_n_0\ : STD_LOGIC;
   signal last1_echo : STD_LOGIC;
   signal last2_echo : STD_LOGIC;
+  signal \^trig\ : STD_LOGIC;
   signal trig_buf_i_1_n_0 : STD_LOGIC;
   signal trig_buf_i_2_n_0 : STD_LOGIC;
   signal trig_buf_i_3_n_0 : STD_LOGIC;
@@ -1212,6 +1214,16 @@ architecture STRUCTURE of MIPSfpga_system_URM_Driver_0_0_URM_Driver is
 begin
   clk170khz <= \^clk170khz\;
   distance(15 downto 0) <= \^distance\(15 downto 0);
+  trig <= \^trig\;
+DangerClose_INST_0: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => DangerClose_buf,
+      I1 => \^trig\,
+      O => DangerClose
+    );
 DangerClose_buf_i_1: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0020"
@@ -1262,7 +1274,7 @@ DangerClose_buf_reg: unisim.vcomponents.FDRE
       C => \^clk170khz\,
       CE => '1',
       D => DangerClose_buf_i_1_n_0,
-      Q => DangerClose,
+      Q => DangerClose_buf,
       R => '0'
     );
 \count[0]_i_1\: unisim.vcomponents.LUT5
@@ -3073,7 +3085,7 @@ trig_buf_reg: unisim.vcomponents.FDRE
       C => \^clk170khz\,
       CE => '1',
       D => trig_buf_i_1_n_0,
-      Q => trig,
+      Q => \^trig\,
       R => '0'
     );
 end STRUCTURE;
@@ -3095,7 +3107,7 @@ entity MIPSfpga_system_URM_Driver_0_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of MIPSfpga_system_URM_Driver_0_0 : entity is "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of MIPSfpga_system_URM_Driver_0_0 : entity is "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=294}";
+  attribute CORE_GENERATION_INFO of MIPSfpga_system_URM_Driver_0_0 : entity is "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=294}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of MIPSfpga_system_URM_Driver_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;

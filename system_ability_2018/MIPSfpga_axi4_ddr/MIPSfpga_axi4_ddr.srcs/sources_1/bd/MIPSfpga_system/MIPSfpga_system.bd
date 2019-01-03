@@ -511,18 +511,18 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>SegmentDisplay_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="SegmentDisplay" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPSfpga_system_SegmentDisplay_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>URM_Driver_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="URM_Driver" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPSfpga_system_URM_Driver_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="clk170khz_param">294</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>SegmentDisplay_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="SegmentDisplay" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPSfpga_system_SegmentDisplay_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -615,7 +615,6 @@
         <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_uart16550_1" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="MotorDriver_0" spirit:portRef="resetn"/>
-        <spirit:internalPortReference spirit:componentRef="URM_Driver_0" spirit:portRef="resetn"/>
         <spirit:internalPortReference spirit:componentRef="SegmentDisplay_0" spirit:portRef="resetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ARESETN"/>
@@ -625,6 +624,7 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M05_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M06_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="URM_Driver_0" spirit:portRef="resetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>SI_ColdReset_1</spirit:name>
@@ -878,9 +878,9 @@
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out3</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out3"/>
-        <spirit:internalPortReference spirit:componentRef="URM_Driver_0" spirit:portRef="CLK100MHZ"/>
         <spirit:internalPortReference spirit:componentRef="MotorDriver_0" spirit:portRef="CLK100MHZ"/>
         <spirit:internalPortReference spirit:componentRef="SegmentDisplay_0" spirit:portRef="CLK100MHZ"/>
+        <spirit:internalPortReference spirit:componentRef="URM_Driver_0" spirit:portRef="CLK100MHZ"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

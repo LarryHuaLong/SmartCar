@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 01 16:43:44 2019" VIVADOVERSION="2015.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 03 15:23:23 2019" VIVADOVERSION="2015.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="MIPSfpga_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -241,7 +241,6 @@
             <CONNECTION INSTANCE="mig_7series_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="axi_uart16550_1" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="MotorDriver_0" PORT="resetn"/>
-            <CONNECTION INSTANCE="URM_Driver_0" PORT="resetn"/>
             <CONNECTION INSTANCE="SegmentDisplay_0" PORT="resetn"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_ARESETN"/>
@@ -251,6 +250,7 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M05_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M06_ARESETN"/>
+            <CONNECTION INSTANCE="URM_Driver_0" PORT="resetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="HRDATA" RIGHT="0" SIGIS="undef" SIGNAME="MIPS_MicroAptiv_UP_0_HRDATA">
@@ -4204,9 +4204,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out3" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="URM_Driver_0" PORT="CLK100MHZ"/>
             <CONNECTION INSTANCE="MotorDriver_0" PORT="CLK100MHZ"/>
             <CONNECTION INSTANCE="SegmentDisplay_0" PORT="CLK100MHZ"/>
+            <CONNECTION INSTANCE="URM_Driver_0" PORT="CLK100MHZ"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

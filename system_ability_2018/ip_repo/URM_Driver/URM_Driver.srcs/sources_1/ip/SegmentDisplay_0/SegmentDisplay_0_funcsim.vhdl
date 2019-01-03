@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Sun Dec 30 14:49:12 2018
+-- Date        : Thu Jan 03 15:05:37 2019
 -- Host        : DESKTOP-6GPL9D0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/HUALONG/Desktop/SmartCar/system_ability_2018/ip_repo/URM_Driver/URM_Driver.srcs/sources_1/ip/SegmentDisplay_0/SegmentDisplay_0_funcsim.vhdl

@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:URM_Driver:1.0
-// IP Revision: 3
+// IP Revision: 4
 
 (* X_CORE_INFO = "URM_Driver,Vivado 2015.2" *)
 (* CHECK_LICENSE_TYPE = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{}" *)
-(* CORE_GENERATION_INFO = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=294}" *)
+(* CORE_GENERATION_INFO = "MIPSfpga_system_URM_Driver_0_0,URM_Driver,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=URM_Driver,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,clk170khz_param=294}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module MIPSfpga_system_URM_Driver_0_0 (
   CLK100MHZ,
